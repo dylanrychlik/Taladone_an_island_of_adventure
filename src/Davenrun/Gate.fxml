@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.GateController">
+
+                        
+
+    <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="300.0">
+            <children>
+                <TextArea fx:id = "current" layoutY = "0" text="Quest "/>
+                <TextArea fx:id = "Map" layoutY="350" layoutX = "0" text = "map"/> 
+                
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="300.0" prefHeight="511.0" prefWidth="700.0">
+            <children>
+                <Pane prefHeight="523.0" prefWidth="660.0">
+                    <children>
+                       
+                        
+                        <Button fx:id="button" layoutX="425" layoutY="350.0" mnemonicParsing="false" text="Submit Action" />
+                        <Button fx:id="button2" layoutX="200" layoutY="350.0" mnemonicParsing="false" text="Submit Action" />
+                        <TextArea fx:id="prompt" layoutX="100" layoutY="0.0" />
+                      
+        <Button fx:id="Northen_woods" layoutX="100" layoutY="100.0" mnemonicParsing="false" text="Go to Northen Woods" onAction="#Northen_woods"  />
+        <Button fx:id="Eastern_Graveyard" layoutX="250" layoutY="100.0" mnemonicParsing="false" text="Go to Eastern Graveyard"  onAction = "#Eastern_Graveyard"/>
+        <Button fx:id="Southern_ocean" layoutX="400" layoutY="100.0" mnemonicParsing="false" text="Go to Southern_Ocean" onAction="#Southern_Ocean"  />       
+        <Button fx:id="Western_Moutnain" layoutX="100" layoutY="200.0" mnemonicParsing="false" text="Go to Western Mountain"  onAction="#Western_Montain"/>
+        <Button fx:id = "Go_North" layoutX="250" layoutY="200.0" mnemonicParsing="false" text="Go North" onAction ="#go_north"/> 
+        <Button fx:id="Go_NorthWest" layoutX="400" layoutY="200.0" mnemonicParsing="false" text="Go NorthWest" onAction ="#go_northWest"/>
+                        <Button fx:id = "Player_stats" layoutX="325" layoutY="300.0"  mnemonicParsing="false" text="Player stats"  onAction = "#stats" />  
+                        <TextArea fx:id="stats" layoutX="100" layoutY="400.0"/>  
+                        <ComboBox fx:id = "Look" layoutX="200" layoutY="300.0" />             
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
+

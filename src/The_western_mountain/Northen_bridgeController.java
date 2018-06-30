@@ -1,0 +1,394 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package The_western_mountain;
+
+import The_western_mountain.*;
+import static Davenrun.OutsidehouseController.Armoritem;
+import java.io.IOException;
+import java.net.URL;
+import java.util.Optional;
+import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import static Davenrun.OutsidehouseController.Weaponitem;
+import static Davenrun.OutsidehouseController.gooditem;
+import static Davenrun.OutsidehouseController.MapHeight;
+import static Davenrun.OutsidehouseController.MapWidth;
+import static Davenrun.OutsidehouseController.Weaponitem;
+import static Davenrun.OutsidehouseController.gooditem;
+import static Davenrun.OutsidehouseController.row1;
+import static Davenrun.OutsidehouseController.row2;
+import static Davenrun.OutsidehouseController.row3;
+import static Davenrun.OutsidehouseController.row4;
+import Davenrun.Player;
+import Davenrun.goodItem;
+import static The_western_mountain.Golden_Wine_berry_innController.row10;
+import static The_western_mountain.Golden_Wine_berry_innController.row11;
+import static The_western_mountain.Golden_Wine_berry_innController.row12;
+import static The_western_mountain.Golden_Wine_berry_innController.row5;
+import static The_western_mountain.Golden_Wine_berry_innController.row6;
+import static The_western_mountain.Golden_Wine_berry_innController.row7;
+import static The_western_mountain.Golden_Wine_berry_innController.row8;
+import static The_western_mountain.Golden_Wine_berry_innController.row9;
+
+import java.util.ArrayList;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
+
+public class Northen_bridgeController implements Initializable {
+
+    public static boolean[] locations = new boolean[30];
+    String intro = "Quest started: The The western mountain. You come to the Western bridge that \n connects the centeral region to the Western region. \n Beyond this bridge is the mysrtous Taladone mountain. \n The tallest mountain in the entite island The Jarl wants me \n invegatage what is at the top of the mountain. \n You cross the bridge that goes over the Taldone river. \n As your reach the end of the bridge there are two paths that you can go to. \n What will you do? ";
+    public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
+    public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
+    public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
+    public static ArrayList<Character> row8 = new ArrayList<Character>(MapWidth);
+    public static ArrayList<Character> row9 = new ArrayList<Character>(MapWidth);
+    public static ArrayList<Character> row10 = new ArrayList<Character>(MapWidth);
+    public static ArrayList<Character> row11 = new ArrayList<Character>(MapWidth);
+    public static ArrayList<Character> row12 = new ArrayList<Character>(MapWidth);
+    public static ArrayList<Character> row13 = new ArrayList<Character>(MapWidth);
+
+    @FXML
+    private TextArea prompt;
+    @FXML
+    private TextArea current;
+
+    @FXML
+    private ComboBox Look;
+
+    @FXML
+    private Button button2;
+    @FXML
+    private Button Player_stats;
+    @FXML
+    private TextArea stats;
+    @FXML
+    private TextArea Map;
+    @FXML
+    private Button Go_North;
+    @FXML
+    private Button Go_South;
+    Player player;
+
+    public void Northen_bridgeController() {
+        this.prompt = new TextArea();
+
+        this.current = new TextArea();
+        this.stats = new TextArea();
+
+        this.Look = new ComboBox();
+        this.Player_stats = new Button();
+        this.Map = new TextArea();
+        this.button2 = new Button();
+        this.Go_North = new Button();
+        this.Go_South = new Button();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        prompt.setPrefHeight(250);
+        prompt.setText(intro);
+        prompt.setText(intro);
+        prompt.setEditable(false);
+        stats.setEditable(false);
+        Map.setEditable(false);
+        Map.setPrefHeight(400);
+        current.setEditable(false);
+        current.setPrefSize(300, 180);
+//ObservableList<String> people = FXCollections.observableArrayList();
+        player.getPlayer();
+        if (player.getJarl_level_count() == 0 || player.getJarl_level_count() == 2 || player.getJarl_level_count() == 4 || player.getJarl_level_count() == 6 || player.getJarl_level_count() == 8 || player.getJarl_level_count() == 10) {
+            current.setText("Quests: \n You currently have no quests");
+        }
+        if (player.getJarl_level_count() == 1) {
+            current.setText("Quests: Quest 1: The Northen Woods \n Primary Objective: Defeat the Dragon of Taladone \n Secondary Objectives: \n - Clear all 10 caves \n - Clear the Dungeon \n");
+        }
+        if (player.getJarl_level_count() == 3) {
+            current.setText("Quests: Quest 2: The Eastern Graveyard \n Primary Objective: Defeat the Demon of the East \n Secondary Objectives: \n - Clear all 10 deadhouses \n - Clear the Death Dungeon \n");
+        }
+        if (player.getJarl_level_count() == 5) {
+            current.setText("Quests: Quest 3: The Southern Ocean \n Primary Objective: Defeat the Sea Creature \n Secondary Objectives: \n - Clear all 10 caves \n - Clear the Dungeon \n");
+        }
+        if (player.getJarl_level_count() == 7) {
+            current.setText("Quests: Quest 4: The Western Mountain \n Primary Objective: Defeat the Priest of the Western Mountain  \n Secondary Objectives: \n - Clear all 10 caves \n - Clear the Dungeon \n");
+        }
+        if (player.getJarl_level_count() == 9) {
+            current.setText("Quests: Quest 5: The Final Quest \n Primary Objective: Defeat the evil of the Davenrun Church \n Secondary Objective: \n - none. \n");
+        }
+        Look.getItems().addAll("Good list", "Weapon list", "Armor list");
+        Look.setValue("Look");
+        button2.setOnAction(event -> {
+            //Call a method to determine which item in the list the user has selected
+            doAction2(Look.getValue().toString()); //Send the selected item to the method
+        });
+        fillmap();
+
+    }
+
+    public void fillmap() {
+
+        row1.clear();
+        row2.clear();
+        row3.clear();
+        row4.clear();
+        row5.clear();
+        row6.clear();
+        row7.clear();
+        row8.clear();
+
+        row1.add('X');
+        row1.add('X');
+        row1.add('X');
+        row1.add('X');
+        row1.add('X');
+        row1.add('X');
+        row1.add('O');
+        row1.add('O');
+        row1.add('O');
+        row1.add('X');
+        row1.add('X');
+        row1.add('X');
+        row1.add('X');
+
+        row2.add('X');
+        row2.add('O');
+        row2.add('O');
+        row2.add('O');
+        row2.add('O');
+        row2.add('O');
+        row2.add('O');
+        row2.add('O');
+        row2.add('O');
+        row2.add('X');
+        row2.add('X');
+        row2.add('X');
+        row2.add('X');
+
+        row3.add('X');
+        row3.add('X');
+           row3.add('X');
+        row3.add('X');
+        row3.add('X');
+        row3.add('X');
+        row3.add('X');
+        row3.add('X');
+        row3.add('X');
+        row3.add('O');
+        row3.add('O');
+     
+        row3.add('X');
+        row3.add('X');
+
+        row4.add('O');
+        row4.add('X');
+        row4.add('X');
+        row4.add('X');
+        row4.add('X');
+        row4.add('X');
+        row4.add('X');
+        row4.add('X');
+        row4.add('X');
+        row4.add('X');
+        row4.add('X');
+        row4.add('O');
+        row4.add('^');
+
+        row5.add('X');
+        row5.add('X');
+        row5.add('X');
+        row5.add('X');
+        row5.add('X');
+        row5.add('X');
+        row5.add('X');
+        row5.add('X');
+        row5.add('X');
+        row5.add('O');
+        row5.add('O');
+        row5.add('X');
+        row5.add('X');
+
+        row6.add('X');
+        row6.add('X');
+        row6.add('X');
+        row6.add('X');
+
+        row6.add('X');
+        row6.add('X');
+        row6.add('X');
+        row6.add('X');
+        row6.add('O');
+        row6.add('X');
+        row6.add('X');
+        row6.add('X');
+        row6.add('X');
+
+        row7.add('X');
+        row7.add('O');
+        row7.add('O');
+        row7.add('O');
+        row7.add('O');
+        row7.add('O');
+        row7.add('O');
+        row7.add('O');
+        row7.add('O');
+        row7.add('X');
+        row7.add('X');
+        row7.add('X');
+        row7.add('X');
+
+        row8.add('X');
+        row8.add('X');
+        row8.add('X');
+
+        row8.add('O');
+        row8.add('X');
+        row8.add('X');
+        row8.add('O');
+        row8.add('O');
+        row8.add('O');
+        row8.add('X');
+        row8.add('X');
+        row8.add('X');
+        row8.add('X');
+
+        Map.setPrefWidth(300);
+        StringBuilder builder = new StringBuilder(row8.size());
+        StringBuilder builder2 = new StringBuilder(row7.size());
+        StringBuilder builder3 = new StringBuilder(row6.size());
+        StringBuilder builder4 = new StringBuilder(row5.size());
+
+        StringBuilder builder5 = new StringBuilder(row4.size());
+        StringBuilder builder6 = new StringBuilder(row3.size());
+        StringBuilder builder7 = new StringBuilder(row2.size());
+        StringBuilder builder8 = new StringBuilder(row1.size());
+
+        for (Character ch : row8) {
+            builder.append("\t" + ch);
+        }
+        for (Character ch : row7) {
+            builder2.append("\t" + ch);
+        }
+        for (Character ch : row6) {
+            builder3.append("\t" + ch);
+        }
+        for (Character ch : row5) {
+            builder4.append("\t" + ch);
+        }
+        for (Character ch : row4) {
+            builder5.append("\t" + ch);
+        }
+        for (Character ch : row3) {
+            builder6.append("\t" + ch);
+        }
+        for (Character ch : row2) {
+            builder7.append("\t" + ch);
+        }
+        for (Character ch : row1) {
+            builder8.append("\t" + ch);
+        }
+
+        Map.setText("The Western Mountain \n ^ represents your current location. \n  O represent a reachable location \n X represent a location that is unreachable \n" + builder.toString() + "\n" + builder2.toString() + "\n" + builder3.toString() + "\n" + builder4.toString() + "\n" + builder5.toString() + "\n" + builder6.toString() + "\n"
+                + builder7.toString() + "\n" + builder8.toString() + "\n");
+        Map.setPrefWidth(375);
+    }
+
+    public void stats() {
+
+        player.getPlayer();
+
+        String Output = "Player stats are: \n Health: " + player.gethealth() + "\n Bank:" + player.getbank() + "\n Attack damage:" + player.getattackdamage() + "\n Armor" + player.getarmor() + "\n Game level" + player.getJarl_level_count();
+        stats.setText(Output);
+    }
+
+    private void doAction2(String listItem) {
+        switch (listItem) {
+            case "Good list": //Action for this item
+                goodlist();
+                break;
+            case "Weapon list":
+                weaponlist();
+                break;
+            case "Armor list": //Action for this item
+                Armorlist();
+                break;
+
+            default: //Default action
+                break;
+        }
+    }
+
+    public void goodlist() {
+
+        System.out.println(gooditem.size());
+        int limit = gooditem.size();
+        String out = " ";
+        for (int x = 0; x < limit; x++) {
+
+            out += ((goodItem) gooditem.get(x)).toString() + "\n";
+        }
+        stats.setText("Your Goods items are \n " + out);
+    }
+
+    public void weaponlist() {
+
+        System.out.println(Weaponitem.getSize());
+        int limit2 = Weaponitem.getSize();
+        String out2 = " ";
+
+        for (int x = 1; x <= limit2; x++) {
+
+            out2 += Weaponitem.getInfo(x).toString() + "\n";
+        }
+        stats.setText("\n Your Weapon items are \n " + out2);
+    }
+
+    public void Armorlist() {
+
+        System.out.println(Armoritem.getSize());
+        int limit3 = Armoritem.getSize();
+        String out3 = " ";
+        for (int x = 1; x <= limit3; x++) {
+
+            out3 += Armoritem.getInfo(x).toString() + "\n";
+        }
+
+        stats.setText("\n Your Armor items are in the order  by \n" + out3);
+    }
+
+    public void go_North() throws IOException {
+        if (locations[0] == false) {
+            Stage Stage = new Stage();
+            Stage.setTitle("Junction 1");
+            Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/attackJunction1.fxml"));
+            Stage.setScene(new Scene(root, 800, 800));
+            Stage.show();
+            closeWindow();
+        }
+        if (locations[0] == true) {
+            Stage Stage = new Stage();
+            Stage.setTitle("Junction 1");
+            Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Junction1.fxml"));
+            Stage.setScene(new Scene(root, 1000, 750));
+            Stage.show();
+            closeWindow();
+        }
+    }
+
+    @FXML
+    public void closeWindow() {
+        Stage stage = (Stage) this.Go_North.getScene().getWindow();
+        stage.close();
+    }
+
+}

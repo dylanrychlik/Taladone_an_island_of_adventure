@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="The_western_mountain.Inside_Golden_Wine_berry_innController">
+   <children>
+
+        <TextArea fx:id="prompt" layoutX="100" layoutY="0.0" text = "You get a drink and some food before heading back out. You see people. What will you do?" />
+        <Button fx:id="Davenrun_Guard" layoutX="100" layoutY="100.0" mnemonicParsing="false" text="Talk to Person 1" onAction = "#Davenrun_Guard" />
+        <Button fx:id="Prisoner1" layoutX="250" layoutY="100.0" mnemonicParsing="false" text="Talk to  Person 2"  onAction = "#prisoner1" />
+        <Button fx:id="Prisoner2" layoutX="425" layoutY="100.0" mnemonicParsing="false" text="Talk to  Person 3" onAction = "#prisoner2" />
+        <Button fx:id="Exit" layoutX="575" layoutY="200.0" mnemonicParsing="false" text="Exit" onAction = "#exit" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.Management_centerController">
+     <children>
+        
+        <TextArea fx:id="prompt" layoutX="100" layoutY="0.0" text = "Welcome to the management center"/>
+        <Button fx:id="Bill_rates" layoutX="100" layoutY="100.0" mnemonicParsing="false" text="Talk to Mark Tuckenburg" onAction = "#Bill"  />
+        <Button fx:id="Ryan_hellgon" layoutX="250" layoutY="100.0" mnemonicParsing="false" text="Talk to Ryan Hellgon" onAction = "#Ryan"/>
+        <Button fx:id="Victoria_dove" layoutX="400" layoutY="100.0" mnemonicParsing="false" text="Talk to Goerge Willinton" onAction="#Goerge"  />
+        <Button fx:id="Game_Room" layoutX="100" layoutY="200.0" mnemonicParsing="false" text="Go to game room" onAction="#game_Room" />
+        <Button fx:id="Go_to_lobby" layoutX="250" layoutY="200.0" mnemonicParsing="false" text="Go to lobby" onAction="#lobby"  />
+        <Button fx:id="Exit" layoutX="400" layoutY="200.0" mnemonicParsing="false" text="Exit" onAction = "#exit"/>
+      
+     
+    </children>
+</AnchorPane>

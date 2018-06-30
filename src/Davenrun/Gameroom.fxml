@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.GameroomController">
+    <children>
+        
+        <TextArea fx:id="prompt" layoutX="100" layoutY="0.0" text = "Welcome to the game room"/>
+        <Button fx:id="lobby" layoutX="100" layoutY="100.0" mnemonicParsing="false" text="Go to lobby" onAction = "#lobby" />
+        <Button fx:id="Management_center" layoutX="200" layoutY="100.0" mnemonicParsing="false" text="Go to management center" onAction = "#Management_center"/>
+        <ComboBox fx:id="Actions" layoutX="375.0" layoutY="100.0" prefWidth="150.0" /> 
+        <ComboBox fx:id = "Game" layoutX="550" layoutY="100.0" /> 
+       <Button fx:id="button" layoutX="375" layoutY="200.0" mnemonicParsing="false" text="Submit Action" onAction="#doAction" />
+       <Button fx:id="button2" layoutX="550" layoutY="200.0" mnemonicParsing="false" text="Submit Action" onAction="#doAction2"/>
+        <Button fx:id="Exit" layoutX="100" layoutY="200.0" mnemonicParsing="false" text="Leave game room" onAction = "#exit" />
+    </children>
+</AnchorPane>

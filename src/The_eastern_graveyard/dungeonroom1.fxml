@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="The_eastern_graveyard.Dungeonroom1Controller">
+   <children>
+        <ScrollPane prefHeight="400.0" prefWidth="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <content>
+                
+                <Pane prefHeight="800.0" prefWidth="51.0"> <!-- Add FXML id to your pane here --> 
+                    <children>   
+                        <TextArea fx:id="prompt" layoutX="100" layoutY="0.0"  />
+                        <Button fx:id="Attack" layoutX="100" layoutY="200.0" mnemonicParsing="false" text="Attack" onAction = "#attack" />
+                        <Button fx:id="Drink_potion" layoutX="200" layoutY="200.0" mnemonicParsing="false" text="Drink health posion" onAction = "#Drink_potion"/>
+                        <Button fx:id="Run" layoutX="350" layoutY="200.0" mnemonicParsing="false" text="Run" onAction = "#run" /> 
+                        <ComboBox fx:id="Look" layoutX="100" layoutY="300.0" /> 
+                        <Button fx:id="button" layoutX="100" layoutY="400.0" mnemonicParsing="false" text="Submit Action" />
+                        <Button fx:id = "Player_stats" layoutX="250" layoutY="300.0"  mnemonicParsing="false" text="Player stats"  onAction = "#stats" />  
+                        <TextArea fx:id="stats" layoutX="100" layoutY="450.0"/>                     
+                    </children>
+                </Pane>
+            </content>
+        </ScrollPane> 
+    </children>
+</AnchorPane>

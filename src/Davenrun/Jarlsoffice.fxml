@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.JarlsofficeController">
+    <children>
+
+        <TextArea fx:id="prompt" layoutX="100" layoutY="0.0" text = "Welcome to the jarls office"/>
+        <Button fx:id="Bill_rates" layoutX="100" layoutY="100.0" mnemonicParsing="false" text="Talk to Davenrun Guard" onAction = "#Bill"  />
+        <Button fx:id="Ryan_hellgon" layoutX="250" layoutY="100.0" mnemonicParsing="false" text="Talk the Jarl of Davenrun" onAction = "#Ryan"/>
+        <Button fx:id="Exit" layoutX="400" layoutY="100.0" mnemonicParsing="false" text="Exit" onAction = "#exit"/>
+    </children>
+</AnchorPane>

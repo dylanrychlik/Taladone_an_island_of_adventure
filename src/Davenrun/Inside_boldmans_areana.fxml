@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="250.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.Inside_boldmans_areanaController">
+    <children>
+      <TextArea fx:id="prompt" layoutX="0" layoutY="0.0" text="What will you fight?"  />
+        <Button fx:id="Go_inside" layoutX="100" layoutY="50.0" mnemonicParsing="false" text="Spider" onAction="#attackspider" />
+        <Button fx:id="Go_South" layoutX="100" layoutY="100.0" mnemonicParsing="false" text="Skelaton" onAction ="#attack_skelaton"/>
+        <Button fx:id="Go_North" layoutX="100" layoutY="150.0" mnemonicParsing="false" text="Zombie" onAction ="#attack_Zombie" />       
+        <Button fx:id="Go_West" layoutX="100" layoutY="200.0" mnemonicParsing="false" text="Snake" onAction = "#attack_snake"/>
+        <Button fx:id = "Go_East" layoutX="100" layoutY="250.0" mnemonicParsing="false" text="Raptor" onAction = "#attack_Raptor"/> 
+        <Button fx:id="Go_SouthWest" layoutX="100" layoutY="300.0" mnemonicParsing="false" text="Exit Areana"  onAction = "#Exit"/>
+    
+    </children>  
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.Guard_centerController">
+    <children>
+
+        <TextArea fx:id="prompt" layoutX="100" layoutY="0.0" text = "Welcome to the guard center" />
+        <Button fx:id="Bill_rates" layoutX="100" layoutY="100.0" mnemonicParsing="false" text="Talk to Davenrun Guard 1" onAction = "#Guard1" />
+        <Button fx:id="Ryan_hellgon" layoutX="250" layoutY="100.0" mnemonicParsing="false" text="Talk to Davenrun Guard 2" onAction = "#Guard2" />
+        <Button fx:id="Victoria_dove" layoutX="400" layoutY="100.0" mnemonicParsing="false" text="Talk to Davenrun Guard 3"  onAction = "#Guard3" />
+        <Button fx:id="Davenrun_guard4" layoutX="100" layoutY="200.0" mnemonicParsing="false" text="Talk to Davenrun Guard 4" onAction = "#Guard4" />
+        <Button fx:id="Davenrun_guard5" layoutX="250" layoutY="200.0" mnemonicParsing="false" text="Talk to Davenrun Guard 5" onAction = "#Guard5" />
+        <Button fx:id="Jarls_office" layoutX="400" layoutY="200.0" mnemonicParsing="false" text="Go to jarls office" onAction = "#jarls_office"/>
+        <Button fx:id="Davenrun_Jail" layoutX="100" layoutY="300.0" mnemonicParsing="false" text="Go to Davenrun Jail" onAction = "#Management_center"/>
+        
+      
+        <Button fx:id="Exit" layoutX="250" layoutY="300.0" mnemonicParsing="false" text="Exit"  onAction="#exit" />
+    </children>
+</AnchorPane>
