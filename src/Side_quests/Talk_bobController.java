@@ -93,7 +93,7 @@ public class Talk_bobController implements Initializable {
         current.setPrefSize(300, 300);
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();
-         current.setText("Quests: \n Side Quest: The Fued \n Objective: Talk to bill");
+         current.setText("Quests: \n Side Quest: The Fued \n Objective: Talk to Bob");
             Look.getItems().addAll("Good list", "Weapon list", "Armor list");
         Look.setValue("Look");
            button2.setOnAction(event -> {

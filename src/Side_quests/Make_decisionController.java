@@ -209,7 +209,7 @@ public class Make_decisionController implements Initializable {
         alert.setTitle("Bill"); 
          alert.setHeight(275);
             alert.setContentText(""
-                    + "Okay, well mabye I was being a little too harsh... alright... \n you can come back, but you HAVE to get a job to support the family. ");
+                    + "Okay, well mabye I was being a little too harsh... alright... \n you can come back, but you HAVE to get a job to support the family.\n Side Quest completed! ");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -226,7 +226,7 @@ public class Make_decisionController implements Initializable {
          Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Bob"); 
          alert.setHeight(275);
-            alert.setContentText("Now get out of here and never come back! This man is my new brother!");
+            alert.setContentText("Now get out of here and never come back! This man is my new brother! Side Quest completed!");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -242,7 +242,7 @@ public class Make_decisionController implements Initializable {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Bill and Bob"); 
          alert.setHeight(275);
-            alert.setContentText("Bill: Aw I'm sorry bob. \n Bob: I’m sorry too Bill. Lets both compripise. I will let your stay if you work harder deal? \n Bob: Deal  ");
+            alert.setContentText("Bill: Aw I'm sorry bob. \n Bob: I’m sorry too Bill. Lets both compripise. I will let your stay if you work harder deal? \n Bob: Deal  \n Side Quest completed!");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait(); 

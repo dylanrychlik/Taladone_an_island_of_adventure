@@ -64,7 +64,7 @@ public class Talk_victoria_doveController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "You see the gang and their leader. ''Aye, an alcholic and a shit talker! \n That is the last that Davenrun needs'' \n You go talk to the Davenrun gang leader!";
+     String intro = "You go talk to Vicoria Dove";
      public void The_stalkerController() {
        
         this.prompt = new TextArea();

@@ -253,7 +253,7 @@ Player.addbank(30);
         alert.setContentText(intro + "You add 30 gold. Your bank is now " +  Player.getbank());
 
         ButtonType buttonTypeOne = new ButtonType("ok");
-            Sidequests[2] = true;
+            Sidequests[1] = true;
           Stage Stage = new Stage();
          Stage.setTitle("Outside House");
                 Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Outsidehouse.fxml"));

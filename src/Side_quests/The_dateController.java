@@ -66,7 +66,7 @@ public class The_dateController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "Side quest started: The date \n You go on a date with a girl. \n You have a drink with her in the casino and play card games with her. You hold her hand through out the night. \n You have dinner in the game from the meat of the creature of the island. \n At the end of the date  girl looks at in the eye. Want to go back to my house and sleep with me?";
+     String intro = "Side quest started: The date \n You go on a date with a girl. \n You have a drink with her in the casino and play card games with her. \n You hold her hand through out the night. \n You have dinner in the game from the meat of the creature of the island. \n At the end of the date  girl looks at in the eye. \n Want to go back to my house and sleep with me?";
      public void The_stalkerController() {
        
         this.prompt = new TextArea();
@@ -93,7 +93,7 @@ public class The_dateController implements Initializable {
         current.setPrefSize(300, 300);
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();
-         current.setText("Quests: \n Side Quest: The shy guy \n Objective: Talk to the girl");
+         current.setText("Quests: \n Side Quest: The Date \n Objective: Decide if you wish to sleep with girl");
             Look.getItems().addAll("Good list", "Weapon list", "Armor list");
         Look.setValue("Look");
            button2.setOnAction(event -> {
@@ -260,14 +260,5 @@ Sidequests[14]= true;
         Stage.show();
         closeWindow();   
     
-    }
-       public void talk4() throws IOException{
-         Stage Stage = new Stage();
-        Stage.setTitle("Make decision");
-        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Make_decision.fxml"));
-        Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow();    
-           
     }
 }

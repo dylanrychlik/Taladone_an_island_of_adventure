@@ -68,7 +68,7 @@ public class Betray_victoria_doveController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "The man dies and you take his 200 gold''Thank you adventure... now give me the gold'' - she says as she puts a sword towards your head";
+     String intro = "The man dies and you take his 200 gold. \n''Thank you adventure ...'' - she puts a sword towards your head. ''Now give me the gold''\n";
    public void The_stalkerController() {
        
         this.prompt = new TextArea();
@@ -226,7 +226,8 @@ public class Betray_victoria_doveController implements Initializable {
                   alert.setContentText("''Smart adventurer''. Side quest completed!");
                      Player.subtractbank(200);
                      Sidequests[9] = true;
-                     JOptionPane.showMessageDialog(null, "side quest completed!");
+                    alert.getButtonTypes().setAll(ok,no);
+         new_result = alert.showAndWait();
                      
                   
                 Stage Stage = new Stage();
@@ -241,8 +242,11 @@ public class Betray_victoria_doveController implements Initializable {
                    alert.setTitle("Victoria Dove"); 
          alert.setHeight(275);
                   alert.setContentText("You will die then!");
+                   alert.getButtonTypes().setAll(ok,no);
+         new_result = alert.showAndWait();
                 Stage Stage = new Stage();
                 Stage.setTitle("Attack victoria dove");
+                
                 Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Attack_victoria_dove.fxml"));
                 Stage.setScene(new Scene(root, 1000, 750));
                 Stage.show();

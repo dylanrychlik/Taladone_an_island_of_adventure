@@ -232,12 +232,7 @@ public class Talk_inn_keeperController implements Initializable {
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
- Stage Stage = new Stage();
-        Stage.setTitle("Gang");
-        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Attack_gang.fxml"));
-        Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow();    
+ 
 
     }
 }

@@ -6,9 +6,13 @@
 package Side_quests;
 
 import static Davenrun.OutsidehouseController.Armoritem;
+import static Davenrun.OutsidehouseController.Sidequests;
 import static Davenrun.OutsidehouseController.Weaponitem;
 import static Davenrun.OutsidehouseController.gooditem;
-import static Davenrun.OutsidehouseController.Sidequests;
+import static Davenrun.OutsidehouseController.row1;
+import static Davenrun.OutsidehouseController.row2;
+import static Davenrun.OutsidehouseController.row3;
+import static Davenrun.OutsidehouseController.row4;
 import Davenrun.Player;
 import Davenrun.goodItem;
 import java.io.IOException;
@@ -36,14 +40,14 @@ import javafx.stage.Stage;
  */
 public class Attack_stalkerController implements Initializable {
 
-    private Player you;
+     private Player you;
     int Enemyhealth = 10;
     Queue<String> enmies = new LinkedList<String>();
     int numhealthptoion = 3;
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-    String intro = " ";
+    String intro = "You go and attack the Stalker ";
 
     @FXML
     private ComboBox Look;
@@ -58,11 +62,14 @@ public class Attack_stalkerController implements Initializable {
     private Button Player_stats;
     @FXML
     private TextArea stats;
-
+    @FXML
+    private TextArea current;
     @FXML
     private Button Drink_potion;
     @FXML
     private Button Run;
+    @FXML
+    private TextArea Map;
 
     public void AttackspiderController() {
         this.prompt = new TextArea();
@@ -70,8 +77,9 @@ public class Attack_stalkerController implements Initializable {
         this.Drink_potion = new Button();
         this.Run = new Button();
         this.button = new Button();
-
+        this.current = new TextArea();
         this.stats = new TextArea();
+        this.Map = new TextArea();
         this.button = new Button();
         this.Look = new ComboBox();
         this.Player_stats = new Button();
@@ -80,7 +88,7 @@ public class Attack_stalkerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        enmies.add("The Stalker");
+        enmies.add("The The stalker");
 
         intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
                 + "\n You armor is " + Player.getarmor() + "Enemy health is " + Enemyhealth + "\n What will you do?";
@@ -92,7 +100,54 @@ public class Attack_stalkerController implements Initializable {
             //Call a method to determine which item in the list the user has selected
             doAction2(Look.getValue().toString()); //Send the selected item to the method
         });
+        prompt.setText(intro);
+        button.setOnAction(event -> {
+            //Call a method to determine which item in the list the user has selected
+            doAction2(Look.getValue().toString()); //Send the selected item to the method
+        });
+        current.setText("Quests: \n Side Quest: The Stalker \n Objective: Kill the Stalker");
 
+        fillmap();
+    }
+
+    public void fillmap() {
+        int MapHeight = 4;
+        int MapWidth = 3;
+        row1.clear();
+        row2.clear();
+        row3.clear();
+        row4.clear();
+        row1.add('^');
+        row1.add('O');
+        row1.add('^');
+        row2.add('^');
+        row2.add('^');
+        row2.add('^');
+        row3.add('^');
+        row3.add('^');
+        row3.add('^');
+        row4.add('X');
+        row4.add('X');
+        row4.add('^');
+        Map.setPrefWidth(300);
+        StringBuilder builder = new StringBuilder(row1.size());
+        StringBuilder builder2 = new StringBuilder(row2.size());
+        StringBuilder builder3 = new StringBuilder(row3.size());
+        StringBuilder builder4 = new StringBuilder(row4.size());
+        for (Character ch : row1) {
+            builder.append("\t" + ch);
+        }
+        for (Character ch : row2) {
+            builder2.append("\t" + ch);
+        }
+        for (Character ch : row3) {
+            builder3.append("\t" + ch);
+        }
+        for (Character ch : row4) {
+            builder4.append("\t" + ch);
+        }
+
+        Map.setText("Davenrun \n Circle represents your current location. \n  Arrow represent a reachable location \n X represent a locations that is unreachable \n" + builder.toString() + "\n" + builder2.toString() + "\n" + builder3.toString() + "\n" + builder4.toString() + "\n");
     }
 
     public void stats() {
@@ -172,7 +227,7 @@ public class Attack_stalkerController implements Initializable {
             } else {
                 Player.addhealth(100);
                 alert.close();
-               Stage Stage = new Stage();
+                Stage Stage = new Stage();
                 Stage.setTitle("Outside House");
                 Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Outsidehouse.fxml"));
                 Stage.setScene(new Scene(root, 1000, 750));
@@ -195,11 +250,15 @@ public class Attack_stalkerController implements Initializable {
             prompt.setText(intro);
             if (enmies.isEmpty()) {
 
-                intro = " ";
-                Player.addbank(30);
-                intro += "You add 30 gold. You bank is now " + Player.getbank();
-                prompt.clear();
-                prompt.setText(intro);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Side Quest completed!");
+alert.setHeaderText("Side Quest completed!");
+            alert.setContentText("You leave the stalker and return to Davenrun. You see that are far in the central region, \n less than a mile from the Northen Bridge.");
+
+            ButtonType Yes = new ButtonType("Ok");
+      
+            alert.getButtonTypes().setAll(Yes);
+            Optional<ButtonType> result = alert.showAndWait();
                 Sidequests[0] = true;
                 Thread.sleep(3);
 
@@ -238,12 +297,12 @@ public class Attack_stalkerController implements Initializable {
         prompt.clear();
         prompt.setText(intro);
         Stage Stage = new Stage();
-       
-                Stage.setTitle("Outside House");
-                Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Outsidehouse.fxml"));
-                Stage.setScene(new Scene(root, 1000, 750));
-                Stage.show();
-                closeWindow();
+
+        Stage.setTitle("Outside House");
+        Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Outsidehouse.fxml"));
+        Stage.setScene(new Scene(root, 1000, 750));
+        Stage.show();
+        closeWindow();
     }
 
     public void goodlist() {

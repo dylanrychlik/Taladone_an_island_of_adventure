@@ -244,13 +244,13 @@ public class Attack_gang_leaderController implements Initializable {
             prompt.setText(intro);
             if (enmies.isEmpty()) {
                       Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-  alert.setContentText(intro + "You add 30 gold. Your bank is now " +  Player.getbank());
+  alert.setContentText(intro + "You leave the inn with your head huring. \n Side quest completed! \n You add 30 gold. Your bank is now " +  Player.getbank());
 
         ButtonType buttonTypeOne = new ButtonType("ok");
         Optional<ButtonType> result = alert.showAndWait();
                 Sidequests[7] = true;
             intro = ""; Player.addbank(200);
-            intro = "I ... I can't bealive he is gone. \n Side quests completed";
+          
   Stage Stage = new Stage();
                 Stage.setTitle("Outside House");
                 Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Outsidehouse.fxml"));

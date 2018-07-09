@@ -250,7 +250,16 @@ public class Attack_victoria_doveController implements Initializable {
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
+Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Side Quest Completion");
+            alert.setHeaderText("Side Quest Completioned!");
 
+            alert.setContentText("You leave the casino as the Davenrun Guards \n prepare her for the Eastern Graveyard. \n Side Quest Completioned!");
+
+          
+            ButtonType Cancel = new ButtonType("Ok");
+            alert.getButtonTypes().setAll(Cancel);
+            Optional<ButtonType> result = alert.showAndWait();
                 intro = " ";
                 Player.addbank(200);
                 intro += "You add 200 gold. You bank is now " + Player.getbank();
