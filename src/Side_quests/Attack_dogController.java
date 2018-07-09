@@ -243,13 +243,13 @@ public class Attack_dogController implements Initializable {
             prompt.setText(intro);
             if (enmies.isEmpty()) {
                       Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-  alert.setContentText(intro + "You add 30 gold. Your bank is now " +  Player.getbank());
+  alert.setContentText("\n I ... I can't bealive he is gone. \n Side quests completed. \n You add 30 gold. Your bank is now " +  Player.getbank());
 
         ButtonType buttonTypeOne = new ButtonType("ok");
         Optional<ButtonType> result = alert.showAndWait();
                 Sidequests[5] = true;
             intro = ""; Player.addbank(200);
-            intro = "I ... I can't bealive he is gone. \n Side quests completed";
+            intro = "";
   Stage Stage = new Stage();
                 Stage.setTitle("Outside House");
                 Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Outsidehouse.fxml"));
