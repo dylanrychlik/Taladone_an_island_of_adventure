@@ -74,7 +74,7 @@ public class Cave7room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You see a large man standing fend off from the snapp turtles. One them grabs him \n and swallows him whole. The five turtle then go and attack you. \n You grab yoru sword and charge.";
+        intro = "You see a large man standing fend off from the snapp turtles. One them grabs him \n and swallows him whole. The five turtle then go and attack you. \n You grab your sword and charge.";
         prompt.setText(intro);
     
         enmies.add("Snapping turtle");

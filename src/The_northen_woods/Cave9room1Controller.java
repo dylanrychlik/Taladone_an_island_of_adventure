@@ -73,7 +73,7 @@ public class Cave9room1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You then and go attack see the Giants as you get closer they feel threatened \n and then go and attack you.";
+        intro = "You then and go attack and see the Giants as you get closer they feel threatened \n and then go and attack you.";
         prompt.setText(intro);
         enmies.add("Giant");
         enmies.add("Giant");

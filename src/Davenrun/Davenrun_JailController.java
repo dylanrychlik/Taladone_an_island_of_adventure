@@ -60,7 +60,7 @@ public class Davenrun_JailController implements Initializable {
  public void prisoner1(){
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Prisoner ");
-        alert.setContentText(" Prisoner: I am in for Stealing gold from the casino. I was trying to provide for my family. We were gonna lose our house if we didn’t find a gold. \n I had no job, so I went to the casino and tried to steal, I was caught, now I am here");
+        alert.setContentText(" Prisoner: I am in for stealing gold from the Casino. I was trying to provide for my family. We were gonna lose our house if we didn’t find gold. \n I had no job, so I went to the casino and tried to steal, I was caught, now I am here.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -68,7 +68,7 @@ public class Davenrun_JailController implements Initializable {
   public void prisoner2(){
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Prisoner ");
-        alert.setContentText(" Prisoner: I am in for… Murder. In cold blood. In my youth… I had rather anggry temper, I killed a man who was making me very anrgy.\n The jarl at the time let me have life in prison, instead of killing me. I guess I should be thankful. I had time to think, and I am no longer angry. Just waiting for the sweet realize of death.");
+        alert.setContentText(" Prisoner: I am in for… murder. In cold blood. In my youth… I had rather anggry temper, I killed a man who was making me very anrgy.\n The Jarl at the time let me have life in prison, instead of killing me. I guess I should be thankful. I had time to think, and I am no longer angry. Just waiting for the sweet realize of death.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();

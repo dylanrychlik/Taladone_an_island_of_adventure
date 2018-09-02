@@ -105,6 +105,7 @@ public static boolean[] locations = new boolean[30];
         Map.setEditable(false);
         Map.setPrefHeight(400);
         current.setEditable(false);
+         locations[27] = true;
         current.setPrefSize(300, 250);
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();

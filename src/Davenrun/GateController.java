@@ -107,13 +107,13 @@ public class GateController extends DataModel implements Initializable {
         if (Player.getJarl_level_count() == 0) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Gate Guard");
-            alert.setContentText("Gate Guard: You are not ready. I suggest you go talk to the Jalr first. ");
+            alert.setContentText("Gate Guard: You are not ready. I suggest you go talk to the Jarl first. ");
 
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             alert.showAndWait();
         }
-        else {
+        if (Player.getJarl_level_count() > 1) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Gate Guard");
             alert.setContentText("Gate Guard: You already completed this quest! Do you wish to retry it?");
@@ -168,13 +168,13 @@ public class GateController extends DataModel implements Initializable {
         if (Player.getJarl_level_count() < 3) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Gate Guard");
-            alert.setContentText("Gate Guard: You are not ready. I suggest you go talk to the Jalr first. ");
+            alert.setContentText("Gate Guard: You are not ready. I suggest you go talk to the Jarl first. ");
 
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             alert.showAndWait();
         }
-          else {
+            if (Player.getJarl_level_count() > 3)  {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Gate Guard");
             alert.setContentText("Gate Guard: You already completed this quest! Do you wish to retry it?");
@@ -228,13 +228,13 @@ public class GateController extends DataModel implements Initializable {
         if (Player.getJarl_level_count() < 5) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Gate Guard");
-            alert.setContentText("Gate Guard: You are not ready. I suggest you go talk to the Jalr first. ");
+            alert.setContentText("Gate Guard: You are not ready. I suggest you go talk to the Jarl first. ");
 
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             alert.showAndWait();
     }
-        else {
+           if (Player.getJarl_level_count() > 5)  {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Gate Guard");
             alert.setContentText("Gate Guard: You already completed this quest! Do you wish to retry it?");
@@ -287,13 +287,13 @@ public class GateController extends DataModel implements Initializable {
         if (Player.getJarl_level_count() < 7) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Gate Guard");
-            alert.setContentText("Gate Guard: You are not ready. I suggest you go talk to the Jalr first. ");
+            alert.setContentText("Gate Guard: You are not ready. I suggest you go talk to the Jarl first. ");
 
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             alert.showAndWait();
     }
-         else {
+            if (Player.getJarl_level_count() > 7)  {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Gate Guard");
             alert.setContentText("Gate Guard: You already completed this quest! Do you wish to retry it?");

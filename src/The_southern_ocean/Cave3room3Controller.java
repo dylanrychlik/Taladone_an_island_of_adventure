@@ -77,12 +77,11 @@ public class Cave3room3Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-intro = " You see four more banits as well as the banit leader. \n The banit sub leader and banits have banits to the womans 3 children. \n The banit leader \n has his knife to the woman. ''You stupid bitch, I'll make you suffer. \n I killed your dumbarse husband. \n I'll skin your precoius children alive while you scream begging me to stop. \n Once thier dead, I'll have my fun with your pretty face while you cry in dispear, \n  and then I'll chain you in this cave to die.'' \n You then come out and shoot an arrow through a banit. \n The banit leader soves the woman. ''Kill him! Make him suffer!'' And the men charge.";
- prompt.setText(intro);
-       enmies.add("Banit");
- enmies.add("Banit");
- enmies.add("Banit subleader");
- enmies.add("Banit leader");
+intro = "You see the agler  and go and attack";
+prompt.setText(intro);
+   enmies.add("agler ");
+  enmies.add("agler "); 
+  enmies.add("agler ");
        
    intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
                 + "\n You armor is " + Player.getarmor() + "Enemy health is " + Enemyhealth + "\n What will you do?";

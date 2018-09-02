@@ -39,11 +39,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+
 public class Junction6Controller implements Initializable {
 
     // String intro = " You travel to the the fourth junction of the northen region \n You eat an apple and some water as you sit in the near log. From behind you you hear a twig snap. You turn around to see a man sitting there. You: What are you doing here? What do you want?” \n “Beware the dragon traveler. Fires breath from its mouth and flies like an bird in the sky.. Beyond the dragons lair is the northen coast. It leads to northen irlead laddy.” \n You put your sword away and the man dissaplear in the night. You fall down beyond the log behind you to see a bunny hopping near by. \n There are no enmies int his area!";
-   String intro = "You come to the 6th Junction in the souther egion.\n  You come to the 6th Junction in southern region. The JUCNTION looks clear and you breath relaxed int he deep water. "; 
-   public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
+    String intro = "You come to the 6th Junction in the souther egion.\n  You come to the 6th Junction in southern region. The JUCNTION looks clear and you breath relaxed int he deep water. ";
+    public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row8 = new ArrayList<Character>(MapWidth);
@@ -90,9 +91,9 @@ public class Junction6Controller implements Initializable {
         this.Go_SouthEast = new Button();
     }
 
-     @Override
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
-  prompt.setPrefHeight(150);
+        prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);
         prompt.setEditable(false);
@@ -100,6 +101,7 @@ public class Junction6Controller implements Initializable {
         Map.setEditable(false);
         Map.setPrefHeight(400);
         current.setEditable(false);
+        locations[5] = true;
         current.setPrefSize(300, 180);
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();
@@ -133,8 +135,7 @@ public class Junction6Controller implements Initializable {
 
     public void fillmap() {
 
-       
-          row1.clear();
+        row1.clear();
         row2.clear();
         row3.clear();
         row4.clear();
@@ -278,7 +279,7 @@ public class Junction6Controller implements Initializable {
         StringBuilder builder9 = new StringBuilder(row9.size());
         StringBuilder builder10 = new StringBuilder(row10.size());
         StringBuilder builder11 = new StringBuilder(row11.size());
-          StringBuilder builder12 = new StringBuilder(row12.size());
+        StringBuilder builder12 = new StringBuilder(row12.size());
         StringBuilder builder13 = new StringBuilder(row13.size());
 
         for (Character ch : row1) {
@@ -315,13 +316,13 @@ public class Junction6Controller implements Initializable {
             builder11.append("\t" + ch);
         }
 
-         for (Character ch : row12) {
+        for (Character ch : row12) {
             builder12.append("\t" + ch);
         }
-          for (Character ch : row13) {
+        for (Character ch : row13) {
             builder13.append("\t" + ch);
         }
-        Map.setText("The Southern Ocean \n ^ represents your current location. \n  O represent a reachable location \n X represent a location that is unreachable \n" + builder.toString() + "\n" +builder2.toString() + "\n" +builder3.toString() + "\n" + builder4.toString() + "\n" + builder5.toString() + "\n" + builder6.toString() + "\n"
+        Map.setText("The Southern Ocean \n ^ represents your current location. \n  O represent a reachable location \n X represent a location that is unreachable \n" + builder.toString() + "\n" + builder2.toString() + "\n" + builder3.toString() + "\n" + builder4.toString() + "\n" + builder5.toString() + "\n" + builder6.toString() + "\n"
                 + builder7.toString() + "\n" + builder8.toString() + "\n" + builder9.toString() + "\n" + builder10.toString() + "\n"
                 + builder11.toString() + "\n" + builder12.toString() + "\n" + builder13.toString() + "\n");
     }
@@ -353,42 +354,43 @@ public class Junction6Controller implements Initializable {
 
     public void go_NorthWest() throws IOException {
 
-         Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Cabin.fxml"));
-                Stage stage = new Stage();
-                stage.setTitle("Cabin");
-                stage.setScene(new Scene(root, 1000, 750));
-                 stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Cabin.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Cabin");
+        stage.setScene(new Scene(root, 1000, 750));
+        stage.show();
         closeWindow();
     }
 
     public void go_Southeast() throws IOException {
-Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/House1.fxml"));
-                Stage stage = new Stage();
-                stage.setTitle("House 1");
-                stage.setScene(new Scene(root, 1000, 750));
-                 stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/House1.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("House 1");
+        stage.setScene(new Scene(root, 1000, 750));
+        stage.show();
         closeWindow();
-    }
-        public void go_North() throws IOException {
-        if (locations[7] == false) {
-         Stage Stage = new Stage();
-        Stage.setTitle("Junction 8");
-        Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/AttackJunction8.fxml"));
-       Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow();
-    }
-            if (locations[7] == true) {
-         Stage Stage = new Stage();
-        Stage.setTitle("Junction 8");
-        Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Junction8.fxml"));
-       Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow();
-    }
     }
 
-       public void go_West() throws IOException {
+    public void go_North() throws IOException {
+        if (locations[7] == false) {
+            Stage Stage = new Stage();
+            Stage.setTitle("Junction 8");
+            Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/AttackJunction8.fxml"));
+            Stage.setScene(new Scene(root, 1000, 750));
+            Stage.show();
+            closeWindow();
+        }
+        if (locations[7] == true) {
+            Stage Stage = new Stage();
+            Stage.setTitle("Junction 8");
+            Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Junction8.fxml"));
+            Stage.setScene(new Scene(root, 1000, 750));
+            Stage.show();
+            closeWindow();
+        }
+    }
+
+    public void go_West() throws IOException {
         Stage Stage = new Stage();
         Stage.setTitle("Cave 4");
         Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Cave4.fxml"));
@@ -435,13 +437,10 @@ Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/House1
         stats.setText("\n Your Armor items are in the order  by \n" + out3);
     }
 
-    
-
     @FXML
     public void closeWindow() {
         Stage stage = (Stage) this.Go_North.getScene().getWindow();
         stage.close();
     }
-
 
 }

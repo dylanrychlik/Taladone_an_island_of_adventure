@@ -290,7 +290,7 @@ prompt.setText("Welcome to Venus well that can heal the sick and wounded");
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Richardson Johnson");
 
-        alert.setContentText("Aye, bless the acient god's of Taladone");
+        alert.setContentText("Aye, bless the ancient god's of Taladone");
 
         ButtonType buttonTypeOne = new ButtonType("What can you tell me about this well??");
         ButtonType buttonTypeTwo = new ButtonType("Where are you from?");
@@ -300,7 +300,7 @@ prompt.setText("Welcome to Venus well that can heal the sick and wounded");
 
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Richardson Johnson: The powers of these ancient well remain a mystery. It is rumored that it is a gift from Venus, \n the goddess of love during the peak of the Roman Empire when a big battle took place in Talandone. \n The well was a gift to the wounded who fought so hard to defend Davenrun back then that way they could make a push to take over daven run. \n Some say the well is a blessing and a curse for that’s how all the strange monsters and creatures came to rule");
+            alert.setContentText("Richardson Johnson: The powers of these ancient well remain a mystery. It is rumored that it is a gift from Venus, \n the goddess of love during the peak of the Roman Empire when a big battle took place in Talandone. \n The well was a gift to the wounded who fought so hard to defend Davenrun back then that way they could make a push to take over Davenrun. \n Some say the well is a blessing and a curse for that’s how all the strange monsters and creatures came to rule");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -351,7 +351,7 @@ prompt.setText("Welcome to Venus well that can heal the sick and wounded");
         }
         if (result.get() == buttonTypeTwo) {
             alert.setHeight(500);
-            alert.setContentText("Elzibeth Queenston: The areana doesnn’t scare me as much as the casino. At the least the areana has a gold oprrinity. The real threat is the casino.");
+            alert.setContentText("Elzibeth Queenston: The Arena doesn’t scare me as much as the Casino. At least the arena has a gold opportunity. The real threat is the Casino.");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();

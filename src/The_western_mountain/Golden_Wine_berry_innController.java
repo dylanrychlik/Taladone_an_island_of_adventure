@@ -100,7 +100,7 @@ public class Golden_Wine_berry_innController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+     locations[23] = true;
         prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);

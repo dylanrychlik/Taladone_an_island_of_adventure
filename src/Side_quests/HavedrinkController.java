@@ -66,7 +66,7 @@ public class HavedrinkController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "Side quests started: The drink \n ''Feels good to have a drink after a hard days work.'' - the man said. \n ''I have lived in Taladone my entire life, my father raised me to hunt and my mother \n raised me to be an honorable man, 30 years gone is too fast. \n I feel as if I am getting old. \n I want to live forever.'' - he says. \n ''Say you want another dirnk?'' - he asks";
+     String intro = "Side quests started: The drink \n ''Feels good to have a drink after a hard days work.'' - the man said. \n ''I have lived in Taladone my entire life, my father raised me to hunt and my mother \n raised me to be an honorable man, 30 years gone is too fast. \n I feel as if I am getting old. \n I want to live forever.'' - he says. \n ''Say you want another drink?'' - he asks";
      public void The_stalkerController() {
        
         this.prompt = new TextArea();
@@ -211,7 +211,7 @@ public class HavedrinkController implements Initializable {
          Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Man"); 
          alert.setHeight(275);
-            alert.setContentText("You have another drink, \n You: Screw it I want another one. \n You take a shot. Soon things go burly. \n The man speaks up ''You aright? You're a light weight!'");
+            alert.setContentText("You have another drink, \n You: Screw it I want another one. \n You take a shot. Soon things go blurry. \n The man speaks up ''You aright? You're a light weight!'");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();

@@ -11,6 +11,7 @@ import static Davenrun.OutsidehouseController.Weaponitem;
 import static Davenrun.OutsidehouseController.gooditem;
 import Davenrun.Player;
 import Davenrun.goodItem;
+import static The_southern_ocean.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -74,14 +75,13 @@ public class InsidewesterncrossingController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-   
-        intro = "You go in a see a long dark and ice covered hallway. You then turn around the cornor \n and see the light before the light, a 4 dogoie heads and \n demons comes and walks towards you. \n A threat. You go and attack";
+        intro = "You go in a see a long dark and ice covered hallway. You then turn around the cornor \n and see the light before the light, a 4 dogoie heads and \n a demon comes and walks towards you. \n A threat. You go and attack";
         prompt.setText(intro);
-       enmies.add("Doogiehead");
-enmies.add("Doogiehead");
-enmies.add("Doogiehead");
-enmies.add("Doogiehead");
- enmies.add("demon");
+        enmies.add("Doogiehead");
+        enmies.add("Doogiehead");
+        enmies.add("Doogiehead");
+        enmies.add("Doogiehead");
+        enmies.add("demon");
 
         intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
                 + "\n You armor is " + Player.getarmor() + "Enemy health is " + Enemyhealth + "\n What will you do?";
@@ -195,7 +195,7 @@ enmies.add("Doogiehead");
             if (enmies.isEmpty()) {
 
                 //Thread.sleep(3000);
-
+                locations[30] = true;
                 Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Dragons_lair.fxml"));
                 Stage stage = new Stage();
                 stage.setTitle("Dragons lair");

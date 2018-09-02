@@ -1,11 +1,7 @@
-DROP DATABASE IF EXISTS Taladone;
 
-CREATE DATABASE Taladone;
-
-USE Taladone;
 
 CREATE TABLE Location (
-Location_ID INT NOT NULL AUTO_INCREMENT, 
+Location_ID INT NOT NULL, 
 Location_name varchar (50), 
 PRIMARY KEY (Location_ID)
 );
@@ -22,7 +18,7 @@ PRIMARY KEY (Player_ID)
 );
 
 CREATE TABLE Quest (
-Quest_ID INT NOT NULL auto_increment,
+Quest_ID INT NOT NULL,
 Quest_name varchar (50),
 primary_objective varchar (50), 
 secondary_objective_1 varchar (50), 
@@ -39,6 +35,7 @@ PRIMARY KEY (Side_Quest_ID)
 CREATE TABLE Quest_location_mapping (
 Quest_ID INT NOT NULL, 
 Location_ID INT NOT NULL, 
+Location_Completion bit NOT NULL, 
 PRIMARY KEY (Location_ID,Quest_ID),
 FOREIGN KEY (Location_ID) REFERENCES Location(Location_ID), 
 FOREIGN KEY (Quest_ID) REFERENCES Quest(Quest_ID) 
@@ -70,7 +67,7 @@ FOREIGN KEY (Location_ID) REFERENCES Location(Location_ID)
 
 
 CREATE TABLE Gooditems (
-Item_ID INT NOT NULL AUTO_INCREMENT, 
+Item_ID INT NOT NULL, 
 Item_name varchar (50), 
 Description varchar (200),
 Health_value INT (10),
@@ -79,7 +76,7 @@ PRIMARY KEY (Item_ID)
 ); 
 
 CREATE TABLE Store_good_items (
-Item_ID INT NOT NULL AUTO_INCREMENT, 
+Item_ID INT NOT NULL, 
 Item_name varchar (50), 
 Description varchar (200),
 Health_value INT (10),
@@ -91,7 +88,7 @@ FOREIGN KEY (Item_ID) REFERENCES Gooditems (Item_ID)
 
 
 CREATE TABLE weapon_item (
-weapon_ID INT NOT NULL AUTO_INCREMENT, 
+weapon_ID INT NOT NULL, 
 weapon_name varchar (50), 
 Description varchar (130),
 attack_value INT (10),
@@ -101,7 +98,7 @@ PRIMARY KEY (weapon_ID)
 );
 
 CREATE TABLE store_weapon_item (
-weapon_ID INT NOT NULL AUTO_INCREMENT, 
+weapon_ID INT NOT NULL, 
 weapon_name varchar (50), 
 Description varchar (130),
 attack_value INT (10),
@@ -111,7 +108,7 @@ FOREIGN KEY (weapon_ID) REFERENCES weapon_item (weapon_ID)
 );
 
 CREATE TABLE Armor (
-Armor_ID INT NOT NULL AUTO_INCREMENT, 
+Armor_ID INT NOT NULL, 
 Armor_name varchar (50), 
 Description varchar (130),
 armor_value INT (10),
@@ -120,7 +117,7 @@ PRIMARY KEY (Armor_ID)
 );
 
 CREATE TABLE Store_Armor (
-Armor_ID INT NOT NULL AUTO_INCREMENT, 
+Armor_ID INT NOT NULL, 
 Armor_name varchar (50), 
 Description varchar (130),
 armor_value INT (10),
@@ -128,7 +125,3 @@ cost INT (10),
 PRIMARY KEY (Armor_ID),
 FOREIGN KEY (Armor_ID) REFERENCES Armor (Armor_ID)
 );
-
-
-
-

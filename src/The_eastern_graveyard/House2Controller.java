@@ -44,7 +44,7 @@ import javax.swing.JOptionPane;
  */
 public class House2Controller implements Initializable {
 
-    String intro = "You come to another house. It is the most Eastern house in the island. \n The house is empty? ";
+    String intro = "You come to another house. It is the most Eastern house in the island. \n The house is empty. ";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -94,6 +94,7 @@ public class House2Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+          locations[25] = true;
         prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);

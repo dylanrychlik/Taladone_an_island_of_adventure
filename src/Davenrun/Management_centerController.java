@@ -63,7 +63,7 @@ public class Management_centerController implements Initializable {
 
     public void Bill() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Mark Tuckenburg: People in this town are stupid. betting everything they own, but I can’t control thier addiction. As cold as it is, their addiction is the reason why I have enough gold to feed everyone in this town. \n  But why should I give up everything I worked hard for to feed people who are lazy? I am the first assintiant. Ryan Helgon is the owner and Goerge Willinton is the second assintaint. \n I am in charge of the inner issues of the casino while goerge in charge of outside issues like talking the Jarl. Ryan deals both. Hence why he is the leader.");
+        alert.setContentText("Mark Tuckenburg: People in this town are stupid. Betting everything they own, but I can’t control thier addiction. As cold as it is, their addiction is the reason why I have enough gold to feed everyone in this town. \n  But why should I give up everything I worked hard for to feed people who are lazy? I am the first assintiant. Ryan Helgon is the owner and Goerge Willinton is the second assintaint. \n I am in charge of the inner issues of the casino while goerge in charge of outside issues like talking the Jarl. Ryan deals both. Hence why he is the leader.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -71,7 +71,7 @@ public class Management_centerController implements Initializable {
 
     public void Ryan() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Ryan: I am the leader of this casino. I am the reason why the casino is so popular I keep this place in bussinese. Some think of me as an evil man, I think of myself as man of worked hard like all three of us ");
+        alert.setContentText("Ryan: I am the leader of this casino. I am the reason why the casino is so popular I keep this place in business. Some think of me as an evil man, I think of myself as man of worked hard like all three of us ");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();

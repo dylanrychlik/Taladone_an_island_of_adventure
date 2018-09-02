@@ -40,7 +40,7 @@ import javafx.stage.Stage;
  */
 public class EasterncrossingController implements Initializable {
 
-   String intro = "Welcome to Eastern crossing. This is the one of way \n you can cross to get to the draons lairs. " + "\n Inside the corssing a creature of unknown lurks within. Waiting to attack you" + "\n Do you wish to go inside?";
+   String intro = "Welcome to Eastern crossing. This is the one of way \n you can cross to get to the dragons lairs. " + "\n Inside the crossing a creature of unknown lurks within. Waiting to attack you" + "\n Do you wish to go inside?";
      public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);

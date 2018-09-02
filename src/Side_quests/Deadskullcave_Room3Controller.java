@@ -242,7 +242,7 @@ public class Deadskullcave_Room3Controller implements Initializable {
             if (enmies.isEmpty()) {
   Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Girl");
-intro = "Thank you advenrure I will always be thankful. Here isa little something for your trouble";
+intro = "Thank you advenrurer I will always be thankful. Here is a little something for your trouble";
 Player.addbank(50);
         alert.setContentText(intro + "Gold is now" +  Player.getbank() +  "\n Side quest complted!");
 

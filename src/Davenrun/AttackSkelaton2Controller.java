@@ -30,7 +30,7 @@ public class AttackSkelaton2Controller implements Initializable {
 
     private Player you;
     int Enemyhealth = 10;
-    String intro = "Dylan Alberton: Good day Davenrun! Today is a day of DEATH and DISPEAR! \n Today we have our contendent " + you.Getname() + " plus the opposer, the creatures that haunt \n Taladone! \n Is the contenent a WASTE OF SPACE in this town, or does he/she have what it \n takes to be.... AN ADVENTURER! Only faith will find out!";
+    String intro = "Dylan Alberton: Good day Davenrun! Today is a day of DEATH and DESPAIR! \n Today we have our contendent " + you.Getname() + " plus the opposer, the creatures that haunt \n Taladone! \n Is the contenent a WASTE OF SPACE in this town, or does he/she have what it \n takes to be.... AN ADVENTURER! Only faith will find out!";
     Queue<String> enmies = new LinkedList<String>();
     int numhealthptoion = 3;
     int healthpotionhealamount = 30;
@@ -195,10 +195,10 @@ public class AttackSkelaton2Controller implements Initializable {
 
                 Thread.sleep(3);
 
-                Stage Stage = new Stage();
+           Stage Stage = new Stage();
                 Stage.setTitle("Go_inside_boldsman_areana");
                 Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Inside_boldmans_areana.fxml"));
-                Stage.setScene(new Scene(root, 250, 3500));
+                Stage.setScene(new Scene(root, 250, 350));
                 Stage.show();
                 closeWindow();
 

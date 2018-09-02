@@ -28,13 +28,16 @@ import static The_northen_woods.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
@@ -45,7 +48,7 @@ import javafx.stage.Stage;
  * @author The flash
  */
 public class Cave9Controller implements Initializable {
-    String intro = "You travel to giant cave. Inside are the taldone giants. \n They are gennerally pretty peacefull creatures, \n but attack anyone who goes inside the cave. \n Jarl speaks of gold that is within the cvae for anyone who clearns it. \n Will you get the gold or save your engery for the real enemy?";
+    String intro = "You travel to giant cave. Inside are the taldone giants. \n They are gennerally pretty peacefull creatures, \n but attack anyone who goes inside the cave. \n Jarl speaks of gold that is within the cvae for anyone who clears it. \n Will you get the gold or save your engery for the real enemy?";
 public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -354,6 +357,19 @@ public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
         }
     }
       public void go_inside_boldmans_areana() throws IOException {
+            if(locations[20] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+         ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+          else {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 9");
         Parent root = FXMLLoader.load(getClass().getResource("/The_northen_woods/Cave9room1.fxml"));
@@ -362,7 +378,7 @@ public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
         closeWindow();
     }
 
-
+      }
 
     public void go_South() throws IOException {
 

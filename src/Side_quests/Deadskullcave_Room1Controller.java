@@ -46,7 +46,7 @@ public class Deadskullcave_Room1Controller implements Initializable {
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-    String intro = " Side quest started: The rescue mission \n You go inside deadweb cave. You step on damp webs on the ground \n and see several dead bodies in the distance you hear a scream.\n You get a stange feeling from behind and draw your swor";
+    String intro = " Side quest started: The rescue mission \n You go inside deadweb cave. You step on damp webs on the ground \n and see several dead bodies in the distance you hear a scream.\n You get a stange feeling from behind and draw your sword";
     @FXML
     private TextArea Map;
     @FXML

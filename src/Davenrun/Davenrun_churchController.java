@@ -109,7 +109,7 @@ public class Davenrun_churchController implements Initializable {
         }
         Look.getItems().addAll("Good list", "Weapon list", "Armor list");
         Look.setValue("Look");
-        Actions.getItems().addAll("Ed Volvo", "Bernie Welteron", "Dan Townsand", "Maderson Runton", "Nathan Steel");
+        Actions.getItems().addAll("Ed Volvo", "Bernie Welteron", "Dan Townsand", "Maderson Runton");
 
         Actions.setValue("Talk to");
 
@@ -275,7 +275,7 @@ public class Davenrun_churchController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Dan Townsand");
 
-        alert.setContentText("Dan Townsand: go inside the inn to get warm and have a dirnk God knows every man needs it. ");
+        alert.setContentText("Dan Townsand: go inside the Inn to get warm and have a drink God knows every man needs it. ");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -286,7 +286,7 @@ public class Davenrun_churchController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Bernie Welteron");
 
-        alert.setContentText("Bernie Welterton: I remeber this church was a safe haven to pray to the lord and confese our sins. \n Now it the general of all the evil that it is in Taladone. ");
+        alert.setContentText("Bernie Welterton: I remember when this church was a safe haven to pray to the lord and confess our sins. \n Now it the general of all the evil that it is in Taladone. ");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -332,7 +332,7 @@ public class Davenrun_churchController implements Initializable {
             stage.show();
             closeWindow();  
         }
-         else {
+           if (Player.getJarl_level_count() > 10)  {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Gate Guard");
             alert.setContentText("Gate Guard: You already completed this quest! Do you wish to retry it?");

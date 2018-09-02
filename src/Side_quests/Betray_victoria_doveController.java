@@ -68,7 +68,7 @@ public class Betray_victoria_doveController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "The man dies and you take his 200 gold. \n''Thank you adventure ...'' - she puts a sword towards your head. ''Now give me the gold''\n";
+     String intro = "The man dies and you take his 200 gold. \n''Thank you adventurer ...'' - she puts a sword towards your head. ''Now give me the gold''\n";
    public void The_stalkerController() {
        
         this.prompt = new TextArea();

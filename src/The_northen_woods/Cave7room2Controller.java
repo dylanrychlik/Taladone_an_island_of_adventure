@@ -73,7 +73,7 @@ public class Cave7room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You see a large man standing fend off from the snakes. One them grabs him \n and swallows him whole. The five snakes then go and attack you. \n You grab yoru sword and charge.";
+        intro = "You see a large man standing fending off from the snakes. One them grabs him \n and swallows him whole. The five snakes then go and attack you. \n You grab yoru sword and charge.";
         prompt.setText(intro);
         enmies.add("Snake");
         enmies.add("Snake");

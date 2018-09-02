@@ -99,7 +99,7 @@ public class Boldsman_areanaController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        String intro = "Boldman’s arena: Where the niava go to die and the rich get richer. \n If an adventure like yourself wants to makes quick gold and experience \n they can go in and fight evil creatures that haunt the island of Taladone.";
+        String intro = "Boldman’s arena: Where the naive go to die and the rich get richer. \n If an adventure like yourself wants to make quick gold and experience \n they can go in and fight evil creatures that haunt the Island of Taladone.";
 
         prompt.setText(intro);
         prompt.setEditable(false);
@@ -425,7 +425,7 @@ public class Boldsman_areanaController implements Initializable {
     public void Charles_Oakland() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Charles Oakland");
-        alert.setContentText("The areana mangement is always drunk while I barley have enough gold to feed my family.");
+        alert.setContentText("The areana management is always drunk while I barley have enough gold to feed my family.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -485,7 +485,7 @@ public class Boldsman_areanaController implements Initializable {
     public void John_Millerman() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("John Millerman");
-        alert.setContentText("Taladone is damned my friend, the church is said to be haunted and nobody goes there to pray /n There are differene places the island that are filled with creatures that need to be stoped! /n Davenrun is too packed and filled with greed. /n Taladone is not of adventure it use to be, now people are dying!");
+        alert.setContentText("Taladone is damned my friend, the church is said to be haunted and nobody goes there to pray /n There are differene places the island that are filled with creatures that need to be stopped! /n Davenrun is too packed and filled with greed. /n Taladone is not the island of adventure it use to be, now people are dying!");
 
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
@@ -495,7 +495,7 @@ public class Boldsman_areanaController implements Initializable {
     public void Alexander_Dobious() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Alexander Dobious");
-        alert.setContentText("If you like gossip, check out wines inn! If you like me and hate gossip, meet me at the casino for drinks and games!");
+        alert.setContentText("If you like gossip, check out Wines Inn! If you're like me and hate gossip, meet me at the casino for drinks and games!");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -524,7 +524,7 @@ public class Boldsman_areanaController implements Initializable {
 
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Zackary Hamilton: The Jarl of Davenrun is doing nothing to save Taledone from troubles, not just in the town, but outside. /n" + "The outside is even worse than the inside. Evil haunts Taladone, Jarl is doing nothing about it. I heard that he is looking for an adventure to his dirty work. What trash!");
+            alert.setContentText("Zackary Hamilton: The Jarl of Davenrun is doing nothing to save Taledone from troubles, not just in the town, but outside. /n" + "The outside is even worse than the inside. Evil haunts Taladone, the Jarl is doing nothing about it. I heard that he is looking for an adventure to his dirty work. What trash!");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -534,7 +534,7 @@ public class Boldsman_areanaController implements Initializable {
         }
         if (result.get() == buttonTypeTwo) {
             alert.setHeight(500);
-            alert.setContentText("Zackary Hamilton: I am from Engalnd, my father owned an Inn just off the coast of the Irish Sea./n  When I became an adult, I told him I wanted to be andventurer in Side_quests. \n He lauged in my face and kicked me out of the house. Zackary Hamilton: I came here and went the aerana. Unfourtanly my dreams of being an adventure were crushed were detoryed after I got badly injured. That was 10 years ago. \n I am thankful that I can still walk, but I will never be an adventurer again.");
+            alert.setContentText("Zackary Hamilton: I am from Engalnd, my father owned an Inn just off the coast of the Irish Sea./n  When I became an adult, I told him I wanted to be an adventurer. \n He lauged in my face and kicked me out of the house. Zackary Hamilton: I came here and went to the arena. Unfourtanly my dreams of being an adventure were crushed were detoryed after I got badly injured. That was 10 years ago. \n I am thankful that I can still walk, but I will never be an adventurer again.");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -565,7 +565,7 @@ public class Boldsman_areanaController implements Initializable {
           Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Elizbeth Ironlung");
 
-        alert.setContentText("They kidnapped her! Just outside town! Please adventure! Please do something?");
+        alert.setContentText("They kidnapped her! Just outside town! Please adventure! Please do something!");
 
         ButtonType buttonTypeOne = new ButtonType("What happened?");
         ButtonType buttonTypeTwo = new ButtonType("Sorry I can't help");
@@ -575,7 +575,7 @@ public class Boldsman_areanaController implements Initializable {
 
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Elizbeth Iron lung:Banits have taken my daughter and took her to deadweb Cave. There are rumors to be spiders there! Please can do you do something? Please adventurer! The thought of losing her makes me want to vomit!");
+            alert.setContentText("Elizbeth Iron lung: Banits have taken my daughter and took her to deadweb Cave. There are rumors to be spiders there! Please can do you do something? Please adventurer! The thought of losing her makes me want to vomit!");
             ButtonType ok = new ButtonType("yes");
                ButtonType no = new ButtonType("No");
             alert.getButtonTypes().setAll(ok,no);
@@ -655,7 +655,7 @@ stage.setTitle("Deadweb cave");
         else {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Sheral the Exterminator");
-        alert.setContentText("I am sheril the Exterminator: I am a Cybrotronic lifeform from the year 2533 I have traveled back in time for one mission: To destroy you. \n To be continuied....");
+        alert.setContentText("I am Sheral the Exterminator: I am a Cybrotronic lifeform from the year 2533. I have traveled back in time for one mission: To destroy you. ");
 
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
@@ -675,7 +675,7 @@ stage.setTitle("Deadweb cave");
     public void Hannah_Kardash() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Hannah Kardash");
-        alert.setContentText("If you want some gold, go to the Areana... that is if you can handle fighting mosters and creatures of course...");
+        alert.setContentText("If you want some gold, go to the Areana... that is if you can handle fighting monsters and creatures of course...");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -694,7 +694,7 @@ stage.setTitle("Deadweb cave");
         if (result.get() == buttonTypeOne) {
             Player.getPlayer();
             if (player.getbank() < 1) {
-                alert.setContentText("Don't have enough money in bank!");
+                alert.setContentText("You don't have enough money in bank!");
                 ButtonType ok = new ButtonType("OK");
                 alert.getButtonTypes().setAll(ok);
                 Optional<ButtonType> new_result = alert.showAndWait();
@@ -738,7 +738,7 @@ stage.setTitle("Deadweb cave");
 
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Dylan Elberton: Why yes I am! What a great life I live too! All I do is drink and go through girlfriend at least once a week  \n Tis a good life, and I did it by working hard and educating myself unlike some of the people in this town who complain about not having enough gold to feed themselves. \n Mabye if you weren't such a lazy maggot, unlike me, mabye life would not be so difficult, but alas they watse their money on things I like to do for fun \n poor souls, they will never know what it is like to earn their gold.");
+            alert.setContentText("Dylan Elberton: Why yes I am! What a great life I live too! All I do is drink and go through a girlfriend at least once a week!  \n Tis a good life, and I did it by working hard and educating myself unlike some of the people in this town who complain about not having enough gold to feed themselves. \n Mabye if you weren't such a lazy maggot, unlike me, mabye life would not be so difficult, but alas they watse their money on things I like to do for fun \n poor souls, they will never know what it is like to earn their gold.");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -748,7 +748,7 @@ stage.setTitle("Deadweb cave");
         }
         if (result.get() == buttonTypeTwo) {
             alert.setHeight(500);
-            alert.setContentText("Dylan Elberton: I am from the big city in England far away. I went to a college known as oxford in London. \n I learned about bussinse and ecomnics and use my knowledge to open the aerana. \n With hard work, I manuplated the capiltism in Taladone to make a fourtune. \n I am now the richest person in Davenrun and one of the richest in the United Kingdom thanks to my hard work. \n I would give to charity, but why should I give my money that I worked my arse off for to give to people who don’t want to work?  \n Makes no logical sense to me. Beggers can’t be choosers my friend. I wish Davenrun would start to realize that");
+            alert.setContentText("Dylan Elberton: I am from the big city in England far away. I went to a college known as Oxford in London. \n I learned about business and ecomonics and used my knowledge to open this arena. \n With hard work, I manipulated the capitalism in Taladone to make a fourtune. \n I am now the richest person in Davenrun and one of the richest in the United Kingdom thanks to my hard work. \n I would give to charity, but why should I give my money that I worked my arse off for to give to people who don’t want to work?  \n Makes no logical sense to me. Beggers can’t be choosers my friend. I wish Davenrun would start to realize that.");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -768,7 +768,7 @@ stage.setTitle("Deadweb cave");
     public void Cindi_Henerys() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Cindi Henerys");
-        alert.setContentText("I don't know what I'm doing with my life");
+        alert.setContentText("I don't know what I'm doing with my life.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -786,7 +786,7 @@ stage.setTitle("Deadweb cave");
     public void Smitty_Janson() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Smitty Janson");
-        alert.setContentText("Smitty Janson: Hello laddy. Good to see a fellow adventurer here in Talendone. It's a rare thing these days. We need an adventurer more than ever too. People are dying and evil is ruling this land. Please talk to the Jarl. I'm sure he is more than willing to give you jobs to save the island");
+        alert.setContentText("Smitty Janson: Hello laddy. Good to see a fellow adventurer here in Talendone. \n It's a rare thing these days. We need an adventurer more than ever too. People are dying and evil is ruling this land. \n Please talk to the Jarl. I'm sure he is more than willing to give you jobs to save the island");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();

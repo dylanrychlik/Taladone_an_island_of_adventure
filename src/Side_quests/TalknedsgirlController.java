@@ -64,7 +64,7 @@ public class TalknedsgirlController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "Side quests started: The shy guy. You go to talk to neds girl";
+     String intro = "Side quests started: The shy guy. You go to talk to Neds girl";
      public void The_stalkerController() {
        
         this.prompt = new TextArea();
@@ -221,7 +221,7 @@ public class TalknedsgirlController implements Initializable {
          Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Man");
 
-        alert.setContentText("Davenrun isdoomed anyway. The jarl is courrupt and is paid by the areana and casino to tell davenrun what they want to hear. You will die ");
+        alert.setContentText("Davenrun is doomed anyway. The Jarl is courrupt and is paid by the areana and casino to tell davenrun what they want to hear. You will die ");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

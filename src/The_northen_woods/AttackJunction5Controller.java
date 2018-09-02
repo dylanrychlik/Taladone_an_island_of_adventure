@@ -75,7 +75,7 @@ public class AttackJunction5Controller implements Initializable {
 "Here the ground feels wet. \n You notice a swamp not too far away from the Junctions. \n There is a mist in the fog.\n" +
 "As you sit down to grab a drink from the long walk you see a web near by. \n Upon further inpection of the web you see a dead body with it blood gone. \n" +
 "You back away from the bodies frighten and draw your sword. \n You put in yourself in a defense position.. Your skin feels like its gonna crawl. \n Upon the sawp you see a few figures from the distance.\n" +
-"The figuire are about 5 feet in length and 4 feet long. \n As the spider draws closer to you you see a web penatral your skin \n you run to the near by tree to desterpate tae it off.\n" +
+"The figuire are about 5 feet in length and 4 feet long. \n As the spider draws closer to you you see a web penatral your skin \n you run to the near by tree to desperate to get it off.\n" +
 "Your skin is crawling like spider on your skins and this points your take the web off \n and see three giant spider coming straight towards you draw your sword and prepare for battle. ";  
  prompt.setText(intro);
        enmies.add("Spider");

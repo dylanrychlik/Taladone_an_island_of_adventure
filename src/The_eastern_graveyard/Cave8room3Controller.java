@@ -209,7 +209,7 @@ Player.addbank(150);
              goodItem  Cave4Weapon = new   goodItem("7","Regular health","Regular health found in General Goods store in Davenrun.",50,50);
         
              gooditem.addLast(Cave4Weapon);
-                    Armor Cave4Armor = new Armor("7","Armor","Armor forged by John WarIron",25,25);
+                    Armor Cave4Armor = new Armor("7","Armor","Armor forged by John WarIron",50,50);
             Armoritem.addLast(Cave4Armor);
                 Stage Stage = new Stage();
                 Stage.setTitle("Cave 8");
@@ -220,7 +220,7 @@ Player.addbank(150);
 
             } else {
                 Player.addhealth(100);
-               Player.addactarmor(25);
+               Player.addactarmor(50);
                 Stage Stage = new Stage();
                 Stage.setTitle("Cave 8");
                 Parent root = FXMLLoader.load(getClass().getResource("/The_eastern_graveyard/Cave8.fxml"));

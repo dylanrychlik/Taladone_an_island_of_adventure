@@ -42,7 +42,7 @@ public class Attack_bookcave_room1Controller implements Initializable {
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-    String intro = " Side quest started: The book. You come to the cave just outside davenrun.\n  As you go inside you see a few dead bodies \n with chunks of meat around the red coated blood. \n As you look ahead you see a few skeltons marching towards you.";
+    String intro = " Side quest started: The book. You come to the cave just outside Davenrun.\n  As you go inside, you see a few dead bodies \n with chunks of meat around the red coated blood. \n As you look ahead you see a few skeltons marching towards you.";
     @FXML
     private TextArea Map;
     @FXML

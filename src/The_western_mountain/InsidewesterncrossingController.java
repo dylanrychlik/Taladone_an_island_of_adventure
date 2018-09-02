@@ -12,6 +12,7 @@ import static Davenrun.OutsidehouseController.Weaponitem;
 import static Davenrun.OutsidehouseController.gooditem;
 import Davenrun.Player;
 import Davenrun.goodItem;
+import static The_western_mountain.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -74,7 +75,7 @@ public class InsidewesterncrossingController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+locations[30] = true;
             intro = "You go in a see a long dark and ice covered hallway. You then turn around the cornor \n and see the light before the light, headless men and \n a demon comes and walks towards you. \n A threat. This creature is not described in the Taladone arcivhes. \n You intend to tell the Jarl after the dragon is dead.";
         prompt.setText(intro);
        enmies.add("Doogiehead");

@@ -47,7 +47,7 @@ public class Attack_stalkerController implements Initializable {
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-    String intro = "You go and attack the Stalker ";
+    String intro = "You go and attack the stalker ";
 
     @FXML
     private ComboBox Look;

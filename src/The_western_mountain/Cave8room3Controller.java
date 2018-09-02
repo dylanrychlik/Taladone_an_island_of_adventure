@@ -77,7 +77,7 @@ public class Cave8room3Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-     intro = "You go and see the a demon. You go and attack ";
+     intro = "You go and see a demon. You go and attack ";
  prompt.setText(intro);
        enmies.add("Demon");
 
@@ -191,7 +191,7 @@ public class Cave8room3Controller implements Initializable {
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
- locations[19] = true;
+               locations[19] = true;
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation!");
 Player.addbank(150);
@@ -207,7 +207,7 @@ Player.addbank(150);
              goodItem  Cave4Weapon = new   goodItem("7","Regular health","Regular health found in General Goods store in Davenrun.",50,50);
         
              gooditem.addLast(Cave4Weapon);
-                    Armor Cave4Armor = new Armor("7","Armor","Armor forged by John WarIron",25,25);
+                    Armor Cave4Armor = new Armor("7","Armor","Armor forged by John WarIron",40,40);
             Armoritem.addLast(Cave4Armor);
                 Stage Stage = new Stage();
                 Stage.setTitle("Cave 8");
@@ -218,7 +218,7 @@ Player.addbank(150);
 
             } else {
                 Player.addhealth(100);
-               Player.addactarmor(25);
+               Player.addactarmor(40);
                 Stage Stage = new Stage();
                 Stage.setTitle("Cave 8");
                 Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Cave8.fxml"));

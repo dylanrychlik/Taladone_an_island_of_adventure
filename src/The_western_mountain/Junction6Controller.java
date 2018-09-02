@@ -40,10 +40,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+
 public class Junction6Controller implements Initializable {
 
     // String intro = " You travel to the the fourth junction of the northen region \n You eat an apple and some water as you sit in the near log. From behind you you hear a twig snap. You turn around to see a man sitting there. You: What are you doing here? What do you want?” \n “Beware the dragon traveler. Fires breath from its mouth and flies like an bird in the sky.. Beyond the dragons lair is the northen coast. It leads to northen irlead laddy.” \n You put your sword away and the man dissaplear in the night. You fall down beyond the log behind you to see a bunny hopping near by. \n There are no enmies int his area!";
-   String intro = "You come to the 6th Junction in the western region.\n  The blizzard  gets alittle thickers and there seems \n to be no enmies you turn around the conor…. \n It seems quite…  \n There are no emnies in this area!.";
+    String intro = "You come to the 6th Junction in the western region.\n  The blizzard  gets alittle thickers and there seems \n to be no enmies you turn around the conor…. \n It seems quite…  \n There are no emnies in this area!.";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -91,9 +92,9 @@ public class Junction6Controller implements Initializable {
         this.Go_SouthEast = new Button();
     }
 
-     @Override
+    @Override
     public void initialize(URL url, ResourceBundle rb) {
-  prompt.setPrefHeight(150);
+        prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);
         prompt.setEditable(false);
@@ -102,6 +103,7 @@ public class Junction6Controller implements Initializable {
         Map.setPrefHeight(400);
         current.setEditable(false);
         current.setPrefSize(300, 180);
+        locations[5] = true;
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();
         if (player.getJarl_level_count() == 0 || player.getJarl_level_count() == 2 || player.getJarl_level_count() == 4 || player.getJarl_level_count() == 6 || player.getJarl_level_count() == 8 || player.getJarl_level_count() == 10) {
@@ -134,7 +136,7 @@ public class Junction6Controller implements Initializable {
 
     public void fillmap() {
 
-       row1.clear();
+        row1.clear();
         row2.clear();
         row3.clear();
         row4.clear();
@@ -173,7 +175,7 @@ public class Junction6Controller implements Initializable {
 
         row3.add('X');
         row3.add('X');
-           row3.add('X');
+        row3.add('X');
         row3.add('X');
         row3.add('X');
         row3.add('X');
@@ -182,7 +184,7 @@ public class Junction6Controller implements Initializable {
         row3.add('X');
         row3.add('O');
         row3.add('O');
-     
+
         row3.add('X');
         row3.add('X');
 
@@ -326,42 +328,43 @@ public class Junction6Controller implements Initializable {
 
     public void go_NorthWest() throws IOException {
 
-         Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Cabin.fxml"));
-                Stage stage = new Stage();
-                stage.setTitle("Cabin");
-                stage.setScene(new Scene(root, 1000, 750));
-                 stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Cabin.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Cabin");
+        stage.setScene(new Scene(root, 1000, 750));
+        stage.show();
         closeWindow();
     }
 
     public void go_Southeast() throws IOException {
-Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/House1.fxml"));
-                Stage stage = new Stage();
-                stage.setTitle("House 1");
-                stage.setScene(new Scene(root, 1000, 750));
-                 stage.show();
+        Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/House1.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("House 1");
+        stage.setScene(new Scene(root, 1000, 750));
+        stage.show();
         closeWindow();
-    }
-        public void go_North() throws IOException {
-        if (locations[7] == false) {
-         Stage Stage = new Stage();
-        Stage.setTitle("Junction 8");
-        Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/AttackJunction8.fxml"));
-       Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow();
-    }
-            if (locations[7] == true) {
-         Stage Stage = new Stage();
-        Stage.setTitle("Junction 8");
-        Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Junction8.fxml"));
-       Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow();
-    }
     }
 
-       public void go_West() throws IOException {
+    public void go_North() throws IOException {
+        if (locations[7] == false) {
+            Stage Stage = new Stage();
+            Stage.setTitle("Junction 8");
+            Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/AttackJunction8.fxml"));
+            Stage.setScene(new Scene(root, 1000, 750));
+            Stage.show();
+            closeWindow();
+        }
+        if (locations[7] == true) {
+            Stage Stage = new Stage();
+            Stage.setTitle("Junction 8");
+            Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Junction8.fxml"));
+            Stage.setScene(new Scene(root, 1000, 750));
+            Stage.show();
+            closeWindow();
+        }
+    }
+
+    public void go_West() throws IOException {
         Stage Stage = new Stage();
         Stage.setTitle("Cave 4");
         Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Cave4.fxml"));
@@ -408,13 +411,10 @@ Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Hous
         stats.setText("\n Your Armor items are in the order  by \n" + out3);
     }
 
-    
-
     @FXML
     public void closeWindow() {
         Stage stage = (Stage) this.Go_North.getScene().getWindow();
         stage.close();
     }
-
 
 }

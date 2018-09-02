@@ -247,7 +247,7 @@ public class Attack_coyoteController implements Initializable {
             if (enmies.isEmpty()) {
  Sidequests[4] = true;
             intro = ""; Player.addbank(200);
-            intro = "Thank you adventureder. Here is 200 gold. Your bank is now" +Player.getbank();
+            intro = "Thank you adventurer. Here is 200 gold. Your bank is now" +Player.getbank();
   Stage Stage = new Stage();
                 Stage.setTitle("Outside House");
                 Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Outsidehouse.fxml"));

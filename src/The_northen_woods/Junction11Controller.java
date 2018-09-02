@@ -38,7 +38,7 @@ import javafx.stage.Stage;
  */
 public class Junction11Controller implements Initializable {
 
-    String intro = "You travel 11th junction of the northen region. \n There seems to be no enmies you turn around the cornor… it seems quite....  \n There are no emnies in this area!";
+    String intro = "You travel 11th junction of the northen region. \n There seems to be no enemies you turn around the cornor… it seems quite....  \n There are no enemies in this area!";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -88,6 +88,7 @@ public class Junction11Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+                locations[10] = true;
         prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);

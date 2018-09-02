@@ -42,7 +42,7 @@ import javafx.stage.Stage;
  */
 public class EasterncrossingController implements Initializable {
 
-   String intro = "Welcome to Northen crossing. This is the one of way \n you can cross to get to the demon lairs. " + "\n Inside the corssing a creature of unknown lurks within. Waiting to attack you" + "\n Do you wish to go inside?";
+   String intro = "Welcome to Northen crossing. This is the one of way \n you can cross to get to top of the mountain. " + "\n Inside the corssing a creature of unknown lurks within. Waiting to attack you" + "\n Do you wish to go inside?";
      public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);

@@ -192,6 +192,7 @@ prompt.setText(intro);
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
+                locations[14] = true;
               Player.addbank(100);
               intro = " ";
            //  intro += "You add 100 gold. You bank is now " + Player.getbank();

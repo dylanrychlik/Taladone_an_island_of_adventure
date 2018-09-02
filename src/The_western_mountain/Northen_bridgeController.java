@@ -47,7 +47,7 @@ import javafx.stage.Stage;
 
 public class Northen_bridgeController implements Initializable {
 
-    public static boolean[] locations = new boolean[30];
+    public static boolean[] locations = new boolean[28];
     String intro = "Quest started: The The western mountain. You come to the Western bridge that \n connects the centeral region to the Western region. \n Beyond this bridge is the mysrtous Taladone mountain. \n The tallest mountain in the entite island The Jarl wants me \n invegatage what is at the top of the mountain. \n You cross the bridge that goes over the Taldone river. \n As your reach the end of the bridge there are two paths that you can go to. \n What will you do? ";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
@@ -86,7 +86,7 @@ public class Northen_bridgeController implements Initializable {
 
         this.current = new TextArea();
         this.stats = new TextArea();
-
+ locations[27] = true;
         this.Look = new ComboBox();
         this.Player_stats = new Button();
         this.Map = new TextArea();

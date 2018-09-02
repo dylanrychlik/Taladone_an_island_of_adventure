@@ -43,7 +43,7 @@ import javafx.stage.Stage;
  */
 public class Junction12Controller implements Initializable {
  
- String intro = "Emnies in area were defeated! What would you like to do?";
+ String intro = "Enemies in area were defeated! What would you like to do?";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);

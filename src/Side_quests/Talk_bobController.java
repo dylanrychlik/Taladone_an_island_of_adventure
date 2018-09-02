@@ -212,7 +212,7 @@ public class Talk_bobController implements Initializable {
      Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Bob");
 
-        alert.setContentText(" My brother doesn’t know the defintion of family. I clean the house while he helps the areana take creatures from the island! I have even went hunting to give their wife and kids meals.");
+        alert.setContentText(" My brother doesn’t know the defintion of family. I clean the house while he helps the arena take creatures from the island! I have even went hunting to give their wife and kids meals.");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

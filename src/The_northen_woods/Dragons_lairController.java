@@ -74,7 +74,7 @@ public class Dragons_lairController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "Welcome to the dragonss lair. Here is where the evil dragon of taladone sleeps. \n You have travel a long jounrey to right tis evil dragon. \n Beyond this lair is the northen coast of Taladone. You hear \n a giant roar as you step around the cornor and fight the dragon.";
+        intro = "Welcome to the dragons lair. Here is where the evil dragon of taladone sleeps. \n You have travel a long jounrey to fight this evil dragon. \n Beyond this lair is the northen coast of Taladone. You hear \n a giant roar as you step around the cornor and fight the dragon.";
         prompt.setText(intro);
         enmies.add("The Dragon of Taladone");
 
@@ -191,7 +191,7 @@ public class Dragons_lairController implements Initializable {
                 intro = "";
                 
                 intro = "Quest Completed!";
-                locations[25] = true;
+                 locations[28] = true;
                 if (Player.getJarl_level_count() == 1){
                // Thread.sleep(3000);
 Player.setJarl_level_count();

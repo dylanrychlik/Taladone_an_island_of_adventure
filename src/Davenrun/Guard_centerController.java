@@ -71,7 +71,7 @@ public class Guard_centerController implements Initializable {
     public void Guard1() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Davenrun Guard");
-        alert.setContentText("Davenrun Guard: We protect the city, without us everyone would be dead. You hear me? Dead.");
+        alert.setContentText("Davenrun Guard: We protect the city, without us everyone would be dead. You hear me? Dead!S");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -81,7 +81,7 @@ public class Guard_centerController implements Initializable {
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Davenrun Guard");
-        alert.setContentText(" Davenrunrynn Guard: Break the law and you will regret it. The jarl works hard to keep davenrun safe.");
+        alert.setContentText(" Davenrunrynn Guard: Break the law and you will regret it. The Jarl works hard to keep Davenrun safe.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -91,7 +91,7 @@ public class Guard_centerController implements Initializable {
     public void Guard3() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Davenrun Guard");
-        alert.setContentText(" Davenrun Guard: I am the sargeant who is chage of all the guards of daverun, if there is an issue I answer to one person: The Jarl of Davenrun.");
+        alert.setContentText(" Davenrun Guard: I am the sargeant who is chage of all the guards of Daverun, if there is an issue I answer to one person: The Jarl of Davenrun.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();

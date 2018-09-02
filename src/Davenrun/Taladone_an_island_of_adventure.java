@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -56,18 +57,20 @@ public class Taladone_an_island_of_adventure extends Application {
     Stage primaryStage = new Stage();
     private Player you;
 
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) throws IOException, SQLException {
+          
+
         this.primaryStage = primaryStage;
-        String title = "Taladone: \n an Island of adventure";
+        String title = "Taladone";
         TextField game_title = new TextField();
         BorderPane pane = new BorderPane();
 
         game_title.setText(title);
 
         //A button with an empty text caption.
-        Button New_game = new Button("New game");
+        Label New_game = new Label("Taladone: An island of adventure");
 //A button with the specified text caption.
-        Button Load_game = new Button("Load game");
+        Button Load_game = new Button("Play Game");
 //A button with the specified text caption and icon.
         Button exit = new Button("exit");
 //game_title.setScaleY(10);
@@ -85,29 +88,15 @@ public class Taladone_an_island_of_adventure extends Application {
             @Override
             public void handle(ActionEvent e) {
                 try {
-                    load_game();
-                } catch (IOException ex) {
-                    Logger.getLogger(Taladone_an_island_of_adventure.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(Taladone_an_island_of_adventure.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (SQLException ex) {
-                    Logger.getLogger(Taladone_an_island_of_adventure.class.getName()).log(Level.SEVERE, null, ex);
-                }
-
-            }
-        });
-
-        New_game.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent e) {
-                try {
                     create_name();
                 } catch (IOException ex) {
                     Logger.getLogger(Taladone_an_island_of_adventure.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                } 
 
             }
         });
+
+      
 
         exit.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -157,8 +146,21 @@ public class Taladone_an_island_of_adventure extends Application {
 
         }
     }
+   int jobID;
+  
 
+  private boolean isFilled;
+  private static final AtomicInteger count = new AtomicInteger(0); 
+  public int Job(){
+  
+
+    jobID = count.incrementAndGet(); 
+    return jobID;
+}
+int PlayerID;
     public void startgame() throws IOException {
+        PlayerID = jobID;
+        System.out.println(PlayerID);
         Stage Stage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Insidehouse.fxml"));
         Stage.setTitle("Insidehouse");
@@ -178,78 +180,12 @@ public class Taladone_an_island_of_adventure extends Application {
     }
 
     public void load_game() throws ClassNotFoundException, IOException, SQLException {
-        Class.forName("com.mysql.jdbc.Driver");
-
-        System.out.println("Driver loaded");
-
-//Connect to a database..   the location of the database, the userid, and the password.
-//NOTE:  Please use Userid "root" and password ""   to make it easier to grade.
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Taladone?", "root", "sesame");
-        System.out.println("Databse connected");
-        try {
-
-            String sql = "SELECT * FROM Save";
-            PreparedStatement statement = connection.prepareStatement(sql);
-
-            ResultSet rs = statement.executeQuery();
-            int ID = 0, Playtime = 0, Side_Quest_ID = 0, Player_ID = 0;
-
-            String result = " ";
-
-            while (rs.next()) {
-                Player_ID = rs.getInt("Player_ID");
-                Side_Quest_ID = rs.getInt("Side_Quest_ID");
-                Playtime = rs.getInt("Playtime");
-                result += "Player_ID: " + rs.getInt("Player_ID") + " Side_quest_ID: " + rs.getInt("Side_Quest_ID") + " Play time: " + rs.getInt("Playtime") + "\n";
-
-            }
-            System.out.println("Resultset complete");
-            //call outside house method
-            TextInputDialog alert = new TextInputDialog("");
-            alert.setTitle("Alert!");
-            alert.setHeaderText("Alert!");
-            alert.setContentText("Please pick a save to load from \n " + result);
-            TextArea load = new TextArea();
-            load.setText(result);
-            load.setEditable(false);
-            load.setWrapText(true);
-
-            inputresult = alert.showAndWait();
-            sql = "SELECT * FROM Save WHERE Player_ID = " + inputresult.get() + ";";
-            statement = connection.prepareStatement(sql);
-
-            rs = statement.executeQuery();
-
-            while (rs.next()) {
-                Player_ID = rs.getInt("Player_ID");
-
-                Side_Quest_ID = rs.getInt("Side_Quest_ID");
-                Playtime = rs.getInt("Playtime");
-                result = Integer.toString(rs.getInt("Player_ID"));
-
-            }
-            System.out.println(result);
-            System.out.println(inputresult.get());
-            System.out.println("Resultset2 complete");
-            if (inputresult.get().equals(result)) {
-
-                intionalize_game();
-            } else {
-                alert.close();
-                Alert alert2 = new Alert(AlertType.INFORMATION);
-                alert2.setTitle("Error!");
-
-                alert2.setContentText("Error: Incorrect input");
-                ButtonType ok = new ButtonType("OK");
-                alert2.getButtonTypes().setAll(ok);
-                alert2.showAndWait();
-            }
-        } catch (SQLException e) {
-            System.out.println("Error executing the request command: " + e.toString());
-            e.printStackTrace();
-
-        }
-
+        Stage Stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Database_connection.fxml"));
+        Stage.setTitle("Database Connection");
+        Stage.setScene(new Scene(root, 600, 400));
+        Stage.show();
+        primaryStage.close();
     }
 
     public void intionalize_game() throws ClassNotFoundException, SQLException, IOException {
@@ -261,7 +197,7 @@ public class Taladone_an_island_of_adventure extends Application {
 //NOTE:  Please use Userid "root" and password ""   to make it easier to grade.
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Taladone?", "root", "sesame");
         System.out.println("Databse connected");
-        String sql = "SELECT * FROM Player WHERE Player_ID = " + inputresult.get() + ";";
+        String sql = "SELECT * FROM Player;";
         PreparedStatement statement = connection.prepareStatement(sql);
 
         ResultSet rs2 = statement.executeQuery();
@@ -279,7 +215,7 @@ public class Taladone_an_island_of_adventure extends Application {
             bank = rs2.getInt("Player_bank");
 
         }
-        Player.getPlayer();
+              Player.getPlayer();
 
         Player.setName(test);
         Player.setbank(bank);

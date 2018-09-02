@@ -73,7 +73,7 @@ public class Cave6room1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You see a man who is trying to run away from the Skelatons. \n ''Help me! We were exploring the Northen Woods and then the Skeltans attacked \n and killed my crew! One of them has a sword that turns peeple into Skeltans \n and two of my crew and now Skeletans! Please Adventurer! Please do something! \n A Zombies then comes from behind and stabs the man and his Flesh, Organs, \n Muscels, all decompose whil the man is screaming muclessly. \n He then is decomposes to a skelatan and attacks. ";
+        intro = "You see a man who is trying to run away from the Skelatons. \n ''Help me! We were exploring the Northen Woods and then the Skeltans attacked \n and killed my crew! One of them has a sword that turns people into Skeltans \n and two of my crew and now Skeletans! Please Adventurer! Please do something! \n A Skeleton then comes from behind and stabs the man and his Flesh, Organs, \n and muscles, all decompose while the man is screaming in agony. \n He then is decomposes to a skelatan and attacks. ";
         prompt.setText(intro);
         enmies.add("Skelaton");
         enmies.add("Skelaton");

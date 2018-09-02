@@ -252,7 +252,7 @@ public class Wines_innController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Swansom Elberton");
 
-        alert.setContentText("Swansom Elberton: go inside the inn to get warm and have a dirnk God knows every man needs ");
+        alert.setContentText("Swansom Elberton: Go inside the inn to get warm and have a drink! God knows every man needs it");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();

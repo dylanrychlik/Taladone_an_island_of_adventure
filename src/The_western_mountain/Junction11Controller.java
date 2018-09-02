@@ -40,7 +40,7 @@ import javafx.stage.Stage;
  */
 public class Junction11Controller implements Initializable {
 
-    String intro = "You travel 11th junction of the eastern region. \n As you walk foward you stop by your tracks to what appears to be your father. \n You gasp in shock and put. The ghost of \n your father scare directely in your eye. As he about to \n  open his mouth he dissapear like he did when you were a kid.";
+    String intro = "You travel 11th junction of the eastern region. \n As you walk foward you stop by your tracks to what appears to be your father. \n You gasp in shock and put down the sword. The ghost of \n your father scare directely in your eye. As he about to \n  open his mouth he dissapear like he did when you were a kid.";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -90,6 +90,7 @@ public class Junction11Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+          locations[10] = true;
         prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);

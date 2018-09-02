@@ -81,7 +81,7 @@ public class AttackJunction1Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        intro = "You travel north of the brigde to the the first junction of the northen region. \n You see the Junction with your hand by your side. \n Ready for anything to attack you. \n You have 3 health potions and a sword and armor by your sde to protect yourself \n from the creatures that haunt Side_quests. \n As your travel faster your heart beats and palm sweat drips to your cloths and damps \n a small portion of it \n You turn around the cornor. It seems quiet...";
+        intro = "You travel north of the bridge to the the first junction of the Northen woods. \n You see the Junction with your hand by your side. \n Ready for anything to attack you. \n You have 3 health potions and a sword and armor by your sde to protect yourself \n from the creatures that haunt Taladone. \n As you travel faster your heart beats and palm sweat drips to your cloths and damps \n a small portion of it \n You turn around the cornor. It seems quiet...";
         prompt.setText(intro);
         stats.setEditable(false);
         enmies.add("Coyote");

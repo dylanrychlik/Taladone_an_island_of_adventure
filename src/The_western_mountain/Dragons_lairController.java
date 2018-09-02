@@ -76,7 +76,7 @@ public class Dragons_lairController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "Welcome to the top of the western mountain. You come to the top of the moaunt. The bizzard is instesne and very diifcult to see. In the distance you see a man upon further inception you sse the presit. You looks at you. And says ''I am the former presit of the Davenrun church. I ran the church for years before I realized god is a lie. I answer to one being. The sum of all diabolical. He has to motives only death. In order to fight him you must face me - the general of the doogiehead army.'' ";
+        intro = "Welcome to the top of the western mountain.\n  You come to the top of the moaunt. The bizzard is instesne and very diifcult to see. \n In the distance you see a man upon further inception you sse the presit. \n You looks at you. And says ''I am the former presit of the Davenrun church. \n I ran the church for years before I realized god is a lie.\n  I answer to one being. The sum of all diabolical. He has to motives only death. \n In order to fight him you must face me - the general of the doogiehead army.'' ";
         prompt.setText(intro);
 enmies.add("Priest of the Western Mountain");
 
@@ -191,9 +191,9 @@ enmies.add("Priest of the Western Mountain");
             prompt.setText(intro);
             if (enmies.isEmpty()) {
                 intro = "";
-                
+                locations[28] = true;
                 intro = "Quest Completed!";
-                locations[25] = true;
+              
                // Thread.sleep(3000);
   if (Player.getJarl_level_count() == 7){
                // Thread.sleep(3000);

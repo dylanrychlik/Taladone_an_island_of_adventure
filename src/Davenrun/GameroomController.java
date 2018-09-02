@@ -92,7 +92,7 @@ prompt.setPrefHeight(80);
 
            Stage Stage = new Stage();
         Stage.setTitle("The Follwer");
-        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Talkman.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Talk_victoria_dove.fxml"));
         Stage.setScene(new Scene(root, 1000, 750));
         Stage.show();
         closeWindow(); 
@@ -150,7 +150,7 @@ prompt.setPrefHeight(80);
 
     public void quincey() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Quincy Joner: you know don’t understand what all the fuss is about the Casino, it’s nice to drink and play some games after a hard days work");
+        alert.setContentText("Quincy Joner: You know, I don’t understand what all the fuss is about the Casino, it’s nice to drink and play some games after a hard days work.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -183,7 +183,7 @@ prompt.setPrefHeight(80);
     }
         else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Racheal Paige");
+        alert.setTitle("Allison Swanson");
 
         alert.setContentText("You're atrative. Would you like to go on date with me? ");
 
@@ -196,7 +196,7 @@ prompt.setPrefHeight(80);
         if (result.get() == buttonTypeOne) {
 
            Stage Stage = new Stage();
-        Stage.setTitle("The Follwer");
+        Stage.setTitle("The Date");
         Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/The_date.fxml"));
         Stage.setScene(new Scene(root, 1000, 750));
         Stage.show();
@@ -225,7 +225,7 @@ prompt.setPrefHeight(80);
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Chris Gimmerman");
 
-        alert.setContentText("Common, just one more and ill hit gold!");
+        alert.setContentText("Common, just one more and I'll hit gold!");
 
         ButtonType buttonTypeOne = new ButtonType("Are you here all the time?");
         ButtonType buttonTypeTwo = new ButtonType("Tell me about your self.");
@@ -235,7 +235,7 @@ prompt.setPrefHeight(80);
 
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Yes. It is an addiction. I simply can not stop playing. I have lost everything and egained everything all over again. If I can’t not play, then I go insane. \n I haven’t slept in 3 days. Curse the Jarl for letting this happen. It’s worse than drinking, it’s worse than murder, it’s betting everything you work so hard for to get a little profit.");
+            alert.setContentText("Yes. It is an addiction. I simply can not stop playing. I have lost everything and regained everything all over again. If I can’t not play, then I go insane. \n I haven’t slept in 3 days. Curse the Jarl for letting this happen. It’s worse than drinking, it’s worse than murder, it’s betting everything you work so hard for to get a little profit.");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -245,7 +245,7 @@ prompt.setPrefHeight(80);
         }
         if (result.get() == buttonTypeTwo) {
             alert.setHeight(500);
-            alert.setContentText("Yes. Chris: Born and raised here. My father traveled here before the caisno and the areana was greddy. When I was a young boy, my father told me to not risk your hard days work in a card game \n I was too niave to listen to him, He died in the raptor cave. I spend years trying to provide for the mother. When she died and my sister left Side_quests. I came to the casino. When I’m tired I sleep, when I’m hungry I eat, \n when I need to pee or poop, I pee or poop, the rest of the time I am here. \n I have nothing else to live for. I have lost everything and gained it all back so many times that it doesn’t phase me anymore.");
+            alert.setContentText("Yes. Chris: Born and raised here. My father traveled here before the caisno and the areana was greddy. When I was a young boy, my father told me to not risk your hard days work in a card game \n I was too niave to listen to him, he died in the raptor cave. I spend years trying to provide for the mother. When she died and my sister left Taladone, I came to the casino. When I’m tired I sleep, when I’m hungry I eat, \n when I need to piss or shit, I piss or shit, the rest of the time I am here. \n I have nothing else to live for. I have lost everything and gained it all back so many times that it doesn’t phase me anymore.");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();

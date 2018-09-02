@@ -41,7 +41,7 @@ import javafx.stage.Stage;
  */
 public class WesterncrossingController implements Initializable {
 
-    String intro = "Welcome to easterncrossing. This is the one of way you can cross \n to get to the sea monster \n lairs. " + "\n Inside the corssing a creature of unknown lurks within. Waiting to attack you" + "\n Do you wish to go inside?";
+    String intro = "Welcome to easterncrossing. This is the one of way you can cross \n to get to the sea monster \n lairs. " + "\n Inside the crossing a creature of unknown lurks within. Waiting to attack you" + "\n Do you wish to go inside?";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);

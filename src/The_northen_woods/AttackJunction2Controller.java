@@ -71,7 +71,7 @@ public class AttackJunction2Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
- intro = "You travel to the seocond junction of the northen region. \n You take a sip from your water bottle and see a bush in the near by junction. \n You eat the berries in that bush. Even the fortune of having the house in \n Davenrun, means you don’t have all the gold in the world. \n You hear a roar in the distance and turn around the cornor, and see \n 3 bears charging at you at full speed. \n You grab your sword, and charge.";
+ intro = "You travel to the seocond junction of the northen region. \n You take a sip from your water bottle and see a bush in the near by junction. \n You eat the berries in that bush. Even the fortune of having the house in \n Davenrun, doesn't mean you have all the gold in the world. \n You hear a roar in the distance and turn around the cornor, and see \n 3 bears charging at you at full speed. \n You grab your sword, and charge.";
         prompt.setText(intro);
         enmies.add("bear");
            enmies.add("bear");

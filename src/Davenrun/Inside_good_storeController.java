@@ -54,7 +54,7 @@ public class Inside_good_storeController implements Initializable {
     goodItem shovel = new goodItem("0", "Shovel", "Shovel", 10, 30);
 
     Taladone_an_island_of_adventure you = new Taladone_an_island_of_adventure();
-    String intro = "Boldman’s arena: Where the niava go to die and the rich get richer. \n If an adventure like yourself wants to makes quick gold and experience they can go in and fight evil creatures that haunt the island of Taladone. ";
+    String intro = "Boldman’s arena: Where the Niava go to die and the rich get richer. \n If an adventure like yourself wants to makes quick gold and experience they can go in and fight evil creatures that haunt the island of Taladone. ";
     Player player;
     @FXML
     private TextArea prompt;
@@ -243,7 +243,7 @@ public class Inside_good_storeController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Goerge Fordland");
 
-        alert.setContentText("Fordland: Bussiness isn’t like what it use to be. When my father owned this store, it was the biggest business in Davenrun. Now the casino and the Aerana has produced so much wealth that so man people can’t buy stuff from here and most likely bet it at the casino. \n My son who never has a day off can’t even go huntng. He is too busy working. His birthday is coming up and I want to get him some venison. \n Problem is that I’m low on employees and I never have time to hunt either. \n Say if you can hunt a deer for me and get the deer back to me, I will pay you in gold. What do you say? ");
+        alert.setContentText("Fordland: Bussiness isn’t like what it use to be. When my father owned this store, it was the biggest bussiness in Davenrun. Now the Casino and the Arena has produced so much wealth that so many people can’t buy stuff from here and most likely bet it at the casino. \n My son who never has a day off can’t even go huntng. He is too busy working. His birthday is coming up and I want to get him some venison. \n Problem is that I’m low on employees and I never have time to hunt either. \n Say if you can hunt a deer for me and get the deer back to me, I will pay you in gold. What do you say? ");
 
         ButtonType buttonTypeOne = new ButtonType("Yes");
         ButtonType buttonTypeTwo = new ButtonType("No");

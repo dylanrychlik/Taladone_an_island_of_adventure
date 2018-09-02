@@ -39,7 +39,7 @@ import javafx.stage.Stage;
  * @author The flash
  */
 public class Junction9Controller implements Initializable {
-String intro = "You travel he 9th junction of the eastern region.  \n You have your sowrd by your side and the mist become even thicker. \n Its hard to see anything 10 feet in front of your and your blind beyond 20. \n The noise continue to get louder and it become appartent that is hell in the east \n You turn around the cornor… it seems quite… There are no emenies in this area!"; 
+String intro = "You travel he 9th junction of the eastern region.  \n You have your sword by your side and the mist become even thicker. \n Its hard to see anything 10 feet in front of your and your blind beyond 20. \n The noise continue to get louder and it become appartent that is hell in the east. \n You turn around the cornor… it seems quite… There are no emenies in this area!"; 
 public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -97,6 +97,7 @@ public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
         Map.setEditable(false);
         Map.setPrefHeight(400);
         current.setEditable(false);
+          locations[8] = true;
         current.setPrefSize(300, 180);
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();

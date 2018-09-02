@@ -74,7 +74,7 @@ public class AttackJunction3Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        intro = "You come to the third Junction in southern region. \n The water is now getting a little deeper. \n You and is now over your head. \n Suprisly you now breath.\n  Almost imdeept an accoplus grabs ahold of your body with it tenchonalvle. \n  You are in a full westle match with an ocptloys.\n  Your trying to get the stick techitncal off of your as its \n mouth comes close to your body.\n  Just as it s about to attack eat you push it away at the last second and two more join. \n You drawn your sword and begin to attacl. ";
+        intro = "You come to the third Junction in southern region. \n The water is now getting a little deeper. \n You and is now over your head. \n Suprisly you can now breath.\n  Almost immediately an octopus grabs ahold of your body with it tentacles. \n  You are in a full westle match with an octopus.\n  Your trying to get the sticky tentacles off of your as its \n mouth comes close to your body.\n  Just as it's about to eat you, you push it away at the last second and two more join. \n You drawn your sword and begin to attack. ";
         prompt.setText(intro);
         enmies.add("Traverler");
         enmies.add("Traverler");

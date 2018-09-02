@@ -74,7 +74,7 @@ public class Dungeonroom4Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You get deeper in the dungeon. You see an old man in hiss 80s. ''Beware traveler. \n The man squids will stop at nothing to kill you... and \n every thing you love.'' The man then take a knife and stabs him self and 10 man squids come from \n differnt rooms and feed on the dead man. The raptors then come attack you.";
+        intro = "You get deeper in the dungeon. You see an old man in hiss 80s. ''Beware traveler. \n The man squids will stop at nothing to kill you... and \n every thing you love.'' The man then take a knife and stabs him self and 10 man squids come from \n differnt rooms and feed on the dead man. The mansquids then come attack you.";
         prompt.setText(intro);
         
         enmies.add("Man squids");

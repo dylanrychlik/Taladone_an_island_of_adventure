@@ -67,7 +67,7 @@ public Inside_innController(){
         Optional<ButtonType> result = alert.showAndWait();
           if (result.get() == buttonTypeTwo) {
     alert.setHeight(500);
-            alert.setContentText("Miles Fred: Did you hear about Hannah Frenchhorn? I hear she is cheating on her husband, with Masiky Helderrun! Do you hear about Ned Arseinton? \n I hear he likes this girl and doesn’t know how to approach her.....poor soul. I think Glen NorthStell is crazy, he says these strange green people did “Experments on him” \n Thats about all I heard about. I hope you have a good day! ");
+            alert.setContentText("Miles Fred: Did you hear about Hannah Frenchhorn? I hear she is cheating on her husband, with Masiky Helderrun! Do you hear about Ned Arseinton? \n I hear he likes this girl and doesn’t know how to approach her.....poor soul. I think Glen NorthStell is crazy, he says these strange green people did ''Experments'' on him. \n Thats about all I heard about. I hope you have a good day! ");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -84,7 +84,7 @@ public Inside_innController(){
  public void prisoner1(){
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Hannah FrenchHorn ");
-        alert.setContentText(" Hannah Frenchhorn: I can’t believe this is happening! Why did I lose control?");
+        alert.setContentText(" Hannah Frenchhorn: I can’t belive this is happening! Why did I lose control?");
         ButtonType ok = new ButtonType("What happened?");
         ButtonType exit = new ButtonType("Exit");
         alert.getButtonTypes().setAll(ok,exit);
@@ -121,7 +121,7 @@ public Inside_innController(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Ned Anderson");
 
-        alert.setContentText("There is this girl, I really really like her, but I am too scared to what she will say if I ask to marry her. She is so pretty, and I’m an just a fool. My father says I lack to socail skills to marry somone like her. I want to prove him and everyone in Davenrun wrong. Can you help me fellow adventurer sir?");
+        alert.setContentText("There is this girl, I really really like her, but I am too scared about what she will say if I ask to marry her. She is so pretty, and I’m just a fool. My father says I lack the socail skills to marry somone like her. I want to prove him and everyone in Davenrun wrong. Can you help me fellow adventurer sir?");
 
         ButtonType buttonTypeOne = new ButtonType("Yes");
         ButtonType buttonTypeTwo = new ButtonType("No");
@@ -176,7 +176,7 @@ public Inside_innController(){
  }
        public void prisoner5() throws IOException{
   
-         if (Sidequests[2] == true){
+         if (Sidequests[1] == true){
                Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Alert!");
 
@@ -189,7 +189,7 @@ public Inside_innController(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Glen Northsteel");
 
-        alert.setContentText("I am telling you, they were these green people doing experments on me! Why won’t anyone listen to me!? These green people. They attackted me and took to this stange place and did “Experiments to me” I woke up in my bed. It happend in the farm just outside of town. Please adventure, can you investage the farm? I will pay you in gold if you can? ");
+        alert.setContentText("I am telling you, they were these green people doing experments on me! Why won’t anyone listen to me!? \n These green people. They attackted me and took to this stange place and did “Experiments to me” I woke up in my bed. \n It happend in the farm just outside of town. Please adventure, can you investigate the farm? \n I will pay you in gold if you can? ");
 
         ButtonType buttonTypeOne = new ButtonType("Yes");
         ButtonType buttonTypeTwo = new ButtonType("No");

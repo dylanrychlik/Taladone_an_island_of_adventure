@@ -12,6 +12,7 @@ import static Davenrun.OutsidehouseController.Weaponitem;
 import static Davenrun.OutsidehouseController.gooditem;
 import Davenrun.Player;
 import Davenrun.goodItem;
+import static The_western_mountain.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -196,7 +197,7 @@ enmies.add("Doogiehead");
             if (enmies.isEmpty()) {
 
               //  Thread.sleep(3000);
-
+                locations[29] = true;
                 Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Dragons_lair.fxml"));
                 Stage stage = new Stage();
                 stage.setTitle("Dragons lair");

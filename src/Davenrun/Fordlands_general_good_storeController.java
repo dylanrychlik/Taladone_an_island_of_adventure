@@ -79,7 +79,7 @@ public class Fordlands_general_good_storeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         prompt.setPrefSize(550, 50);
-        prompt.setText("Goodmans General Good Store: Here you can buy different items to \n add to your inventory to either benefit yourself or bet at Hellruns casino. \n You can also sell items you picked up in your travels to get quick gold. \n Would you like to go inside?");
+        prompt.setText("Goodmans General Good Store: Here you can buy different items to \n add to your inventory to either benefit yourself or bet at Hellruns Casino. \n You can also sell items you picked up in your travels to get quick gold. \n Would you like to go inside?");
         prompt.setEditable(false);
         
         prompt.setEditable(false);
@@ -299,7 +299,7 @@ public void Go_South() throws IOException{
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Bart Welson");
 
-        alert.setContentText("Bart Welson: Need a sword? Go the wepons and armor store. I’m sure they have what you need.");
+        alert.setContentText("Bart Welson: Need a sword? Go the weapons and armor store. I’m sure they have what you need.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -331,7 +331,7 @@ public void Go_South() throws IOException{
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Denice Cook");
 
-        alert.setContentText("Denice Cook: We should not live in a Davenrun where only a handful of people own a third of the wealth in the town");
+        alert.setContentText("Denice Cook: We should not live in a Davenrun where only a handful of people own a third of the wealth in the town.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();

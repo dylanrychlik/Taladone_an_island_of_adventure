@@ -11,6 +11,7 @@ import static Davenrun.OutsidehouseController.Weaponitem;
 import static Davenrun.OutsidehouseController.gooditem;
 import Davenrun.Player;
 import Davenrun.goodItem;
+import static The_eastern_graveyard.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -77,7 +78,6 @@ public class InsideeasterncrossingController implements Initializable {
         intro = "You go in a see a long dark and ice covered hallway. You then turn around the cornor \n and see the light before the light, a headless man comes and walks towards you. \n A threat. This creature is not described in the Taladone arcivhes. \n You intend to tell the Jarl after the dragon is dead.";
         prompt.setText(intro);
         enmies.add("Doogie head");
-        
 
         intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
                 + "\n You armor is " + Player.getarmor() + "Enemy health is " + Enemyhealth + "\n What will you do?";
@@ -189,8 +189,8 @@ public class InsideeasterncrossingController implements Initializable {
             prompt.setText(intro);
             if (enmies.isEmpty()) {
 
-              //  Thread.sleep(3000);
-
+                //  Thread.sleep(3000);
+                locations[29] = true;
                 Parent root = FXMLLoader.load(getClass().getResource("/The_eastern_graveyard/Dragons_lair.fxml"));
                 Stage stage = new Stage();
                 stage.setTitle("Dragons lair");

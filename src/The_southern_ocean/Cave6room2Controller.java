@@ -74,7 +74,7 @@ public class Cave6room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-         intro = "You then go and see a man naked with his arm flesh torn and the back of bloody skin exposed. \n. ''Are you and angel.'' ''Don't worry, you're going to be alright''. ''No I'm not'' \n a losbter then comes and tears most of his flesh off like paper and then falls to the ground and bleeds out \n as you go and attack.";
+         intro = "You then go and see a man naked with his arm flesh torn and the back of bloody skin exposed. \n. ''Are you an angel?'' ''Don't worry, you're going to be alright''. ''No I'm not'' \n a losbter then comes and tears most of his flesh off like paper and then falls to the ground and bleeds out \n as you go and attack.";
          prompt.setText(intro);
         enmies.add("Lobster");
         enmies.add("Lobster");

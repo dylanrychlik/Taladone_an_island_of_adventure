@@ -32,21 +32,25 @@ import static The_northen_woods.Junction5Controller.row6;
 import static The_northen_woods.Junction5Controller.row7;
 import static The_northen_woods.Junction5Controller.row8;
 import static The_northen_woods.Junction5Controller.row9;
+import static The_northen_woods.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 public class Cave5Controller implements Initializable {
-    String intro = "You travel to undead cave. Beyond the light of this cave, is pure darkness \n and undead creatures that feast on the the flesh of adventures like yourself \n If this cave is clearn no wonder travel will come to a undead zombie from \n this cave in the night sky \n Who knows what wepon s and armor are in from dead adventures ";
+    String intro = "You travel to undead cave. Beyond the light of this cave, is pure darkness \n and undead creatures that feast on the the flesh of adventures like yourself \n If this cave is clearn no more people will become an undead zombie from \n this cave in the night sky. \n Who knows what weapons and armor are in from dead adventures ";
  public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -355,6 +359,19 @@ public class Cave5Controller implements Initializable {
         }
     }
       public void go_inside_boldmans_areana() throws IOException {
+            if(locations[16] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+        ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+          else {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 5");
         Parent root = FXMLLoader.load(getClass().getResource("/The_northen_woods/Cave5room1.fxml"));
@@ -362,7 +379,7 @@ public class Cave5Controller implements Initializable {
         Stage.show();
         closeWindow();
     }
-
+      }
     public void go_East() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/The_northen_woods/Junction6.fxml"));
 

@@ -39,7 +39,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 public class Junction4Controller implements Initializable {
-    String intro = " You travel to the the fourth junction of the northen region \n You eat an apple and some water as you sit in the near log. \n From behind you you hear a twig snap. \n You turn around to see a man sitting there. \n You: ''What are you doing here? What do you want?” \n “Beware the dragon traveler. Fires breath from its mouth and flies like a \n bird in the sky.. Beyond the \n dragons lair is the northen coast. It leads to northen irlead laddy.” \n You put your sword away and the man dissaplear in the night. \n You fall down beyond the \n log behind you to see a bunny hopping near by. \n There are no enmies int his area!";
+    String intro = " You travel to the the fourth junction of the northen region \n You eat an apple and some water as you sit in the near log. \n From behind you you hear a twig snap. \n You turn around to see a man sitting there. \n You: ''What are you doing here? What do you want?” \n “Beware the dragon traveler. Fires breath from its mouth and flies like a \n bird in the sky.. Beyond the \n dragons lair is the northen coast. It leads to northen irlead laddy.” \n You put your sword away and the man dissapear in the night. \n You fall down beyond the \n log behind you to see a bunny hopping near by. \n There are no enmies int his area!";
   public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -96,7 +96,8 @@ public class Junction4Controller implements Initializable {
         stats.setEditable(false);
         Map.setEditable(false);
         Map.setPrefHeight(400);
-        current.setEditable(false);
+        current.setEditable(false);  
+        locations[3] = true;       
         current.setPrefSize(300, 180);
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();

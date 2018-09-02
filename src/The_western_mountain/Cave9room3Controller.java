@@ -78,7 +78,7 @@ public class Cave9room3Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You go and see the a demon. You go and attack ";
+        intro = "You go and see a demon. You go and attack ";
  prompt.setText(intro);
        enmies.add("Demon");
 
@@ -210,7 +210,7 @@ Player.addbank(150);
            Weapon  Cave4Weapon = new   Weapon("9","Sword","Sword forged store in Davenrun.",50,50);
         
             Weaponitem.addLast(Cave4Weapon);
-                    Armor Cave4Armor = new Armor("9","Armor","Armor forged by John WarIron",25,25);
+                    Armor Cave4Armor = new Armor("9","Armor","Armor forged by John WarIron",50,50);
             Armoritem.addLast(Cave4Armor);
                 Stage Stage = new Stage();
                 Stage.setTitle("Cave 9");
@@ -220,7 +220,7 @@ Player.addbank(150);
                 closeWindow();
 
             } else {
-                Player.setarmor(25);
+                Player.setarmor(50);
                 Player.setattackdamage(50);
                
                 Stage Stage = new Stage();

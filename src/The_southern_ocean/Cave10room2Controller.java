@@ -74,7 +74,7 @@ public class Cave10room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You go in the upper floor bellow the deck and see another warrior \n ''Your family is with the captain. When you dead thell die too... slowly... the children in particular... Ill have the woman watch... while she screams \n then I'll her stab her through her whore mouth' ";
+        intro = "You go in the upper floor bellow the deck and see another warrior \n ''Your family is with the captain. When you die they'll die too... slowly... the children in particular... I'll have the woman watch... while she screams \n then I'll her stab her through her whore mouth' \n You go and attack";
         prompt.setText(intro);
         enmies.add("pirate");
         enmies.add("pirate");

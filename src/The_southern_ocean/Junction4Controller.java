@@ -40,7 +40,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 public class Junction4Controller implements Initializable {
-    String intro = "  You come to the fourth Juncton in the souther region. You look around see nothing but a school of mysterous fish. The jucntion seems clear.";
+    String intro = "  You come to the fourth Juncton in the southern region. You look around see nothing but a school of mysterous fish. The junction seems clear.";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -99,6 +99,7 @@ public class Junction4Controller implements Initializable {
         Map.setPrefHeight(400);
         current.setEditable(false);
         current.setPrefSize(300, 180);
+         locations[3] = true;
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();
         if (player.getJarl_level_count() == 0 || player.getJarl_level_count() == 2 || player.getJarl_level_count() == 4 || player.getJarl_level_count() == 6 || player.getJarl_level_count() == 8 || player.getJarl_level_count() == 10) {

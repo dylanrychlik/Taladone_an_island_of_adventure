@@ -72,10 +72,12 @@ public class Junction25Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        intro = "''If my doogie head army can't destory you, perhaps I will.''";
+        intro = "'More emnies come and attack";
 
         prompt.setText(intro);
-       enmies.add("The sum of all diabolical"); 
+       enmies.add("Doogie head"); 
+        enmies.add("Doogie head"); 
+         enmies.add("Doogie head"); 
     
  
     
@@ -243,12 +245,12 @@ Player.setJarl_level_count();
         prompt.clear();
         prompt.setText(intro);
 
-        Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Davenrun_church.fxml"));
-        Stage stage = new Stage();
-        stage.setTitle("Cave 1");
-        stage.setScene(new Scene(root, 1000, 750));
-        stage.show();
-        closeWindow();
+       Parent root = FXMLLoader.load(getClass().getResource("/The_final_quest/junction26.fxml"));
+                Stage stage = new Stage();
+                stage.setTitle("Davenrun church");
+                stage.setScene(new Scene(root, 1000, 750));
+                stage.show();
+                closeWindow();
     }
 
     public void goodlist() {

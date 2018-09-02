@@ -75,7 +75,7 @@ public class Cave3room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-      intro = "You and see a man appears in the cave. \n ''Help me... the raptor took my goddamn brother... I might die'' - \n he said and the raptors jump and tear the man to shreds as blood psews everywhere";
+      intro = "You and see a man appears in the cave. \n ''Help me... the raptor took my goddamn brother... I might die'' - \n he said and the raptors jump and tear the man to shreds as blood sprews everywhere";
         prompt.setText(intro);
         enmies.add("Raptor");
         enmies.add("Raptor");

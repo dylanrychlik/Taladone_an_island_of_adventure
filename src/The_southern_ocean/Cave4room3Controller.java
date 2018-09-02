@@ -78,7 +78,7 @@ public class Cave4room3Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
  
-intro = "The giant jellyfish continue to attack and you and finisht he remainng off.";
+intro = "The giant jellyfish continue to attack and you and finish the remaing jellyfish off.";
 prompt.setText(intro);
         enmies.add("jellyfish");
         enmies.add("jellyfish");
@@ -195,7 +195,7 @@ prompt.setText(intro);
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
-
+locations[15] = true;
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation!");
 Player.addbank(150);

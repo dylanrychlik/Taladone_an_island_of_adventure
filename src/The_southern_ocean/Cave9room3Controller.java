@@ -195,6 +195,7 @@ public class Cave9room3Controller implements Initializable {
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
+                  locations[20] = true;
      Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation!");
 Player.addbank(150);
@@ -210,7 +211,7 @@ Player.addbank(150);
            Weapon  Cave4Weapon = new   Weapon("9","Sword","Sword forged store in Davenrun.",50,50);
         
             Weaponitem.addLast(Cave4Weapon);
-                    Armor Cave4Armor = new Armor("9","Armor","Armor forged by John WarIron",25,25);
+                    Armor Cave4Armor = new Armor("9","Armor","Armor forged by John WarIron",30,30);
             Armoritem.addLast(Cave4Armor);
                 Stage Stage = new Stage();
                 Stage.setTitle("Cave 9");
@@ -220,7 +221,7 @@ Player.addbank(150);
                 closeWindow();
 
             } else {
-                Player.setarmor(25);
+                Player.setarmor(30);
                 Player.setattackdamage(50);
                
                 Stage Stage = new Stage();

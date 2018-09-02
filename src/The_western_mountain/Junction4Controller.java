@@ -91,6 +91,7 @@ public class Junction4Controller implements Initializable {
 
      @Override
     public void initialize(URL url, ResourceBundle rb) {
+          locations[3] = true;
   prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);

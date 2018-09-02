@@ -74,7 +74,7 @@ public class AttackJunction3Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        intro = "You come to the third Junction in the Eastern Graveyard. \n Clouds begin to from above. The clear night has turn to cloudy \n and a slight rain fall has begun. \n In the east distance you see a few figure just standing 30 feet away form you.\n “Hello? Who is there?” you call out. The figuire say nothing.\n  You have a feeling that they are foes. \n You put you hand towards your side as you begin walking to wards it. \n As you are walking they begin walking towards. \n  The figure seems oldly shaped. \n It defietly doesn’t look like a friend. \n As you get closer it is realized that is a group of doogie heads \n and they go and attack you. ";
+        intro = "You come to the third Junction in the Eastern Graveyard. \n Clouds begin to from above. The clear night has turn to cloudy \n and a slight rain fall has begun. \n In the east distance you see a few figure just standing 30 feet away form you.\n “Hello? Who is there?” you call out. The figuire say nothing.\n  You have a feeling that they are foes. \n You put you hand towards your side as you begin walking to wards it. \n As you are walking they begin walking towards. \n  The figure seems oldly shaped. \n It definitely doesn’t look like a friend. \n As you get closer it is realized that is a group of doogie heads \n and they go and attack you. ";
         prompt.setText(intro);
         enmies.add("doogie head");
         enmies.add("doggie head");

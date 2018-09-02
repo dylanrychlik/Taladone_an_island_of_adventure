@@ -210,7 +210,7 @@ public class Talk_billController implements Initializable {
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Bill");
 
-        alert.setContentText("He complians about his life is what he does. \n He can’t let go of mom and bitches about it for years. \n Hes slow and lacks common sense when is comes to cleaning. \n His cooking is terrible and doesn't even have a job. \n I have to feed his lazy arse");
+        alert.setContentText("He complians about his life is what he does. \n He can’t let go of mom and bitches about it for years. \n He is slow and lacks common sense when is comes to cleaning. \n His cooking is terrible and doesn't even have a job. \n I have to feed his lazy arse!");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

@@ -11,6 +11,7 @@ import static Davenrun.OutsidehouseController.Weaponitem;
 import static Davenrun.OutsidehouseController.gooditem;
 import Davenrun.Player;
 import Davenrun.goodItem;
+import static The_eastern_graveyard.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
@@ -190,7 +191,7 @@ public class InsidewesterncrossingController implements Initializable {
             if (enmies.isEmpty()) {
 
                 //Thread.sleep(3000);
-
+                locations[30] = true;
                 Parent root = FXMLLoader.load(getClass().getResource("/The_eastern_graveyard/Dragons_lair.fxml"));
                 Stage stage = new Stage();
                 stage.setTitle("Dragons lair");

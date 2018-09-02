@@ -30,7 +30,7 @@ public class Attackzombie3Controller implements Initializable {
 
     private Player you;
     int Enemyhealth = 10;
-    String intro = "Dylan Alberton: Good day Davenrun! Today is a day of DEATH and DISPEAR! \n Today we have our contendent " + you.Getname() + " plus the opposer, the creatures that haunt \n Taladone! \n Is the contenent a WASTE OF SPACE in this town, or does he/she have what it \n takes to be.... AN ADVENTURER! Only faith will find out!";
+    String intro = "Dylan Alberton: Good day Davenrun! Today is a day of DEATH and DESPAIR! \n Today we have our contendent " + you.Getname() + " plus the opposer, the creatures that haunt \n Taladone! \n Is the contenent a WASTE OF SPACE in this town, or does he/she have what it \n takes to be.... AN ADVENTURER! Only faith will find out!";
     Queue<String> enmies = new LinkedList<String>();
     int numhealthptoion = 3;
     int healthpotionhealamount = 30;

@@ -188,7 +188,7 @@ public class Cave7room3Controller implements Initializable {
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
-
+   locations[18] = true;
              
                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation!");

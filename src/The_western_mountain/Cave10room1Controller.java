@@ -75,7 +75,7 @@ public class Cave10room1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You in the first cave an elk. The elk gets attack and \n has its muschels and organs get torn to shred by the yetis \n You go and attack";
+        intro = "You in the first cave an elk. The elk gets attack and \n has its muscles and organs get torn to shred by the yetis \n You go and attack";
         prompt.setText(intro);
        enmies.add("Yeti");
      enmies.add("Yeti");

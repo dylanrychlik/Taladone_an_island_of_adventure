@@ -40,7 +40,7 @@ import javafx.stage.Stage;
  */
 public class DungeonController implements Initializable {
 
-    String intro = "Youc oem to the doogiehead dunoea. Here the headless doogieheas \n of Taladone haunt the underlands. DO you dare go inside? ";
+    String intro = "You come to the doogiehead dunoea. Here the headless doogieheas \n of Taladone haunt the underlands. DO you dare go inside? ";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);

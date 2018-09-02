@@ -65,7 +65,7 @@ public class TalkgirlController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "You and see the girl tied up at the end of the cave. \n ''Help me! The girl cries out''";
+     String intro = "You see the girl tied up at the end of the cave. \n ''Help me! The girl cries out''";
      public void The_stalkerController() {
        
         this.prompt = new TextArea();

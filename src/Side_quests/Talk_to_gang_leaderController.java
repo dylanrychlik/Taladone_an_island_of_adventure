@@ -205,7 +205,7 @@ public class Talk_to_gang_leaderController implements Initializable {
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Gang leader");
 
-        alert.setContentText("Naw I'm just gonna kill you istead. Attack gang! ");
+        alert.setContentText("Naw I'm just gonna kill you instead. Attack gang! ");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

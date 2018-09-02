@@ -244,7 +244,7 @@ public class Attack_gang_leaderController implements Initializable {
             prompt.setText(intro);
             if (enmies.isEmpty()) {
                       Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-  alert.setContentText(intro + "You leave the inn with your head huring. \n Side quest completed! \n You add 30 gold. Your bank is now " +  Player.getbank());
+  alert.setContentText(intro + "You leave the inn with your head hurting. \n Side quest completed! \n You add 30 gold. Your bank is now " +  Player.getbank());
 
         ButtonType buttonTypeOne = new ButtonType("ok");
         Optional<ButtonType> result = alert.showAndWait();

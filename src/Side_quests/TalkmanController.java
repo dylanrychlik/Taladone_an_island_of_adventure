@@ -221,7 +221,7 @@ public class TalkmanController implements Initializable {
          Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Man");
 
-        alert.setContentText("Davenrun isdoomed anyway. The jarl is courrupt and is paid by the areana and casino to tell davenrun what they want to hear. You will die ");
+        alert.setContentText("Davenrun is doomed anyway. The Jarl is courrupt and is paid by the Arena and Casino to tell Davenrun what they want to hear. You will die ");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

@@ -247,7 +247,7 @@ public class Attack_bookcave_room3Controller implements Initializable {
 
                  Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Nigel Williams");
-intro = "You go back to Davenrun. You see the Nigil. \n ''You did it! You found my book! Thank you adventure. \n I manipulate the acient taladone arts. Here is 50 gold... and a trick to help you in defense. \n Side quests completed";  
+intro = "You go back to Davenrun. You see the Nigil. \n ''You did it! You found my book! Thank you adventure. \n I manipulate the acient Taladone arts. Here is 50 gold... and a trick to help you in defense. \n Side quest completed!";  
 Player.addactarmor(50) ;
         alert.setContentText(intro + "You add 30 gold. Your bank is now " +  Player.getbank() +  "\n You 50 armor. Your amror is now \n" + Player.getarmor());
 

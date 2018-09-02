@@ -29,20 +29,23 @@ import static The_eastern_graveyard.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 public class Cave6Controller implements Initializable {
 
   
-   String intro = "You come to the spider cave, is where the spider of easter region lies. \n You see a nunch of webs ont he outside. \n The spider must be resting";
+   String intro = "You come to the spider cave, is where the spider of easter region lies. \n You see a bunch of webs on the outside. \n The spider must be resting";
    public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -319,6 +322,19 @@ public class Cave6Controller implements Initializable {
         }
     }
       public void go_inside_boldmans_areana() throws IOException {
+           if(locations[17] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+        ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+          else {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 6");
         Parent root = FXMLLoader.load(getClass().getResource("/The_eastern_graveyard/Cave6room1.fxml"));
@@ -327,7 +343,7 @@ public class Cave6Controller implements Initializable {
         closeWindow();
     }
 
-
+      }
 
     public void go_South() throws IOException {
 

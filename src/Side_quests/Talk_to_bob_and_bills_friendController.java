@@ -64,7 +64,7 @@ public class Talk_to_bob_and_bills_friendController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "You go talk to bill and bobs friends!";
+     String intro = "You go talk to Bill and Bobs friends!";
      public void The_stalkerController() {
        
         this.prompt = new TextArea();
@@ -209,7 +209,7 @@ public class Talk_to_bob_and_bills_friendController implements Initializable {
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Friend one");
 
-        alert.setContentText("His brother does nothing but complain, but I also feel like Bill is being a little too harsh.\n He helps terrimlesly around the house.\n  It makes my life much easier. \n Bill needs to learn some humilty. I side with bob ");
+        alert.setContentText("His brother does nothing but complain, but I also feel like Bill is being a little too harsh.\n He helps tremendously around the house.\n  It makes my life much easier. \n Bill needs to learn some humility. I side with Bob ");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
@@ -234,7 +234,7 @@ public class Talk_to_bob_and_bills_friendController implements Initializable {
          Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Friend three");
 
-        alert.setContentText("I think they need to make up. \n Bill needs to learn some humitly and not blow things out of porportion and Bob needs to be faster with cookin and cleaing. \n As well as hunt more. I am netural! ");
+        alert.setContentText("I think they need to make up. \n Bill needs to learn some humility and not blow things out of porportion and Bob needs to be faster with cookin and cleaing. \n As well as hunt more. I am netural! ");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

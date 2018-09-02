@@ -95,7 +95,7 @@ public class HellrunscasinoController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
       prompt.setPrefHeight(80);
 
-        prompt.setText("Helruns's Casino: Welcome to Helrun’s Casino. This is the entertainment center of \n Davenrun. Here you place casino games and sociallize.");
+        prompt.setText("Helruns's Casino: Welcome to Helrun’s Casino. This is the entertainment center of \n Davenrun. Here you place casino games and socialize.");
         prompt.setEditable(false);
          prompt.setEditable(false);
         stats.setEditable(false);
@@ -262,7 +262,7 @@ private void doAction(String listItem) {
 
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Sean Militen: : Helrun’s Casino is made up of half of what is wrong with Davenrun. The other half being Boldmans areana. People come here and get greedy and bet everything they own. \n They drink themselves sick and next thing they know, they are selling their arses on the streets. \n The casino owners are doing nothing about it. As long as they are making money, they don’t care if someone becomes poor or not. It is an addiction.");
+            alert.setContentText("Sean Militen: Helrun’s Casino is made up of half of what is wrong with Davenrun. The other half being Boldmans areana. People come here and get greedy and bet everything they own. \n They drink themselves sick and next thing they know, they are selling their arses on the streets. \n The casino owners are doing nothing about it. As long as they are making money, they don’t care if someone becomes poor or not. It is an addiction.");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -272,7 +272,7 @@ private void doAction(String listItem) {
         }
         if (result.get() == buttonTypeTwo) {
             alert.setHeight(600);
-            alert.setContentText("Sean Militen: Aye, I am. I came to this land when I was just a little boy. \n My father was killed during the great Taladone war just before I became a man. \n With nothing left, I traveled the islsand for several years. I have recently settled when I found my wife and now we have two kids and a third on its way.\n I don't travel much these days, but when I do my mind goes back to a rather simpiler time. A time before greed.\n A time when Jarls wern't influenced by the wealth of the Areana and the Casino. \n A time when people cared for each other and actually made a living. \n When Adventures were free spirits who traveled the Island hutning the creatures for defense and food, and not sport \n That was almost 20 years ago. \n We main lainders have sabataged the integerity of  Davenrun and the rest of Taladone. \n Dark times are coming to Taladone. I feel in my heart and soul \n. Despite my hate for the Jarl, he is going to be the only guide to save Taladone from an unkown force of evil. \n Don't let the areana and casino distract you, go to the Jarls palace and see what you can do. \n Good luck adventure.  ");
+            alert.setContentText("Sean Militen: Aye, I am. I came to this land when I was just a little boy. \n My father was killed during the great Taladone war just before I became a man. \n With nothing left, I traveled the islsand for several years. I have recently settled when I found my wife and now we have two kids and a third on its way.\n I don't travel much these days, but when I do my mind goes back to a rather simpler time. A time before greed.\n A time when Jarls wern't influenced by the wealth of the Areana and the Casino. \n A time when people cared for each other and actually made a living. \n When Adventures were free spirits who traveled the Island hunting the creatures for defense and food, and not sport \n That was almost 20 years ago. \n We main lainders have sabatoged the integerity of Davenrun and the rest of Taladone. \n Dark times are coming to Taladone. I feel in my heart and soul \n. Despite my hate for the Jarl, he is going to be the only guide to save Taladone from an unkown force of evil. \n Don't let the areana and casino distract you, go to the Jarls palace and see what you can do. \n Good luck adventure.  ");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();

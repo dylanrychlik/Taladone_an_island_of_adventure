@@ -74,7 +74,7 @@ public class Dungeonroom3Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You get deeper in the dungeon. You see a teenager girl in there. \n She is on her knees praying suddely, \n from the next room 3 man squids come and eat him alive. \n You go and attack. ";
+        intro = "You get deeper in the dungeon. You see a teenager girl in there. \n She is on her knees praying suddely, \n from the next room 3 man squids come and eat her alive. \n You go and attack. ";
         prompt.setText(intro);
         enmies.add("Man squid");
         enmies.add("Man squid");

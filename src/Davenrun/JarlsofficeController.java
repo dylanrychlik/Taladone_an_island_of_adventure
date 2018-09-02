@@ -126,7 +126,7 @@ public class JarlsofficeController implements Initializable {
          alert.getButtonTypes().setAll(Cancle);
         Optional<ButtonType> result = alert.showAndWait();
           }
-          else {
+           if (Player.getJarl_level_count() == 1 || Player.getJarl_level_count() == 3 || Player.getJarl_level_count() == 5 || Player.getJarl_level_count() == 7){
                  Alert alert = new Alert(Alert.AlertType.INFORMATION);
         
         ButtonType Cancle = new ButtonType("Ok");
@@ -136,6 +136,15 @@ public class JarlsofficeController implements Initializable {
         Optional<ButtonType> result = alert.showAndWait();
           }
     
+            if (Player.getJarl_level_count() == 9){
+                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        
+        ButtonType Cancle = new ButtonType("Ok");
+         alert.setHeaderText("The Jarl of Davenrun");
+        alert.setContentText("Jarl: What are you still doing here? Go to the church and defeat the evil!");
+         alert.getButtonTypes().setAll(Cancle);
+        Optional<ButtonType> result = alert.showAndWait();
+          }
            
       
     }
@@ -155,7 +164,7 @@ public class JarlsofficeController implements Initializable {
         if (result.get() == yes) {
             while (true) {
             alert.setHeight(600);
-            alert.setContentText("Jarl: Ahhh yes I do. Long ago there was a proficy that an adventure would come to Davenrun and save Taledone from the forces of evil. A man who sets out to save what Davenrun was founded on… a haven of adventures like your self. \n Taladone is becoming dangours. I don’t have guards to spare the town. That is where you come in adventure. There are diffrent places among taladone that need to be explored. If you dare take upon the quest.");
+            alert.setContentText("Jarl: Ahhh yes I do. Long ago there was a proficy that an adventure would come to Davenrun and save Taledone from the forces of evil. A man... or woman who sets out to save what Davenrun was founded on… a haven of adventures like your self. \n Taladone is becoming dangours. I don’t have guards to spare the town. That is where you come in adventure. There are diffrent places among Taladone that need to be explored. If you dare take upon the quest.");
 
             ButtonType yes2 = new ButtonType("What must I do?");
             ButtonType no2 = new ButtonType("That sounds dangourous?");
@@ -198,7 +207,7 @@ public class JarlsofficeController implements Initializable {
             }
             if (result2.get() == no2) {
                 alert.setHeight(600);
-                alert.setContentText("As is the rest of taladone it is I'm afraid. When I was a young boy my father took me on a boat and traveled the Irish sea to this Island, some sort of evil came and made the island worse and worse. \n The creates became increasly difficult and dangours. Now Taladone is an island of evil and we are in the center of it. I fear if noone stops it soon, we are all going to die....");
+                alert.setContentText("As is the rest of taladone it is I'm afraid. When I was a young boy my father took me on a boat and traveled the Irish sea to this Island, some sort of evil came and made the island worse and worse. \n The creates became increasly difficult and dangerous. Now Taladone is an island of evil and we are in the center of it. I fear if noone stops it soon, we are all going to die....");
                 ButtonType ok = new ButtonType("OK");
                 alert.getButtonTypes().setAll(ok);
                 Optional<ButtonType> new_result = alert.showAndWait();
@@ -209,7 +218,7 @@ public class JarlsofficeController implements Initializable {
         }
         if (result.get() == no) {
             alert.setHeight(600);
-            alert.setContentText("An adventure. A one who comes to the island to fight the forces of evil. \n A man who is wise and has no fear. A man who is brave and bold at the same time. A man who isn’t doesn’t fear death, they welcome.\n You have those qualities to save Taladone and the rest of the world.");
+            alert.setContentText("An adventure. A one who comes to the island to fight the forces of evil. \n A man who is wise and has no fear. A man who is brave and bold at the same time. A man who isn’t doesn’t fear death, they welcome it.\n You have those qualities to save Taladone and the rest of the world.");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             result = alert.showAndWait();
@@ -253,7 +262,7 @@ public class JarlsofficeController implements Initializable {
             Optional<ButtonType> result2 = alert.showAndWait();
             if (result2.get() == yes2) {
                 alert.setHeight(600);
-                alert.setContentText("Headless taladone warriors. And there is more than the one or two you saw I’m afraiid. \n I have another quest if you dare choose to ececpt.Go the acient Taladone graveyard. \n Its in the eastern region, you must be quick on your toes \n and fast on your feet for there are haunted creatures that bump the night… and a clue to the evil that haunts Taladone. \n Go there and defeat a pontenial sargeant of the army. \n Oh and I almost forget here is you award young adventurer…");
+                alert.setContentText("Headless taladone warriors. And there is more than the one or two you saw I’m afraid. \n I have another quest if you dare choose to ececpt. Go the acient Taladone graveyard. \n Its in the eastern region, you must be quick on your toes \n and fast on your feet for there are haunted creatures that bump the night… and a clue to the evil that haunts Taladone. \n Go there and defeat a pontenial sargeant of the army. \n Oh and I almost forget here is you award young adventurer…");
 
                 ButtonType yes3 = new ButtonType("Yes");
                 ButtonType no3 = new ButtonType("No");
@@ -335,7 +344,7 @@ public class JarlsofficeController implements Initializable {
         if (result.get() == yes) {
             while (true) {
             alert.setHeight(600);
-            alert.setContentText("Ahhhhhhhh…. The acient demons of Taladone. They lead a group of five doogie heads….. But every leader has a comannder…. On top of a mouantin using acient powers…");
+            alert.setContentText("Ahhhhhhhh…. The acient demons of Taladone. They lead a group of five doogie heads….. But every leader has a comannder... On top of a mouantin using acient powers…");
 
             ButtonType yes2 = new ButtonType("What I must do?");
             ButtonType no2 = new ButtonType("Do you want me to venture to the West Taladone mountain?");
@@ -413,7 +422,7 @@ public class JarlsofficeController implements Initializable {
   ButtonType yes = new ButtonType("I got three 3 wepons, armor, and health potion.");
         ButtonType no = new ButtonType("Where is my gold?");
         alert.setHeaderText("The Jarl of Davenrun");
-        alert.setContentText("Then you are ready for the western mouantain and defeat the doogiehead armys general. He is on the moauntain and will find the clue to his commander… the ultimate commande");
+        alert.setContentText("Then you are ready for the Western Mouantain and defeat the Doogiehead armys general. He is on the moauntain and will find the clue to his commander… the ultimate commander");
          alert.getButtonTypes().setAll(yes, no, Cancle);
         Optional<ButtonType> result = alert.showAndWait();
         
@@ -479,7 +488,7 @@ public class JarlsofficeController implements Initializable {
         
       
             alert.setHeight(600);
-            alert.setContentText("Ahhhhhh…. Adventure you have return. \n The skys of Davenrun have darkened. The end is near…… \n I feel it in my soul….. Go to the Davenrun church…… the door will unlock and the final battle will begin. Go luck adventure adventureer. \n If you say yes, then there is no turning back. Do you still wish to go?");
+            alert.setContentText("Ahhhhhh…. Adventure you have return. \n The skys of Davenrun have darkened. The end is near…… \n I feel it in my soul….. Go to the Davenrun church…… the door will unlock and the final battle will begin. Go luck adventure adventurer. \n If you say yes, then there is no turning back. Do you still wish to go?");
 
                 ButtonType yes3 = new ButtonType("Yes");
                 ButtonType no3 = new ButtonType("No");
@@ -519,15 +528,9 @@ public class JarlsofficeController implements Initializable {
         
       
             alert.setHeight(600);
-            alert.setContentText("Advenuture: " + Player.Getname() + "the Sum of all diobogical is defeated and now we can make taladone what it used to be a haven of adventure and opprinity.\n I now commdend you…. The hero of Taladone: An island of adcventure. \n Here is your award...");
+            alert.setContentText("Advenuture: " + Player.Getname() + "the Sum of all diobogical is defeated and now we can make Taladone what it used to be a haven of adventure and opprinity.\n I now commdend you…. The hero of Taladone: An island of adcventure. \n Here is your award...");
 
-                ButtonType yes3 = new ButtonType("Yes");
-                ButtonType no3 = new ButtonType("No");
-
-                alert.getButtonTypes().setAll(yes3, no3);
-                Optional<ButtonType> result3 = alert.showAndWait();
-
-                if (result3.get() == yes3) {
+              
                      Player.addbank(10000);
                      you.getPlayer();
                      you.setJarl_level_count();
@@ -538,25 +541,9 @@ public class JarlsofficeController implements Initializable {
                     alert.getButtonTypes().setAll(ok);
                     Optional<ButtonType> new_result = alert.showAndWait();
                   
-                }
-                if (result3.get() == no3) {
-                    alert.setHeight(600);
-                    alert.setContentText("Jarl: I am here if you change your mind...");
-                    ButtonType ok = new ButtonType("OK");
-                    alert.getButtonTypes().setAll(ok);
-                    Optional<ButtonType> new_result = alert.showAndWait();
-                 
-                    
-                   
-                }
+               
     }
-      public void Jarl7() {
-        
-    }
-    
-        public void Jarl8() {
-        
-    }
+  
     
     
     public void exit() throws IOException {

@@ -18,6 +18,7 @@ import static The_northen_woods.Golden_Wine_berry_innController.row6;
 import static The_northen_woods.Golden_Wine_berry_innController.row7;
 import static The_northen_woods.Golden_Wine_berry_innController.row8;
 import static The_northen_woods.Golden_Wine_berry_innController.row9;
+import static The_northen_woods.Northen_bridgeController.locations;
 import static The_northen_woods.Northen_bridgeController.row10;
 import static The_northen_woods.Northen_bridgeController.row11;
 import static The_northen_woods.Northen_bridgeController.row13;
@@ -41,7 +42,7 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 public class CabinController implements Initializable {
-String intro = "You come a cabin the cabin in locked from the inside";
+String intro = "You come a cabin. The cabin in locked from the inside. Where will you go?";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -90,7 +91,7 @@ String intro = "You come a cabin the cabin in locked from the inside";
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+ locations[26] = true;
         prompt.setText(intro);
         prompt.setText(intro);
         prompt.setEditable(false);

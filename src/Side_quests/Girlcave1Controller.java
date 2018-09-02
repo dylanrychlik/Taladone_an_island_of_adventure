@@ -45,7 +45,7 @@ public class Girlcave1Controller implements Initializable {
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-    String intro = "Ned wants to  me marry him. \n Hes seem like a good person to marry but I am occupied with a banit leader \n who wants to marry, unfortanly he capturped my \n father in an cve just outside of town if you clear the cave I will marry him. \nYou go and clear the cave";
+    String intro = "Ned wants to  me marry him. \n Hes seem like a good person to marry but I am occupied with a banit leader \n who wants me to marry him, unfortanly he capturped my \n father in an cave just outside of town if you clear the cave I will marry Ned. \nYou go and clear the cave";
     @FXML
     private TextArea Map;
     @FXML

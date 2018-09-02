@@ -195,7 +195,7 @@ public class Junction24Controller implements Initializable {
 
                 Parent root = FXMLLoader.load(getClass().getResource("/The_final_quest/junction25.fxml"));
                 Stage stage = new Stage();
-                stage.setTitle("Cave 1");
+                stage.setTitle("Davenrun church");
                 stage.setScene(new Scene(root, 1000, 750));
                 stage.show();
                 closeWindow();

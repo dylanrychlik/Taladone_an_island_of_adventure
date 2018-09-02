@@ -34,16 +34,20 @@ import static The_western_mountain.Junction5Controller.row6;
 import static The_western_mountain.Junction5Controller.row7;
 import static The_western_mountain.Junction5Controller.row8;
 import static The_western_mountain.Junction5Controller.row9;
+import static The_western_mountain.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
@@ -329,6 +333,19 @@ public class Cave5Controller implements Initializable {
         }
     }
       public void go_inside_boldmans_areana() throws IOException {
+          if(locations[16] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+        ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+          else {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 5");
         Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Cave5room1.fxml"));
@@ -336,7 +353,7 @@ public class Cave5Controller implements Initializable {
         Stage.show();
         closeWindow();
     }
-
+      }
     public void go_East() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/The_western_mountain/Junction6.fxml"));
 

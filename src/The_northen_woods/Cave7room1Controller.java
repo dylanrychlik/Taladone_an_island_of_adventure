@@ -73,7 +73,7 @@ public class Cave7room1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You see three Snakes sliver towards you. They realease their giant fangs and attack";
+        intro = "You see three Snakes sliver towards you. They release their giant fangs and attack";
         prompt.setText(intro);
         enmies.add("Snake");
         enmies.add("Snake");

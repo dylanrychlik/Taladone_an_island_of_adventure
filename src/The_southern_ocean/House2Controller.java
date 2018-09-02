@@ -101,6 +101,7 @@ public class House2Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+           locations[25] = true;
         prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);

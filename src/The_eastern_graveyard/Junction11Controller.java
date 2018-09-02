@@ -97,6 +97,7 @@ public class Junction11Controller implements Initializable {
         Map.setEditable(false);
         Map.setPrefHeight(400);
         current.setEditable(false);
+        locations[10] = true;
         current.setPrefSize(300, 180);
 //ObservableList<String> people = FXCollections.observableArrayList();
         player.getPlayer();

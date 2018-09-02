@@ -72,7 +72,7 @@ public class AttackJunction2Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
- intro = "You come to the second Junction in the souther region. \n You feet the groud below is moist and wets your feets. \n You are sstanding in about in a foot of water. \n In the distance you see bubbles form. \n The buubles become more intesne \n and from aboave realive a group of man sharks. \n You draw your sword and prepare to attack. ";  
+ intro = "You come to the second Junction in the southern region. \n You feet the groud below is moist and wets your feets. \n You are standing in about in a foot of water. \n In the distance you see bubbles form. \n The buubles become more and more intesne \n and from above realive a group of man sharks. \n You draw your sword and prepare to attack. ";  
  prompt.setText(intro);
       enmies.add("Man shark");
 enmies.add("Man shark");

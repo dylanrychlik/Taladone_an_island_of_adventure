@@ -73,7 +73,7 @@ public class Dungeonroom2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You get deeper in the dungeon. In a room there are 5 doors. \n There is a middle aged man.\n  He is tired up in the middle of the room. \n Suddely, the 5 doors opens an in each door a raptor comes out and they and \n tear the man to shreds. \n Blood spews everywhere as the raptors tear the man limb form limb. \n You then go and attack.";
+        intro = "You get deeper in the dungeon. In a room there are 5 doors. \n There is a middle aged man.\n  He is tired up in the middle of the room. \n Suddely, the 5 doors opens an in each door a raptor comes out and they and \n tear the man to shreds. \n Blood spews everywhere as the raptors tear the man limb from limb. \n You then go and attack.";
         prompt.setText(intro);
         enmies.add("Raptor");
       enmies.add("Raptor");

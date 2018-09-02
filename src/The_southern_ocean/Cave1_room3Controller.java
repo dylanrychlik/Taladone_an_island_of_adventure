@@ -75,7 +75,7 @@ public class Cave1_room3Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
- intro = "You go in the dark 3 room of the cave \n As you walk forward you see the ghost of your father... \n traveler... go and attack the this shark and you do so.";
+ intro = "You go in the dark 3 room of the cave \n As you walk forward you see the ghost of your father... \n ''traveler... go and attack the this shark'' and you do so.";
  prompt.setText(intro);
        enmies.add("King Shark of Taladone");
  

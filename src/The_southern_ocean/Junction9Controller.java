@@ -38,7 +38,7 @@ import javafx.stage.Stage;
  * @author The flash
  */
 public class Junction9Controller implements Initializable {
-String intro = "You travel to the 9th junction of the northen region. As you get closer to North, \n the time seems to slow down. You drink your water and notice you have run out. \n Near by the Taladone river, you to take a fill your water bottle when you have see \n your relection on the water. \n Behind it you see a red looking figure and 5 headless men behind you. \n You draw your sword and see nobody behind you.\n You then hear a voice in your head. ''Taladone will burn. The doogie head army will \n rise.'' \n  A fearful looks comes to eyes as you look upon the hill that leads to the lair. \n There are no enmies in this earna!";
+String intro = "You travel to the 9th junction of the northen region. As you get closer to the South, \n the time seems to slow down. You drink your water and notice you have run out. \n  There are no enmies in this area!";
      public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -91,6 +91,7 @@ String intro = "You travel to the 9th junction of the northen region. As you get
   prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);
+         locations[8] = true;
         prompt.setEditable(false);
         stats.setEditable(false);
         Map.setEditable(false);

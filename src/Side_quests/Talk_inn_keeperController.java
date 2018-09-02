@@ -64,7 +64,7 @@ public class Talk_inn_keeperController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "All of sudden, water splashes your face \n and wake in the room with the inn keeper looking at you feroiusly. \n Wake up you drunken maggot!";
+     String intro = "All of sudden, water splashes your face \n and wake in the room with the inn keeper looking at you furiously. \n ''Wake up you drunken maggot!''";
      public void The_stalkerController() {
        
         this.prompt = new TextArea();
@@ -209,7 +209,7 @@ public class Talk_inn_keeperController implements Initializable {
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Inn keeper");
 
-        alert.setContentText("You drank too much thats what happened. You blacked out said some really rude things to a couple of workers and they got the Davenrun gang after you. You better figgure out is going on.  ");
+        alert.setContentText("You drank too much thats what happened. You blacked out said some really rude things to a couple of workers and they got the Davenrun gang after you. You better figure out is going on.  ");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

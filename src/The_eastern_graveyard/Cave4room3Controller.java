@@ -193,7 +193,7 @@ prompt.setText(intro);
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
-
+                locations[15] = true;
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation!");
 Player.addbank(150);

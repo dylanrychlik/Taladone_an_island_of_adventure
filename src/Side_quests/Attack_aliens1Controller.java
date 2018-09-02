@@ -47,7 +47,7 @@ public class Attack_aliens1Controller implements Initializable {
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-    String intro = " Side quest started: The aliens. You go to the farm where \n they said where the green people are, \n all of sudden a bright light shines in the distance going striahgt \n towards you and it captures you and you go inside some sort of flying ship. \n  You look at the green people and you are stuck on the bed. \n They are typing on a computer the alien speaks up. \n “Translation: English languege, lifeform: human. intelligance: low. \n The lifeform is useless, prepare the surgurgy. \n You jump from the bed and attack the alieans. ";
+    String intro = " Side quest started: The aliens. You go to the farm where \n they said where the green people are, \n all of sudden a bright light shines in the distance going straight \n towards you and it captures you and you go inside some sort of flying ship. \n  You look at the green people and you are stuck on the bed. \n They are typing on a computer the alien speaks up. \n “Translation: English languege, lifeform: human. intelligance: low. \n The lifeform is useless, prepare the surgery.'' \n You jump from the bed and attack the alieans. ";
     @FXML
     private TextArea Map;
     @FXML

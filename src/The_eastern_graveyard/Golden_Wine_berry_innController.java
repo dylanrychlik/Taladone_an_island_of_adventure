@@ -50,7 +50,7 @@ import javafx.stage.Stage;
 
 public class Golden_Wine_berry_innController implements Initializable {
 
-    String intro = "You come to an adbanded inn in the gravayard. What will you? ";
+    String intro = "You come to an abandoned inn in the gravayard. What will you? ";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -99,7 +99,7 @@ public class Golden_Wine_berry_innController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+   locations[23] = true;
         prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);

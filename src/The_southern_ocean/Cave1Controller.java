@@ -43,13 +43,16 @@ import static The_southern_ocean.Northen_bridgeController.row9;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
@@ -445,6 +448,19 @@ public class Cave1Controller implements Initializable {
     }
 
    public void go_inside_boldmans_areana() throws IOException {
+          if(locations[12] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+        ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+       else{
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 1");
         Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Cave1_room1.fxml"));
@@ -452,7 +468,7 @@ public class Cave1Controller implements Initializable {
         Stage.show();
         closeWindow();
     }
-
+   }
     public void go_East() throws IOException {
            if (locations[2] == false) {
         Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/attackjunction3.fxml"));

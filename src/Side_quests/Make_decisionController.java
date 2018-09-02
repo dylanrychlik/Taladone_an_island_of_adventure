@@ -242,7 +242,7 @@ public class Make_decisionController implements Initializable {
       Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Bill and Bob"); 
          alert.setHeight(275);
-            alert.setContentText("Bill: Aw I'm sorry bob. \n Bob: I’m sorry too Bill. Lets both compripise. I will let your stay if you work harder deal? \n Bob: Deal  \n Side Quest completed!");
+            alert.setContentText("Bill: Aw I'm sorry bob. \n Bob: I’m sorry too Bill. Lets both compromise. I will let your stay if you work harder deal? \n Bob: Deal  \n Side Quest completed!");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait(); 

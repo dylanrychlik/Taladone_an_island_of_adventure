@@ -110,7 +110,7 @@ public class LobbyController implements Initializable {
 
     public void zack() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Zack Arston: The gate around Davenrun is weak and doesn’t even remotly secure out borders, we need a wall. A wall I tell you!");
+        alert.setContentText("Zack Arston: The gate around Davenrun is weak and doesn’t even remotly secure our borders, we need a wall. A wall I tell you!");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -120,7 +120,7 @@ public class LobbyController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Joel Adam");
 
-        alert.setContentText("Commons, just one more and ill hit gold!");
+        alert.setContentText("Common, just one more game and I'll hit gold!");
 
         ButtonType buttonTypeOne = new ButtonType("What do you think of the Casino?");
         ButtonType buttonTypeTwo = new ButtonType("Where are you from?");
@@ -130,7 +130,7 @@ public class LobbyController implements Initializable {
 
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Joel: What do I think of it? Entertainment. Something that this world lacks. We can’t always be working, we need to have some down time. \n I think the casino, the inn, and the aerana ahas brought culture to the cultreless wasteland of this world. I haven’t always lived here in Davenrun..");
+            alert.setContentText("Joel: What do I think of it? Entertainment. Something that this world lacks. We can’t always be working, we need to have some down time. \n I think the casino, the inn, and the aerana have brought culture to the cultureless wasteland of this world. I haven’t always lived here in Davenrun..");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -140,7 +140,7 @@ public class LobbyController implements Initializable {
         }
         if (result.get() == buttonTypeTwo) {
             alert.setHeight(500);
-            alert.setContentText("YJoel: I am from Ireland laddy. The land is boring and the politics are ridiculous. It is frowned upon to have downtime.\n You will never find something as exciting as Taladone. Some call the island of Taladone dangerous, I call it opportunity. \n An opportunity to escape life and live in a world of fantasy and imgantination. Ireland has none of it. Just miles and miles of order and illness and dullness. Here, we can actually live life in a dangourus way. \n Life is too short to live a mudane life. ");
+            alert.setContentText("Joel: I am from Ireland laddy. The land is boring and the politics are ridiculous. It is frowned upon to have downtime.\n You will never find something as exciting as Taladone. Some call the Island of Taladone dangerous, I call it opportunity. \n An opportunity to escape life and live in a world of fantasy and imgantination. Ireland has none of it. Just miles and miles of order and illness and dullness. Here, we can actually live life in a dangourus way. \n Life is too short to live a mudane life. ");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -233,7 +233,7 @@ public class LobbyController implements Initializable {
 
     public void tori() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Tori Tucker: I’m tired of corrupt polacitions keep getting the title of the Jarl. We need a policial revolution and take over this island. ");
+        alert.setContentText("Tori Tucker: I’m tired of corrupt politicians keep getting the title of the Jarl. We need a policial revolution and take over this island. ");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();

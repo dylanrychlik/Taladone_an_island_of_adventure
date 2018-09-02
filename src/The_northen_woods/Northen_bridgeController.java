@@ -47,7 +47,7 @@ import javafx.stage.Stage;
 
 public class Northen_bridgeController implements Initializable {
 public static boolean[] locations = new boolean[30];
-    String intro = "Quest started: The northen woods. \n The northen bridge: \n You cross the brige that connects the centeral region to the northen region.\n You traveled a long Journey to this bridge. Coutless people and countless fields.\n The central of the island is a beatuy. Almost 90% of the people that live in Taladone \n live in the centeral field. The ones that brave or bold enough to venture into the island \n many of them do not survive. \n The ones that are ignorant or stupid enough to live in the forrest, have trouble sleeping \n at night. They are always afraid of what is going to lurk outside. \n They have any means of defense nessacry to fend off the creature that lurk \n in the Northen Forrest \n Beyond the bridge, there are two pontential paths to travel to the dragons lair. \n The path you go down is a faith that for you to decide";
+    String intro = "Quest started: The northen woods. \n The northen bridge: \n You cross the brige that connects the centeral region to the northen region.\n You traveled a long Journey to this bridge. Coutless people and countless fields.\n The central of the island is a beatuy. Almost 90% of the people that live in Taladone \n live in the centeral field. The ones that brave or bold enough to venture into the island \n many of them do not survive. \n The ones that are ignorant or stupid enough to live in the forrest, have trouble sleeping \n at night. They are always afraid of what is going to lurk outside. \n They have any means of defense necessary to fend off the creatures that lurk \n in the Northen Forrest \n Beyond the bridge, there are two pontential paths to travel to the dragons lair. \n The path you go down is a faith that for you to decide";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -96,6 +96,7 @@ public static boolean[] locations = new boolean[30];
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+          locations[27] = true;
         prompt.setPrefHeight(250);
         prompt.setText(intro);
         prompt.setText(intro);

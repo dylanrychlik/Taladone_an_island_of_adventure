@@ -40,7 +40,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 public class Junction4Controller implements Initializable {
-    String intro = " You come to the fourth Junction in the Eastern region. \n  A mist begins to form in the the graveyard. \n You hear nothing but the rain. \n The raindrops fall to the ground like bullets. \n The rain is unfourtable and it begins to thunder in the distance. \n Light strikes in the East. \n You are heading for the eye of the storm. \n From behind you a crackeling from the gravestone. \n ''Turn back adventure this is your last chance'' Brave a bold you avoide the tempation to go back. And march foward. \n There are no emies in this area!";
+    String intro = " You come to the fourth Junction in the Eastern region. \n  A mist begins to form in the the graveyard. \n You hear nothing but the rain. \n The raindrops fall to the ground like bullets. \n The rain gets harder and it begins to thunder in the distance. \n Lighting strikes in the East. \n You are heading for the eye of the storm. \n From behind you a crackeling from the gravestone. \n ''Turn back adventure this is your last chance'' Brave and bold you avoid the tempation to go back. And march foward. \n There are no emies in this area!";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -90,6 +90,7 @@ public class Junction4Controller implements Initializable {
 
      @Override
     public void initialize(URL url, ResourceBundle rb) {
+        locations[3] = true;
   prompt.setPrefHeight(150);
         prompt.setText(intro);
         prompt.setText(intro);

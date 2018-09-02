@@ -74,7 +74,7 @@ public class Cave10room1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You in the Bottom Deck and hide behind cargo. \n You see the three pirates around 2 tied up warriors and arguing. ''Look, the captain wants them dead '' \n ''I don't give a sharks arse about what the captain says, these people are worth 5000 gold!'' ''Sorry, captains orders'' - asone goes to attack the warriors the other attacks him but his head gets sliced in have as blood spews everywhere. \n You then go and attack sna save the warriors.";
+        intro = "You in the Bottom Deck and hide behind cargo. \n You see the three pirates around 2 tied up warriors and arguing. ''Look, the captain wants them dead '' \n ''I don't give a sharks arse about what the captain says, these people are worth 5000 gold!'' ''Sorry, captains orders'' - as one goes to attack the warriors the other attacks him but his head gets sliced in have as blood spews everywhere. \n You then go and attack sna save the warriors.";
         prompt.setText(intro);
        enmies.add("pirate");
 enmies.add("pirate");

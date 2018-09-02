@@ -66,7 +66,7 @@ public class The_dateController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "Side quest started: The date \n You go on a date with a girl. \n You have a drink with her in the casino and play card games with her. \n You hold her hand through out the night. \n You have dinner in the game from the meat of the creature of the island. \n At the end of the date  girl looks at in the eye. \n Want to go back to my house and sleep with me?";
+     String intro = "Side quest started: The date \n You go on a date with a girl. \n You have a drink with her in the casino and play card games with her. \n You hold her hand through out the night. \n You have dinner in the game from the meat of the creature of the island. \n At the end of the dat girl looks at you in the eye. \n Want to go back to my house and sleep with me?";
      public void The_stalkerController() {
        
         this.prompt = new TextArea();
@@ -211,7 +211,7 @@ public class The_dateController implements Initializable {
     Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Content");
 
-        alert.setContentText(" You go back to her house and pleasure your senses and realses your tension inside of her. You relax, and then tells you, well that staifyies my appitite, now get the hell out. You leave feeling a new man. ");
+        alert.setContentText(" You go back to her house and pleasure your senses and realses your tension inside of her. You relax, and then she tells you, 'Well that satisfied my appetite, now get the hell out. You leave feeling a new man or woman. ");
 Sidequests[14]= true;
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

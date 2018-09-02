@@ -194,7 +194,7 @@ public class Dungeonroom5Controller implements Initializable {
 
                 Player.addbank(100);
                 intro = "You add 100 to bank " + "Your bank is now" + Player.getbank();
-            }
+            
 
            // Thread.sleep(3000);
             locations[22] = true;
@@ -208,7 +208,7 @@ public class Dungeonroom5Controller implements Initializable {
             stage.show();
             closeWindow();
 
-        }
+        } }
     }
 
     public void Drink_potion() {

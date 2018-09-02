@@ -193,7 +193,7 @@ public class Dragons_lairController implements Initializable {
                 intro = "";
                 
                 intro = "Quest Completed!";
-                locations[25] = true;
+                locations[28] = true;
                   if (Player.getJarl_level_count() == 3){
                // Thread.sleep(3000);
 Player.setJarl_level_count();

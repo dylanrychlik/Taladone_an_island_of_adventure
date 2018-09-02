@@ -54,7 +54,7 @@ public class The_stalkerController implements Initializable {
     @FXML
     private TextArea Map;
     Player player;
-     String intro = "Side quest started: the stalker. \n You wake up in a dark room. You seem to be chained on the floor. \n You try to move your hand as the chains break the movement. \n You look around for a key, nothing. \n You sruggle as the chains continuie to break your movment. \n You look see the stalker in the house. “What do you want from me??” you call out. \n The stalker remains silent. You look at the man and see the tatto on his arm. \n You look into his eyes. ";
+     String intro = "Side quest started: the stalker. \n You wake up in a dark room. You seem to be chained on the floor. \n You try to move your hand as the chains break the movement. \n You look around for a key, nothing. \n You struggle as the chains continue to break your movment. \n You look see the stalker in the house. “What do you want from me??” you call out. \n The stalker remains silent. You look at the man and see the tattoo on his arm. \n You look into his eyes. ";
    public void The_stalkerController() {
        
         this.prompt = new TextArea();

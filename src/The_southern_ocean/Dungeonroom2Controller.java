@@ -74,7 +74,7 @@ public class Dungeonroom2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-      intro = "The man squids come and attack a man and tear his flesh and expose his skull. The man squid uses brute forse to shatte the skull, killing the man instanly. \n You then go and attack"; 
+      intro = "The man squids come and attack a man and tear his flesh and expose his skull. The man squid uses brute forse to shatter the skull, killing the man instanly. \n You then go and attack"; 
       prompt.setText(intro);
         enmies.add("Man squid");
      enmies.add("Man squid");

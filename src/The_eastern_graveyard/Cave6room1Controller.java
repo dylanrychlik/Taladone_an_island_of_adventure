@@ -74,7 +74,7 @@ public class Cave6room1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You see 3 spiders and attacj";
+        intro = "You see 3 spiders and attack";
         prompt.setText(intro);
         enmies.add("spider");
         enmies.add("spider");

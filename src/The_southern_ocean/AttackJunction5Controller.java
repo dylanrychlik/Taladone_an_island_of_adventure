@@ -30,11 +30,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-
 public class AttackJunction5Controller implements Initializable {
 
-  
-   private Player you;
+    private Player you;
     int Enemyhealth = 10;
     String intro;
     Queue<String> enmies = new LinkedList<String>();
@@ -71,16 +69,14 @@ public class AttackJunction5Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
- //intro = "You travel to the third junction of the northen region \n The sun is beating on your face like your father when you were a kid. \n As you wipe the sweat on your forehead, you notice a tad bit a red drip on your hand as you wipe it. \n You look up and see blood dripping from the leaves above. \n Upon further inpection, you see the dead body hanged up high from the tree. \n You turn around the cornor and see two more dead. There is a mad man on the loose. \n You grab your sword and scream! \n “Show yourself! I work for the Jarl! You don’t want to fight me!”.You then hear rustling from the leaves from the near by bush. \n Out comes an unarmed man that looks very frighten and scared. \n “Get out of here now! They are coming!” He says. \n An arrow then penatrates him and the man closped to the ground as his breath is cut short and reavles a group of outlaw travelers.forehead, you notice a tad bit a red drip on your hand as you wipe it. \n You look up and see blood dripping from the leaves above. \n Upon further inpection, you see the dead body hanged up high from the tree. \n You turn around the cornor and see two more dead. There is a mad man on the loose. \n You grab your sword and scream! \n “Show yourself! I work for the Jarl! You don’t want to fight me!”.You then hear rustling from the leaves from the near by bush. \n Out comes an unarmed man that looks very frighten and scared. \n “Get out of here now! They are coming!” He says. \n An arrow then penatrates him and the man closped to the ground as his breath is cut short and reavles a group of outlaw travelers.";
- intro = "You come to the firth Junction in the souther region. You come to the 5th Junction in the souther region. The water begins to get deeper and in the distance you see a light. \n The light is pretty int he dark water. \n You begin to swim to towards he light. \n Directly south towards where the sea monster is upposed to live. \n You get close to the light and it reavles a anger fishes teeth and two more appear near by.";
- prompt.setText(intro);
-       enmies.add("Spider");
-enmies.add("Spider");
-enmies.add("Spider");
-       
+        //intro = "You travel to the third junction of the northen region \n The sun is beating on your face like your father when you were a kid. \n As you wipe the sweat on your forehead, you notice a tad bit a red drip on your hand as you wipe it. \n You look up and see blood dripping from the leaves above. \n Upon further inpection, you see the dead body hanged up high from the tree. \n You turn around the cornor and see two more dead. There is a mad man on the loose. \n You grab your sword and scream! \n “Show yourself! I work for the Jarl! You don’t want to fight me!”.You then hear rustling from the leaves from the near by bush. \n Out comes an unarmed man that looks very frighten and scared. \n “Get out of here now! They are coming!” He says. \n An arrow then penatrates him and the man closped to the ground as his breath is cut short and reavles a group of outlaw travelers.forehead, you notice a tad bit a red drip on your hand as you wipe it. \n You look up and see blood dripping from the leaves above. \n Upon further inpection, you see the dead body hanged up high from the tree. \n You turn around the cornor and see two more dead. There is a mad man on the loose. \n You grab your sword and scream! \n “Show yourself! I work for the Jarl! You don’t want to fight me!”.You then hear rustling from the leaves from the near by bush. \n Out comes an unarmed man that looks very frighten and scared. \n “Get out of here now! They are coming!” He says. \n An arrow then penatrates him and the man closped to the ground as his breath is cut short and reavles a group of outlaw travelers.";
+        intro = "You come to the firth Junction in the southern region. You come to the 5th Junction in the southern region. The water begins to get deeper and in the distance you see a light. \n The light is pretty in the dark water. \n You begin to swim to towards he light. \n Directly south towards where the sea monster is upposed to live. \n You get close to the light and it reavles a anger fishes teeth and two more appear near by.";
+        prompt.setText(intro);
+        enmies.add("Angel Fish");
+        enmies.add("Angel Fish");
+        enmies.add("Angel Fish");
 
-            
-   intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
+        intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
                 + "\n You armor is " + Player.getarmor() + "Enemy health is " + Enemyhealth + "\n What will you do?";
         Look.getItems().addAll("Good list", "Weapon list", "Armor list");
         Look.setValue("Look");
@@ -93,7 +89,6 @@ enmies.add("Spider");
 
     }
 
-     
     public void stats() {
 
         player.getPlayer();
@@ -192,8 +187,6 @@ enmies.add("Spider");
             prompt.setText(intro);
             if (enmies.isEmpty()) {
 
-              
-               
                 locations[4] = true;
                 Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Junction5.fxml"));
                 Stage stage = new Stage();
@@ -229,11 +222,11 @@ enmies.add("Spider");
         intro += "You run away from the enemy!";
         prompt.clear();
         prompt.setText(intro);
-        
-         Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Northen_bridge.fxml"));
-                Stage stage = new Stage();
-                stage.setTitle("Northen bridge");
-                stage.setScene(new Scene(root, 1000, 750));
+
+        Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Northen_bridge.fxml"));
+        Stage stage = new Stage();
+        stage.setTitle("Northen bridge");
+        stage.setScene(new Scene(root, 1000, 750));
         stage.show();
         closeWindow();
     }
@@ -281,8 +274,5 @@ enmies.add("Spider");
         Stage stage = (Stage) this.Attack.getScene().getWindow();
         stage.close();
     }
-     
-    
-    
-    
+
 }

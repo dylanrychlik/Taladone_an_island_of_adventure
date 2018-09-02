@@ -504,7 +504,7 @@ public class InsidearmoryController implements Initializable {
 
     public void Hows_bussinse() {
         String out = " John Wariron: Oh the glory days. I miss them when. When taladone "
-                + "was an island of adventure. This was a thriving store and I made a fourtune. Unfourtaly people started getting killed by other people and instead of fighting we all became scared little witches and put weapon rescription laws. Now Taladone is packed with evil and harted. Condindence? I think not! ";
+                + "was an island of adventure. This was a thriving store and I made a fourtune. Unfourtaly people started getting killed by other people and instead of fighting we all became scared little bitches, and put weapon restriction laws. Now Taladone is packed with evil and harted. Coincidence? I think not! ";
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(out);
@@ -514,7 +514,7 @@ public class InsidearmoryController implements Initializable {
     }
 
     public void john_war_iron() {
-        String out = " That name was used by my father, and my fathers fathers and his father before him, who fought in the battle of hastings.... so I suggest you watch your loose little mouth before you insult my family!";
+        String out = " That name was used by my father, and my father's fathers and his father before him, who fought in the battle of Hastings.... so I suggest you watch your loose little mouth before you insult my family!";
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(out);
@@ -524,7 +524,7 @@ public class InsidearmoryController implements Initializable {
     }
 
     public void john_War_iron_legend() {
-        String out = "Aye, I am. Before I came to DavenRun, I was a priate in the Irish Sea. Some creature killed our crew and I swam for 50 miles till I came to Taladone. \n I came to Davenrun and open the Armory during the great Taladone war and became a household name. I sold wepons to both side of the war, some may call it greedy, I call it using your resources. \n After the war, I met my wife and had my Daughter Emily War Iron. I owned this store for over 35 years. While it may not be the Areana or the Casino, it puts a roof over my head and food on the table. And thats all I can ask for.";
+        String out = "Aye, I am. Before I came to Davenrun, I was a pirate in the Irish Sea. Some creature killed our crew and I swam for 50 miles till I came to Taladone. \n I came to Davenrun and open the Armory during the great Taladone war and became a household name. I sold wepons to both side of the war, some may call it greedy, I call it using your resources. \n After the war, I met my wife and had my Daughter Emily War Iron. I owned this store for over 35 years. While it may not be the Areana or the Casino, it puts a roof over my head and food on the table. And thats all I can ask for.";
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(out);

@@ -245,7 +245,7 @@ public class Attack_cyborgController implements Initializable {
 
                                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         
-intro = "You take the time portotor and back to 1215 Taladone";  
+intro = "You take the time portal and back to 1215 Taladone";  
      alert.setContentText(intro);
  Sidequests[5] = true;
         ButtonType buttonTypeOne = new ButtonType("ok");

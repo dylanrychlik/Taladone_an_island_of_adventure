@@ -46,7 +46,7 @@ public class Attack_aliens2Controller implements Initializable {
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-     String intro = "You go down the ship. You see alot of aduucted people in Taladone. ";
+     String intro = "You go down the ship. You see alot of abducted people in Taladone. ";
     @FXML
     private TextArea Map;
     @FXML

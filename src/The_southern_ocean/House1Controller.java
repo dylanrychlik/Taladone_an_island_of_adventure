@@ -104,7 +104,7 @@ String intro = "In the distance, you see an emtpy house. You come up to the hous
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
- 
+    locations[24] = true;
         prompt.setText(intro);
         prompt.setText(intro);
         prompt.setEditable(false);

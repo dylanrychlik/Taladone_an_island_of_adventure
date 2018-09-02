@@ -11,6 +11,7 @@ import static Davenrun.OutsidehouseController.row3;
 import static Davenrun.OutsidehouseController.row4;
 import Davenrun.Player;
 import Davenrun.goodItem;
+import static The_northen_woods.Northen_bridgeController.locations;
 import static The_southern_ocean.Golden_Wine_berry_innController.row10;
 import static The_southern_ocean.Golden_Wine_berry_innController.row11;
 import static The_southern_ocean.Golden_Wine_berry_innController.row12;
@@ -77,6 +78,7 @@ String intro = "You come a cabin the cabin in locked from the inside";
     @FXML
     private Button Go_Inside;
     Player player;
+  
   public void Cabin() {
         this.Go_NorthWest = new Button();
         this.Player_stats = new Button();
@@ -91,7 +93,7 @@ String intro = "You come a cabin the cabin in locked from the inside";
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+  locations[26] = true;
         prompt.setText(intro);
         prompt.setText(intro);
         prompt.setEditable(false);

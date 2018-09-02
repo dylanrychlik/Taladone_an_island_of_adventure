@@ -29,13 +29,16 @@ import static The_northen_woods.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
@@ -43,7 +46,7 @@ import javafx.stage.Stage;
 
 
 public class Cave7Controller implements Initializable {
-String intro = "You travel to snakecave hide Any advenutre who fears of snakes better damn fear \n going inside this cave. \n Snakes big enough to sollow you whole lurk inside. The snakes travel outisde at night \n and kill anoyone who is outisde the cave. Lucky for you, it is broad daylght";
+String intro = "You travel to snakecave hideout. Any advenutre who fears of snakes better damn fear \n going inside this cave. \n Snakes big enough to swallow you whole lurk inside. The snakes travel outisde at night \n and kill anoyone who is outisde the cave. Lucky for you, it is broad daylght";
      public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -352,6 +355,19 @@ String intro = "You travel to snakecave hide Any advenutre who fears of snakes b
         }
     }
       public void go_inside_boldmans_areana() throws IOException {
+            if(locations[18] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+        ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+          else {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 7");
         Parent root = FXMLLoader.load(getClass().getResource("/The_northen_woods/Cave7room1.fxml"));
@@ -360,7 +376,7 @@ String intro = "You travel to snakecave hide Any advenutre who fears of snakes b
         closeWindow();
     }
 
-
+      }
 
     public void go_South() throws IOException {
 

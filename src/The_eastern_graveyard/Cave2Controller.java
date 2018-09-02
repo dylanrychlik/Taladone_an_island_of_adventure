@@ -26,24 +26,28 @@ import static The_eastern_graveyard.Cave10Controller.row8;
 
 import static The_eastern_graveyard.Golden_Wine_berry_innController.row9;
 import static The_eastern_graveyard.Junction1Controller.row13;
+import static The_eastern_graveyard.Northen_bridgeController.locations;
 import java.io.IOException;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 public class Cave2Controller implements Initializable {
 
-    String intro = "Vampire deadhouse: Here is the evil nest of the vampire sof the weterns region. \n Here the undead suck the blood of the inocent so they can stay alvive. \n The vampire are more classy than skelatons or zombies, but equally as dangours. \n You look into the windows to find a man with a cape \n he opens his mouth to reveal his fangs. \n A bat then appears out of mist and flies into the distance. \n You heart pounds again and you step back with yoru sword drawn, \n it seems like it it time to fight the evil creature that haunr Side_quests. \n Do you wish to go inside or continaye or your adventure?";
+    String intro = "Vampire deadhouse: Here is the evil nest of the vampires of the weterns region. \n Here the undead suck the blood of the inocent so they can stay alive. \n The vampire are more classy than skelatons or zombies, but equally as dangours. \n You look into the windows to find a man with a cape \n he opens his mouth to reveal his fangs. \n A bat then appears out of mist and flies into the distance. \n You heart pounds again and you step back with yoru sword drawn, \n it seems like it it time to fight the evil creature that haunt Taladone. \n Do you wish to go inside or continaye or your adventure?";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -321,6 +325,19 @@ public class Cave2Controller implements Initializable {
         }
     }
       public void go_inside_boldmans_areana() throws IOException {
+           if(locations[13] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+        ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+          else {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 2");
         Parent root = FXMLLoader.load(getClass().getResource("/The_eastern_graveyard/Cave2room1.fxml"));
@@ -328,7 +345,7 @@ public class Cave2Controller implements Initializable {
         Stage.show();
         closeWindow();
     }
-
+      }
     public void go_East() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/The_eastern_graveyard/Cave3.fxml"));
 

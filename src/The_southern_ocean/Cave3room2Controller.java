@@ -74,13 +74,11 @@ public class Cave3room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You go in the cave and see what seems to be the leader. \n He has 5 banits around him. He has a knife to the throat of a man. \n ''Please, don't hurt my family, I'll do anything'' - said the man. \n ''I told your family to stay far away from here, now you're gonna pay the price''.  \n He slits his throat as blood oozez out. The banit sees you and goes to the next room. \n The 5 other banits attacks. ";
-        prompt.setText(intro);
-        enmies.add("Banit");
-        enmies.add("Banit");
-        enmies.add("Banit");
-        enmies.add("Banit");
-        enmies.add("Banit");
+   intro = "You see the agler  and go and attack";
+prompt.setText(intro);
+   enmies.add("agler ");
+  enmies.add("agler "); 
+  enmies.add("agler ");
         intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
                 + "\n You armor is " + Player.getarmor() + "Enemy health is " + Enemyhealth + "\n What will you do?";
         Look.getItems().addAll("Good list", "Weapon list", "Armor list");

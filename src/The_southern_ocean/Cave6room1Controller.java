@@ -74,7 +74,7 @@ public class Cave6room1Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You see a man try to fend off the losters. One lobster grabs the manby the leg \n as his leg comes off and blood spews everywhere. ''HELP ME SOMEBODY HELP ME!!!'' \n The lobster then tears the man peice by peice. You then go and attack ";
+        intro = "You see a man try to fend off the losters. One lobster grabs the man by the leg \n as his leg comes off and blood spews everywhere. ''HELP ME SOMEBODY HELP ME!!!'' \n The lobster then tears the man peice by peice. You then go and attack ";
         prompt.setText(intro);
         enmies.add("Lobster");
         enmies.add("Lobster");

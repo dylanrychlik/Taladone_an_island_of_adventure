@@ -74,7 +74,7 @@ public class Cave1_room3Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
- intro = " From the ashes of the dead wolves comes the Alpha male. \n He looks at his dead family and howls so loud that it can heard from Davenrun. \n The wolf then stare at you with rage in his eyes. He knows what you did. \n He runs straight towards you ready to gorge his vengence onto you.";
+ intro = " From the ashes of the dead wolves comes the Alpha male. \n He looks at his dead family and howls so loud that it can heard from Davenrun. \n The wolf then stares at you with rage in his eyes. He knows what you did. \n He runs straight towards you ready to gorge his vengence onto you.";
  prompt.setText(intro);
        enmies.add("King Wolf");
  

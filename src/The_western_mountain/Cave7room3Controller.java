@@ -191,11 +191,11 @@ public class Cave7room3Controller implements Initializable {
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
-
+              locations[18] = true;
              
                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Confirmation!");
-Player.addbank(150);
+             Player.addbank(150);
             alert.setContentText("Cave cleared! You add 150 gold. Your gold is now "+ Player.getbank() +  "You find the Health potion of extreme. \n  Do you wish to equip it to add  to your health rating or do to add it to your inventory?"
                     + "");
 

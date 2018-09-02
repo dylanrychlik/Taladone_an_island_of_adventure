@@ -90,7 +90,7 @@ String intro = "In the distance, you see a house. You come up to the house. The 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
- 
+      locations[24] = true;
         prompt.setText(intro);
         prompt.setText(intro);
         prompt.setEditable(false);

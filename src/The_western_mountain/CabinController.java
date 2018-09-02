@@ -20,6 +20,7 @@ import static The_western_mountain.Golden_Wine_berry_innController.row6;
 import static The_western_mountain.Golden_Wine_berry_innController.row7;
 import static The_western_mountain.Golden_Wine_berry_innController.row8;
 import static The_western_mountain.Golden_Wine_berry_innController.row9;
+import static The_western_mountain.Northen_bridgeController.locations;
 import static The_western_mountain.Northen_bridgeController.row10;
 import static The_western_mountain.Northen_bridgeController.row11;
 import static The_western_mountain.Northen_bridgeController.row13;
@@ -92,7 +93,7 @@ String intro = "You come a cabin the cabin in locked from the inside";
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+  locations[26] = true;
         prompt.setText(intro);
         prompt.setText(intro);
         prompt.setEditable(false);

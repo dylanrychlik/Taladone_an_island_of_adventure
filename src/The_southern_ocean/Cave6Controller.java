@@ -29,13 +29,16 @@ import static The_southern_ocean.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
@@ -91,7 +94,7 @@ public class Cave6Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        prompt.setText("You come to lobster hell. \n Here the giant man easting red lobster lurks withint he cave. \n They have claws large enough to snap bones like twigs and \n mouths that tear flesh like paper. \n You see a sign in the left wall that says, \n if you wish to find the third clue of the evil of taladone, come within. \n Do you dare go inside the cav or contine on your advenute? ");
+        prompt.setText("You come to lobster hell. \n Here the giant man easting red lobster lurks within the cave. \n They have claws large enough to snap bones like twigs and \n mouths that tear flesh like paper. \n You see a sign in the left wall that says, \n if you wish to find the third clue of the evil of taladone, come within. \n Do you dare go inside the cave or contine on your advenute? ");
         prompt.setPrefHeight(150);
       
         prompt.setEditable(false);
@@ -349,6 +352,19 @@ public class Cave6Controller implements Initializable {
         }
     }
       public void go_inside_boldmans_areana() throws IOException {
+            if(locations[17] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+        ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+          else {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 6");
         Parent root = FXMLLoader.load(getClass().getResource("/The_southern_ocean/Cave6room1.fxml"));
@@ -356,7 +372,7 @@ public class Cave6Controller implements Initializable {
         Stage.show();
         closeWindow();
     }
-
+      }
 
 
     public void go_South() throws IOException {

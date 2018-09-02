@@ -74,7 +74,7 @@ public class Cave7room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-       intro = "You go inside and see 5 more dwarg. \n The five dwarg stand and stare at you. \n They don't move, remotelly. \n Suddely, the evil dwarg of Taladone scream so loud, \n it can be heard from the top of the western mountain. \n You fal back 10 feet then run towards you. \n You stand up and attack."; 
+       intro = "You go inside and see 5 more dwarg. \n The five dwarg stand and stare at you. \n They don't move, remotelly. \n Suddely, the evil dwarg of Taladone scream so loud, \n it can be heard from the top of the western mountain. \n You fall back 10 feet then run towards you. \n You stand up and attack."; 
        prompt.setText(intro);
      enmies.add("dwarg");
     enmies.add("dwarg");

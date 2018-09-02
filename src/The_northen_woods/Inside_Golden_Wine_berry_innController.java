@@ -57,7 +57,7 @@ public Inside_Golden_Wine_berry_innController(){
 }
  public void Davenrun_Guard(){
              ButtonType buttonTypeOne = new ButtonType("Are you in charge of this inn? ");
-        ButtonType buttonTypeTwo = new ButtonType(" How is bussinsee?");
+        ButtonType buttonTypeTwo = new ButtonType(" How is business?");
         ButtonType buttonTypeCancel = new ButtonType("Exit");
          Alert alert = new Alert(Alert.AlertType.INFORMATION);
          alert.setTitle("Elbert WineBerry");
@@ -72,7 +72,7 @@ if (result.get() == buttonTypeOne) {
        
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Elbert WineBerry: I am. We are the only inn outisde the centeral region of the island and for good reason. \n I always have my sword by my side because creature always roam near the inn and damage the outside of it. \n We don't get much for demogrpahics other than adventures or travelers. The northen forrest makes it diffult, but its not nearly as bad as the sout,west,east regionsof the island. Only peoople that go therre arte form the order of the Jarl of davenrun");
+            alert.setContentText("Elbert WineBerry: I am. We are the only inn outisde the centeral region of the island and for good reason. \n I always have my sword by my side because creatures always roam near the inn and damage the outside of it. \n We don't get much for demographics other than adventures or travelers. The northen forrest makes it diffult, but its not nearly as bad as the sout,west,east regions of the island. Only peoople that go therre arte form the order of the Jarl of davenrun");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
@@ -82,7 +82,7 @@ if (result.get() == buttonTypeOne) {
         }
         if (result.get () == buttonTypeTwo) {
             alert.setHeight(500);
-        alert.setContentText("Elbert WineBerry: Businssee is slow unfourtantly. We only have two guests at the moment at the ost weve seen in months");
+        alert.setContentText("Elbert WineBerry: Business is slow unfourtantly. We only have two guests at the moment at the most weve seen in months");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         Optional<ButtonType> new_result = alert.showAndWait();
@@ -117,7 +117,7 @@ if (result.get() == buttonTypeOne) {
        
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Devin Cardman: No, I am a traveler, I have roam the northen forrest for several years fending off creature that attack, but calling me an advenutre would just be foolish." + "\n I stay in the inn as my home. At least it keeps the inn in bussise it be a damn shame to see it fail." + "\n The inn is the ony safe place outisde the centeral region. I taladone gets better soon.");
+            alert.setContentText("Devin Cardman: No, I am a traveler, I have roam the northen forrest for several years fending off creature that attack, but calling me an advenutre would just be foolish." + "\n I stay in the inn as my home. At least it keeps the inn in business it be a damn shame to see it fail." + "\n The inn is the ony safe place outisde the centeral region. I taladone gets better soon.");
                   //  + "// reature always roam near the inn and damage the outside of it. \n We don't get much for demogrpahics other than adventures or travelers. The northen forrest makes it diffult, but its not nearly as bad as the sout,west,east regionsof the island. Only peoople that go therre arte form the order of the Jarl of davenrun");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
@@ -128,7 +128,7 @@ if (result.get() == buttonTypeOne) {
         }
         if (result.get () == buttonTypeTwo) {
             alert.setHeight(500);
-        alert.setContentText("Devin Cardman: Northen irlead. I feel my blood warm from the saying. I have the hornor and the pride of saying so myself. Hopefully the king of england will do something about taladone, but jarl can't do junk about it. ");
+        alert.setContentText("Devin Cardman: Northen irlead. I feel my blood warm from the saying. I have the hornor and the pride of saying so myself. Hopefully the king of england will do something about Taladone, but the Jarl can't do junk about it. ");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         Optional<ButtonType> new_result = alert.showAndWait();
@@ -163,7 +163,7 @@ if (result.get() == buttonTypeOne) {
        
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Roland SteelHammar: I am. I am one of the few honorable ones too. Not influenced by the courruption of davenrun" + "\n I am. I am one of the few honorable ones too. Not influenced by the courruption of davenrun" + "\n All the adventures are older. You seem like an advenure and not one who is influenced by the jarl of davenrun. I hope you go and kill that dragon. The northenforrest would be safe again"); 
+            alert.setContentText("Roland SteelHammar: I am. I am one of the few honorable ones too. Not influenced by the courruption of davenrun" +  "\n All the adventures are older. You seem like an advenure and not one who is influenced by the jarl of davenrun. I hope you go and kill that dragon. The northenforrest would be safe again"); 
                     //\n I stay in the inn as my home. At least it keeps the inn in bussise it be a damn shame to see it fail." + "\n The inn is the ony safe place outisde the centeral region. I taladone gets better soon.");
                   //  + "// reature always roam near the inn and damage the outside of it. \n We don't get much for demogrpahics other than adventures or travelers. The northen forrest makes it diffult, but its not nearly as bad as the sout,west,east regionsof the island. Only peoople that go therre arte form the order of the Jarl of davenrun");
             ButtonType ok = new ButtonType("OK");

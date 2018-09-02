@@ -29,13 +29,16 @@ import static The_eastern_graveyard.Northen_bridgeController.locations;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
@@ -46,7 +49,7 @@ import javafx.stage.Stage;
  * @author The flash
  */
 public class Cave9Controller implements Initializable {
-    String intro = "You come to the redcap house. \n Here lies the creatures redcap a murderous goblin that attack anyything they see. \n You look inside the window, \n it is dark and can’t see anything then an ake taps of the window,\n  and the creatures appears. \n Do you wish to go inside?"; 
+    String intro = "You come to the redcap house. \n Here lies the creatures redcap a murderous goblins that attack anyything they see. \n You look inside the window, \n it is dark and can’t see anything then an ake taps of the window,\n  and the creatures appears. \n Do you wish to go inside?"; 
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -324,6 +327,19 @@ public class Cave9Controller implements Initializable {
         }
     }
       public void go_inside_boldmans_areana() throws IOException {
+           if(locations[20] == true) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Alert!");
+
+        alert.setContentText("Cave already cleared!");
+
+         ButtonType buttonTypeOne = new ButtonType("Ok");
+    
+      
+        alert.getButtonTypes().setAll(buttonTypeOne);
+        Optional<ButtonType> result = alert.showAndWait();
+       }
+          else {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Cave 9");
         Parent root = FXMLLoader.load(getClass().getResource("/The_eastern_graveyard/Cave9room1.fxml"));
@@ -331,7 +347,7 @@ public class Cave9Controller implements Initializable {
         Stage.show();
         closeWindow();
     }
-
+      }
 
 
     public void go_South() throws IOException {

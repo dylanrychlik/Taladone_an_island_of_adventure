@@ -38,7 +38,7 @@ import javafx.stage.Stage;
  */
 public class DungeonController implements Initializable {
 
-    String intro = "You travel to the northen woods raptor dungiean. You see the Junction with your \n hand by your side. \n Ready for anything to attack you. You could either go inside \n or continue to the dragons lair.";
+    String intro = "You travel to the northen woods raptor dungean. You see the Junction with your \n hand by your side. \n Ready for anything to attack you. You could either go inside \n or continue to the dragons lair.";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);

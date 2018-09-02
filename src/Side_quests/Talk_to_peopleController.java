@@ -221,7 +221,7 @@ public class Talk_to_peopleController implements Initializable {
          Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Person 2");
 
-        alert.setContentText("You taladone trash. If you talk crap, you will get killed,  here comes the gang now");
+        alert.setContentText("You Taladone trash. If you talk shit, you will get killed. Here comes the gang now!");
 
          ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

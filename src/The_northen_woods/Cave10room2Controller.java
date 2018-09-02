@@ -73,7 +73,7 @@ public class Cave10room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        intro = "You continue on the cave and then see another child in the cave. ''Where's my mommy? \n I'm scared'' The little boy says.\n A group of five come out from the darkness and then jump and forces the boy to fall, \n the locuses then bit the skin of child and begin sucking his blood. \n The boy screams atop of his lungs. \n You look in horror as the boy's vains take over his body. \n then a vein blows and the remaining blood in his body shoots \n out of his body and the boys eyes rool to the back then the locus attack you. ";
+        intro = "You continue on the cave and then see another child in the cave. ''Where's my mommy? \n I'm scared'' The little boy says.\n A group of five come out from the darkness and then jump and forces the boy to fall, \n the locuses then bit the skin of child and begin sucking his blood. \n The boy screams the top of his lungs. \n You look in horror as the boy's vains take over his body. \n then a vein blows and the remaining blood in his body shoots \n out of his body and the boys eyes rool to the back then the locus attack you. ";
         prompt.setText(intro);
         enmies.add("locus");
         enmies.add("locus");

@@ -75,7 +75,7 @@ public class Cave4room2Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
  
-intro = "You go to the second room. You see the dead victims of the jellyfish attack, and not just men, but woman and children too. ";
+intro = "You go to the second room. You see the dead victims of the jellyfish attack, and not just men, but the woman and children too. ";
 prompt.setText(intro);
         enmies.add("jellyfish");
         enmies.add("jellyfish");

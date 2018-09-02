@@ -46,7 +46,7 @@ public class Flightless_dragon_cave_room1Controller implements Initializable {
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-    String intro = " Side quest started: Raptor cave \n You go inside flightdragon cave as you turn into the cave you see a \n pack of raptors eating the meatof a dead dinosuar.";
+    String intro = " Side quest started: Raptor cave \n You go inside flightless dragon cave as you turn into the cave you see a \n pack of raptors eating the meat of a dead dinosuar.";
     @FXML
     private TextArea Map;
     @FXML

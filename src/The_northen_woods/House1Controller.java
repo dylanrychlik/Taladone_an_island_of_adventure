@@ -103,7 +103,7 @@ String intro = "In the distance, you see a house. You come up to the house. You 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
- 
+   locations[24] = true;
         prompt.setText(intro);
         prompt.setText(intro);
         prompt.setEditable(false);
@@ -450,7 +450,7 @@ if (result.get() == buttonTypeOne) {
        
         if (result.get() == buttonTypeOne) {
             alert.setHeight(500);
-            alert.setContentText("Sarah Persona: I came here to escape the clutches of the Jarl of Davenrun. \n" + "My family wasn't having enough gold to feed themselves due to the greed from the casino and areana. \n" + "I tried to get rid sell food but it was no good. Curse the jalr for putting me int his position.");
+            alert.setContentText("Sarah Persona: I came here to escape the clutches of the Jarl of Davenrun. \n" + "My family wasn't having enough gold to feed themselves due to the greed from the casino and arana. \n" + "I tried to  sell food but it was no use. Curse the jarl for putting me in this position.");
 //"Once when I traving I saw the dragon and he nearly burned my house down. They say beyond the dragons lair, is the northen coast of the island \n" + "The great irish sea is in the distance. I can feel it. I can tastse it. It tastes good \n");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);

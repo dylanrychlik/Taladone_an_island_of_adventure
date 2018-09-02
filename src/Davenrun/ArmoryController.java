@@ -240,7 +240,7 @@ public class ArmoryController implements Initializable {
 
             out += ((goodItem) gooditem.get(x)).toString() + "\n";
         }
-        stats.setText("Your Goods items are \n " + out);
+        stats.setText("Your Good items are \n " + out);
     }
 
     public void weaponlist() {
@@ -273,7 +273,7 @@ public class ArmoryController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Bill Rates");
 
-        alert.setContentText("Bill Rates: I don’t have time to talk, I need to buy sword.");
+        alert.setContentText("Bill Rates: I don’t have time to talk, I need to buy a sword.");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -283,7 +283,7 @@ public class ArmoryController implements Initializable {
     public void Steven_Blake() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Sam Solove");
-        alert.setContentText("Sam Solove: This store is a wonderful thing. Too bad the jarl wants to take it away. How unpatritic. ");
+        alert.setContentText("Sam Solove: This store is a wonderful thing. Too bad the Jarl wants to take it away. How unpatriotic. ");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -294,7 +294,7 @@ public class ArmoryController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Mason Mellman");
 
-        alert.setContentText("Mason Mellman: These are dark times in davenrun. Gods I hope things get better. ");
+        alert.setContentText("Mason Mellman: These are dark times in Davenrun. Gods I hope things get better. ");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -316,7 +316,7 @@ public class ArmoryController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Elbert Richarson");
 
-        alert.setContentText("Elbert Richarson: Gods, an adventure! Just like the proficy has forefold!");
+        alert.setContentText("Elbert Richarson: Gods, an adventure! Just like the proficy has foretold!");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -327,7 +327,7 @@ public class ArmoryController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Parkson Warstell");
 
-        alert.setContentText("Parkson Warstell: This store is making people become murders. Murders I tell you!");
+        alert.setContentText("Parkson Warstell: This store is making people become murderers! Murderers I tell you!");
         ButtonType ok = new ButtonType("OK");
         alert.getButtonTypes().setAll(ok);
         alert.showAndWait();
@@ -348,7 +348,7 @@ public class ArmoryController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Patrick Laggace");
 
-        alert.setContentText("I Could be better. My farm just outside of town is struggling with bussinse. There are coyotes in the farm sacring people away. If I don’t do something, I’m gonna lose profits. Say, do you want to kill the coyotes for me? I don’t have the gold to buy a sword, I gotta use to keep my bussinse alive. I’ll pay you an award, it’s the least I can do.");
+        alert.setContentText("I could be better. My farm just outside of town is struggling with business. There are coyotes in the farm sacring people away. If I don’t do something, I’m gonna lose profits. Say, do you want to kill the coyotes for me? I don’t have the gold to buy a sword, I gotta use to keep my business alive. I’ll pay you an award, it’s the least I can do.");
 
         ButtonType buttonTypeOne = new ButtonType("Yes");
         ButtonType buttonTypeTwo = new ButtonType("No");

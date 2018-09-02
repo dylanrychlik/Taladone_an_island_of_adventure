@@ -48,7 +48,7 @@ import javafx.stage.Stage;
 public class Northen_bridgeController implements Initializable {
 
     public static boolean[] locations = new boolean[30];
-    String intro = "Quest started: The eastern gate: \n You come to to the eastern gate that leads to the eastern region.\n The taladone graveyard. Here is where they bury the dead in Taladone \n In the day time, they bury thier dead. \n At the night time, evil dead creatures come out and attack. \n In order for there to peace in Side_quests. \n The eastern region must be cleared of the dead \n and the demon that haunts the graveyard every night. The stars are bright in the sky. \n You can barley see a thing. Mist haunts beyond the gate. \n God only knows what creature lurks within.";
+    String intro = "Quest started: The eastern gate: \n You come to to the eastern gate that leads to the eastern region.\n The taladone graveyard. Here is where they bury the dead in Taladone \n In the day time, they bury thier dead. \n At the night time, evil dead creatures come out and attack. \n In order for there to peace in Taladone, \n the eastern region must be cleared of the dead \n and the demon that haunts the graveyard every night. The stars are bright in the sky. \n You can barley see a thing. Mist haunts beyond the gate. \n God only knows what creature lurks within.";
     public static ArrayList<Character> row5 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row6 = new ArrayList<Character>(MapWidth);
     public static ArrayList<Character> row7 = new ArrayList<Character>(MapWidth);
@@ -100,6 +100,7 @@ public class Northen_bridgeController implements Initializable {
         prompt.setPrefHeight(250);
         prompt.setText(intro);
         prompt.setText(intro);
+          locations[27] = true;
         prompt.setEditable(false);
         stats.setEditable(false);
         Map.setEditable(false);
