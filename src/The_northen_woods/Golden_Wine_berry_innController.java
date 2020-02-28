@@ -444,7 +444,7 @@ public class Golden_Wine_berry_innController implements Initializable {
     public void go_inside_boldmans_areana() throws IOException {
         Stage Stage = new Stage();
         Stage.setTitle("Inside Wineberry Inn");
-        Parent root = FXMLLoader.load(getClass().getResource("/The_northen_woods/Inside_Golden_Wine_berry_inn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/The_northen_woods/inside_Golden_Wine_berry_inn.fxml"));
         Stage.setScene(new Scene(root, 800, 400));
         Stage.show();
         closeWindow();
