@@ -17,12 +17,16 @@ import javafx.fxml.Initializable;
 import static Davenrun.OutsidehouseController.Armoritem;
 import static Davenrun.OutsidehouseController.Weaponitem;
 import static Davenrun.OutsidehouseController.gooditem;
+import static java.util.Collections.list;
+import java.util.Iterator;
+import javafx.application.Platform;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
@@ -36,13 +40,17 @@ public class InsidearmoryController implements Initializable {
     @FXML
     private Button button;
     @FXML
-    private Button button2;
+    private Label Storeactions;
     @FXML
-    private Button button3;
+    private Label Interactions;
     @FXML
-    private Button button4;
+    private ComboBox<Weapon> buy_weapon;
     @FXML
-    private Button button5;
+    private Button buy_weapon_submit;
+    @FXML
+    private ComboBox sell_weapon;
+    @FXML
+    private Button sell_weapon_submit;
     @FXML
     private TextArea stats;
     Player player;
@@ -50,13 +58,13 @@ public class InsidearmoryController implements Initializable {
     @FXML
     private TextArea prompt;
     @FXML
-    private Button Buy_weapon;
+    private ComboBox buy_armor;
     @FXML
-    private Button Sell_weapon;
+    private Button buy_armor_submit;
     @FXML
-    private Button Buy_armor;
+    private ComboBox sell_armor;
     @FXML
-    private Button sell_armor;
+    private Button sell_armor_submit;
     @FXML
     private Button Hows_bussinse;
     @FXML
@@ -64,13 +72,12 @@ public class InsidearmoryController implements Initializable {
     @FXML
     private Button Legendary_john_war_iron;
     @FXML
-    private TextField input;
-    @FXML
     private Button Exit;
 
-    static public LinkedList playerweaponitem = new LinkedList();
+    static public LinkedList storeweaponitem = new LinkedList();
 
-    static public LinkedList playerarmoritem = new LinkedList();
+    static public LinkedList storearmoritem = new LinkedList();
+ Weapon weapon;
     Taladone_an_island_of_adventure you = new Taladone_an_island_of_adventure();
     Weapon sword = new Weapon("0", "sword", "sword", 120, 30);
     Weapon sword2 = new Weapon("1", "sword", "sword", 125, 30);
@@ -89,41 +96,98 @@ public class InsidearmoryController implements Initializable {
 
     public InsidearmoryController() {
         this.prompt = new TextArea();
-        this.Buy_weapon = new Button();
-        this.Sell_weapon = new Button();
-        this.Buy_armor = new Button();
-        this.sell_armor = new Button();
+        this.buy_weapon = new ComboBox();
+        // this.buy_weapon_submit = new Button();
+        this.sell_weapon = new ComboBox();
+        this.sell_weapon_submit = new Button();
+        this.buy_armor = new ComboBox();
+        this.buy_armor_submit = new Button();
+        this.sell_armor = new ComboBox();
+        this.sell_armor_submit = new Button();
         this.Hows_bussinse = new Button();
         this.John_wariron = new Button();
         this.Legendary_john_war_iron = new Button();
-        this.input = new TextField();
+        this.Storeactions = new Label();
+        this.Interactions = new Label();
         this.Look = new ComboBox();
         this.button = new Button();
-        this.button2 = new Button();
-        this.button3 = new Button();
-        this.button4 = new Button();
-        this.button5 = new Button();
-
         this.stats = new TextArea();
         this.Exit = new Button();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        prompt.setPrefSize(850, 50);
+        
+          if (storeweaponitem.isEmpty()) {
+            intionalize();
 
-        //prompt.setText(intro);
+        }
+          else {
+              buy_weapon.getItems().addAll(storeweaponitem);
+          }
+        buy_weapon.setPromptText("Select weapon to buy");
+        sell_weapon.setValue("Select weapon to sell");
+        buy_armor.setValue("Select armor to buy");
+        sell_armor.setValue("Select armor to sell");
+
+        
+
+        buy_weapon.setOnAction(e -> {
+           
+    SelectWeapontoBuy(buy_weapon.getValue().toString());
+        });
+
+   
+        buy_armor.getItems().addAll(plate, plate2, plate3, plate4, plate5);
+        prompt.setPrefHeight(20);
+        prompt.setPrefWidth(800);
+        stats.setPrefWidth(800);
         prompt.setEditable(false);
         player.getPlayer();
         stats.setEditable(false);
         Look.getItems().addAll("Good list", "Weapon list", "Armor list");
         Look.setValue("Look");
-        button5.setOnAction(event -> {
+        button.setOnAction(event -> {
             //Call a method to determine which item in the list the user has selected
             doAction(Look.getValue().toString()); //Send the selected item to the method
         });
     }
 
+    public void SelectWeapontoBuy(String value) {
+ 
+    weapon = new Weapon(buy_weapon.getValue().getID(),buy_weapon.getValue().getdescription(),buy_weapon.getValue().getname(),buy_weapon.getValue().gethealthrating(),buy_weapon.getValue().getcost());
+            stats.setText("The following Weapon Item is selected: \n " + weapon.toString() + "\n \n Select the ''Buy Weapon'' button to buy it.");
+        System.out.println(buy_weapon.getValue().getcost());
+            value = weapon.toString();
+        buy_weapon.setValue(null);
+       buy_weapon.setPromptText("Select weapon to buy");
+    }
+     public void BuyWeapon() {
+ 
+ if (weapon.getcost() > Player.getbank()){
+     System.out.println("You dont have enough funds!");
+          stats.setText("You don't have enough funds!");
+    }
+ else {
+     
+     String rec1 = weapon.getID();
+        storeweaponitem.remove(weapon.toString());
+        
+      for(Iterator<Weapon> iter = storeweaponitem.iterator(); iter.hasNext();) {
+    Weapon data = iter.next();
+    if (data.getID() == rec1) {
+        iter.remove();
+    }
+}
+      System.out.println(storeweaponitem.size());
+    buy_weapon.getItems().clear();
+   buy_weapon.getItems().addAll(storeweaponitem);
+       Weaponitem.addFirst(weapon);
+       Player.subtractbank(weapon.getcost());
+            stats.setText(weapon.toString() + " \n Added to your inventory");
+          
+ }
+     }
     public void stats() {
 
         player.getPlayer();
@@ -186,79 +250,16 @@ public class InsidearmoryController implements Initializable {
 
         stats.setText("\n Your Armor items are in the order  by \n" + out3);
     }
-
-    public void buy_weapon() {
-        if (playerweaponitem.size() == 0) {
-            intionalize();
-
-        }
-
-        //JOptionPane.showMessageDialog(null, playergoodlist.toString());
-        //promt for range of items to be deleted
-        String deletePrompt;
-        int x, Next;
-        //Prompt for range of items to be removed
-        out = " ";
-        int limit = playerweaponitem.size();
-        for (x = 0; x < limit; x++) {
-
-            out += ((Weapon) playerweaponitem.get(x)).toString() + "\n";
-        }
-
-        // Start = Integer.parseInt(JOptionPane.showInputDialog(null, "What position starting from zero from" + goodlist.toString() + "you would like to buy? ", HEADING, JOptionPane.ERROR_MESSAGE));
-        // dialog.setContentText("Please type a number from the textarea below to buy a store item.:");
-        stats.setText("Please type a number from the textarea below to buy a store item.\n What position starting from zero from you would like to buy?" + out);
-    }
-
+    
     public void buy_armor() {
-        if (playerarmoritem.size() == 0) {
-            intionalize3();
 
-        }
-
-        //JOptionPane.showMessageDialog(null, playergoodlist.toString());
-        //promt for range of items to be deleted
-        String deletePrompt;
-        int x, Next;
-        //Prompt for range of items to be removed
-
-        int limit = playerarmoritem.size();
-        out = " ";
-        for (x = 0; x < limit; x++) {
-
-            out += ((Armor) playerarmoritem.get(x)).toString() + "\n";
-        }
-
-        // Start = Integer.parseInt(JOptionPane.showInputDialog(null, "What position starting from zero from" + goodlist.toString() + "you would like to buy? ", HEADING, JOptionPane.ERROR_MESSAGE));
-        // dialog.setContentText("Please type a number from the textarea below to buy a store item.:");
-        stats.setText("Please type a number from the textarea below to buy an armor item.\n What position starting from zero from you would like to buy?" + out);
     }
 
     public void sell_weapons() {
-        if (Weaponitem.getSize() == 0) {
-            stats.setText("You have no weapons to sell!");
 
-        }
-
-        //JOptionPane.showMessageDialog(null, playergoodlist.toString());
-        //promt for range of items to be deleted
-        String deletePrompt;
-        int x, Next;
-        //Prompt for range of items to be removed
-
-        int limit = Weaponitem.getSize();
-        out = " ";
-        for (x = 1; x <= limit; x++) {
-
-            out += ((Weapon) Weaponitem.getInfo(x)).toString() + "\n";
-        }
-
-        // Start = Integer.parseInt(JOptionPane.showInputDialog(null, "What position starting from zero from" + goodlist.toString() + "you would like to buy? ", HEADING, JOptionPane.ERROR_MESSAGE));
-        // dialog.setContentText("Please type a number from the textarea below to buy a store item.:");
-        stats.setText("Please type a number from the textarea below to buy a store item.\n What position starting from zero from you would like to sell?" + out);
     }
 
-    public void doAction2() {
+    /* public void doAction2() {
 
         player.getPlayer();
         Weapon result = new Weapon();
@@ -448,7 +449,7 @@ public class InsidearmoryController implements Initializable {
 
         }
     }
-
+     */
     public void sell_armor() {
         if (Armoritem.getSize() == 0) {
             stats.setText("You have no armor to sell!");
@@ -475,31 +476,34 @@ public class InsidearmoryController implements Initializable {
     }
 
     public void intionalize() {
-        playerweaponitem.add(sword);
+        storeweaponitem.add(sword);
 
-        playerweaponitem.add(sword2);
-        playerweaponitem.add(sword3);
-        playerweaponitem.add(sword4);
-        playerweaponitem.add(sword5);
+        storeweaponitem.add(sword2);
+        storeweaponitem.add(sword3);
+        storeweaponitem.add(sword4);
+        storeweaponitem.add(sword5);
+        
+
+    buy_weapon.getItems().addAll(storeweaponitem);
 
     }
 
     public void intionalize2() {
-        playerweaponitem.add(ax);
+        storeweaponitem.add(ax);
 
     }
 
     public void intionalize3() {
-        playerarmoritem.add(plate);
-        playerarmoritem.add(plate2);
-        playerarmoritem.add(plate3);
-        playerarmoritem.add(plate4);
-        playerarmoritem.add(plate5);
+        storearmoritem.add(plate);
+        storearmoritem.add(plate2);
+        storearmoritem.add(plate3);
+        storearmoritem.add(plate4);
+        storearmoritem.add(plate5);
 
     }
 
     public void intionalize4() {
-        playerarmoritem.add(shield);
+        storearmoritem.add(shield);
     }
 
     public void Hows_bussinse() {
