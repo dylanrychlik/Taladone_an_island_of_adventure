@@ -44,6 +44,7 @@ public class OutsidehouseController implements Initializable {
 public static boolean[] Sidequests = new boolean[20];
     private Inside_good_storeController lists;
     public static LinkedList<goodItem> gooditem = new LinkedList<>();
+   // public static LinkedList<Weapon> Weaponitem = new LinkedList<>();
     public static Weaponlinklist Weaponitem = new Weaponlinklist();
     public static Armorlinklist Armoritem = new Armorlinklist();
     public static int MapHeight = 4;

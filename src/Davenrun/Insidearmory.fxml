@@ -6,26 +6,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.InsidearmoryController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.InsidearmoryController">
     <children>
-        <TextArea fx:id="prompt" layoutX="100" layoutY="0.0" text="John WarIron: Aye welcome to the Armory. If you need anything let me know!"  />
-        <Button fx:id="Buy_weapon" layoutX="50" layoutY="100.0" mnemonicParsing="false" text="I would like to buy weapons!"  onAction="#buy_weapon" />
-        <Button fx:id="Sell_weapon" layoutX="250" layoutY="100.0" mnemonicParsing="false" text="I would like to sell weapons!" onAction="#sell_weapons"/>
-       
-        <Button fx:id = "Player_stats" layoutX="300" layoutY="300.0"  mnemonicParsing="false" text="Player stats"  onAction = "#stats" />  
-        <TextArea fx:id="stats" layoutX="100" layoutY="400.0"/>  
-        <ComboBox fx:id = "Look" layoutX="150" layoutY="300.0" />  
-        <Button fx:id="button" layoutX="100" layoutY="200.0" mnemonicParsing="false" text="Buy weapon" onAction = "#doAction2"/>    
-        <TextField fx:id="input" layoutX="0.0" layoutY="300.0"  />
-        <Button fx:id="button2" layoutX="200" layoutY="200.0" mnemonicParsing="false" text="Sell weapon" onAction = "#doAction3"/>   
-        <Button fx:id="button3" layoutX="300" layoutY="200.0" mnemonicParsing="false" text="Buy Armor" onAction = "#doAction5"/>   
-        <Button fx:id="button4" layoutX="400" layoutY="200.0" mnemonicParsing="false" text="Sell Armor" onAction = "#doAction4"/>       
-         <Button fx:id="button5" layoutX="150" layoutY="350.0" mnemonicParsing="false" text="Submit Action" />    
-        <Button fx:id="Buy_armor" layoutX="450" layoutY="100.0" mnemonicParsing="false" text="I would like to buy armor!" onAction = "#buy_armor" />       
-        <Button fx:id="sell_armor" layoutX="650" layoutY="100.0" mnemonicParsing="false" text="I would like to sell armor!" onAction = "#sell_armor"/>       
-        <Button fx:id="Hows_bussinse" layoutX="400" layoutY="300.0" mnemonicParsing="false" text="How is bussinse?" onAction = "#Hows_bussinse" />     
-        <Button fx:id="John_wariron" layoutX="300" layoutY="350.0" mnemonicParsing="false" text="What kind of name is John Wariron?" onAction = "#john_war_iron"/>       
-        <Button fx:id="Legendary_john_war_iron" layoutX="500" layoutY="300.0" mnemonicParsing="false" text="Are you the legendary John Wariron?"  onAction = "#john_War_iron_legend" />         
-        <Button fx:id="Exit" layoutX="250" layoutY="250.0" mnemonicParsing="false" text="Exit"  onAction = "#exit" />
-    </children>  
+     
+                 
+        <TextArea fx:id = "prompt" layoutX = "70" layoutY = "25" text="John WarIron: Aye welcome to the Armory. If you need anything let me know!"/>
+        <Label fx:id = "Storeactions" layoutX = "50" layoutY = "100" text = "Store actions"/>
+        <ComboBox fx:id="buy_weapon" layoutX="50" layoutY="150.0"  />  
+        <Button fx:id = "buy_weapon_submit" layoutX="50" layoutY="200.0" text = "Buy weapon"  onAction="#BuyWeapon"  /> 
+        <ComboBox fx:id="sell_weapon" layoutX="250" layoutY="150.0" />  
+        <Button fx:id = "sell_weapon_submit" layoutX="250" layoutY="200.0" text = "Sell weapon" onAction="#SellWeapon"  /> 
+        <ComboBox fx:id="buy_armor" layoutX="50" layoutY="250.0" />  
+        <Button fx:id = "buy_armor_submit" layoutX="50" layoutY="300.0" text = "Buy armor" onAction="#BuyArmor"  /> 
+        <ComboBox fx:id="sell_armor" layoutX="250" layoutY="250.0" />  
+        <Button fx:id = "sell_armor_submit" layoutX="250" layoutY="300.0" text = "Sell armor" onAction="#SellArmor"    /> 
+        <ComboBox fx:id = "Look" layoutX="50" layoutY="350.0" />  
+        <Button fx:id="button" layoutX="50" layoutY="400.0" mnemonicParsing="false" text="Submit Action" /> 
+        <TextArea fx:id = "stats" layoutX = "50" layoutY = "500" />           
+        <Label fx:id = "Interactions" layoutX = "500" layoutY = "100" text = "Interact with John Wariron"/>  
+        <Button fx:id = "Player_stats" layoutX="250" layoutY="350.0"  mnemonicParsing="false" text="Player stats"  onAction = "#stats" />       
+                    
+        <Button fx:id="Hows_bussinse" layoutX="500" layoutY="150.0" mnemonicParsing="false" text="How is bussinse?" onAction = "#Hows_bussinse" />     
+        <Button fx:id="John_wariron" layoutX="700" layoutY="150.0" mnemonicParsing="false" text="What kind of name is John Wariron?" onAction = "#john_war_iron"/>       
+        <Button fx:id="Legendary_john_war_iron" layoutX="500" layoutY="200.0" mnemonicParsing="false" text="Are you the legendary John Wariron?"  onAction = "#john_War_iron_legend" />         
+        <Button fx:id="Exit" layoutX="750" layoutY="200.0" mnemonicParsing="false" text="Exit"  onAction = "#exit" />
+    
+              
+    </children>
 </AnchorPane>

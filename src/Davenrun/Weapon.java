@@ -30,6 +30,7 @@ public class Weapon {
         this.attackdamage = 0;
         this.cost = 0;
   }
+  
     public Weapon(String ID,String Name, String Description, int health, int Cost)
     {
    
@@ -61,9 +62,11 @@ public void setID(String ID)
     {
         return name;
     }
-public void setname(String Name)
+
+public String setname(String Name)
 {
-    Name = name;
+   this.name = Name;
+   return Name;
 }
 public String getdescription()
 {

@@ -49,11 +49,11 @@ public class GameroomController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
+
         prompt.setText("Welcome to the Game room! \n Here you can play games and bet.");
         prompt.setEditable(false);
         Actions.getItems().addAll("Allison Swanson", "Chris Gimmerman", "Racheal Paige", "Quincy Johner", "Mac Black", "Victoria Dove");
-prompt.setPrefHeight(80);
+        prompt.setPrefHeight(80);
         Game.getItems().addAll("Black Jack", "Poker", "Tictactoe", "Crabs", "Rock Paper scissors");
         Actions.setValue("Talk to");
         Game.setValue("Play game");
@@ -69,83 +69,78 @@ prompt.setPrefHeight(80);
     }
 
     public void victoria_dove() throws IOException {
-        if (Sidequests[9] == true){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Side quest already completed!");
-        ButtonType ok = new ButtonType("OK");
-        alert.getButtonTypes().setAll(ok);
-        alert.showAndWait();
-    }
-        else {
+        if (Sidequests[9] == true) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Side quest already completed!");
+            ButtonType ok = new ButtonType("OK");
+            alert.getButtonTypes().setAll(ok);
+            alert.showAndWait();
+        } else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Victora Dove");
+            alert.setTitle("Victora Dove");
 
-        alert.setContentText("Can you help? There is a man following me. I'm afraid he is going to hurt me. \n Can you help me? ");
+            alert.setContentText("Can you help? There is a man following me. I'm afraid he is going to hurt me. \n Can you help me? ");
 
-        ButtonType buttonTypeOne = new ButtonType("Yes");
-        ButtonType buttonTypeTwo = new ButtonType("No");
-        ButtonType buttonTypeCancel = new ButtonType("Exit");
-        alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
-        Optional<ButtonType> result = alert.showAndWait();
+            ButtonType buttonTypeOne = new ButtonType("Yes");
+            ButtonType buttonTypeTwo = new ButtonType("No");
+            ButtonType buttonTypeCancel = new ButtonType("Exit");
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
+            Optional<ButtonType> result = alert.showAndWait();
 
-        if (result.get() == buttonTypeOne) {
+            if (result.get() == buttonTypeOne) {
 
-           Stage Stage = new Stage();
-        Stage.setTitle("The Follwer");
-        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Talk_victoria_dove.fxml"));
-        Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow(); 
+                Stage Stage = new Stage();
+                Stage.setTitle("The Follwer");
+                Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Talk_victoria_dove.fxml"));
+                Stage.setScene(new Scene(root, 1000, 750));
+                Stage.show();
+                closeWindow();
+
+            }
+            if (result.get() == buttonTypeTwo) {
+
+                alert.setContentText("I am here if you change your mind...");
+                ButtonType ok = new ButtonType("OK");
+                alert.getButtonTypes().setAll(ok);
+                Optional<ButtonType> new_result = alert.showAndWait();
+
+            }
+            if (result.get() == buttonTypeCancel) {
+                alert.setContentText("Well Alright then!");
+                ButtonType ok = new ButtonType("OK");
+                alert.getButtonTypes().setAll(ok);
+                Optional<ButtonType> new_result = alert.showAndWait();
+            }
 
         }
-        if (result.get() == buttonTypeTwo) {
-
-            alert.setContentText("I am here if you change your mind...");
-            ButtonType ok = new ButtonType("OK");
-            alert.getButtonTypes().setAll(ok);
-            Optional<ButtonType> new_result = alert.showAndWait();
-
-        }
-        if (result.get() == buttonTypeCancel) {
-            alert.setContentText("Well Alright then!");
-            ButtonType ok = new ButtonType("OK");
-            alert.getButtonTypes().setAll(ok);
-            Optional<ButtonType> new_result = alert.showAndWait();
-        }
-
-    }
     }
 
     public void racheal_paige() throws IOException {
-         if (Sidequests[15] == true){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Side quest already completed!");
-        ButtonType ok = new ButtonType("OK");
-        alert.getButtonTypes().setAll(ok);
-        alert.showAndWait();
-    }
-        else {
+        if (Sidequests[15] == true) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Side quest already completed!");
+            ButtonType ok = new ButtonType("OK");
+            alert.getButtonTypes().setAll(ok);
+            alert.showAndWait();
+        } else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Racheal Paige");
+            alert.setTitle("Racheal Paige");
 
-        alert.setContentText("You: Hey you just stoled from me! Get back here! ");
+            alert.setContentText("You: Hey you just stoled from me! Get back here! ");
 
-        ButtonType buttonTypeOne = new ButtonType("Ok");
-        
-        alert.getButtonTypes().setAll(buttonTypeOne);
-        Optional<ButtonType> result = alert.showAndWait();
+            ButtonType buttonTypeOne = new ButtonType("Ok");
 
-        
-           Stage Stage = new Stage();
-        Stage.setTitle("The Thief");
-        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Talk_thief.fxml"));
-        Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow(); 
+            alert.getButtonTypes().setAll(buttonTypeOne);
+            Optional<ButtonType> result = alert.showAndWait();
 
-      
+            Stage Stage = new Stage();
+            Stage.setTitle("The Thief");
+            Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Talk_thief.fxml"));
+            Stage.setScene(new Scene(root, 1000, 750));
+            Stage.show();
+            closeWindow();
 
-    }
+        }
     }
 
     public void quincey() {
@@ -174,51 +169,50 @@ prompt.setPrefHeight(80);
     }
 
     public void allison() throws IOException {
-       if (Sidequests[14] == true){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Side quest already completed!");
-        ButtonType ok = new ButtonType("OK");
-        alert.getButtonTypes().setAll(ok);
-        alert.showAndWait();
-    }
-        else {
+        if (Sidequests[14] == true) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Side quest already completed!");
+            ButtonType ok = new ButtonType("OK");
+            alert.getButtonTypes().setAll(ok);
+            alert.showAndWait();
+        } else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Allison Swanson");
+            alert.setTitle("Allison Swanson");
 
-        alert.setContentText("You're atrative. Would you like to go on date with me? ");
+            alert.setContentText("You're atrative. Would you like to go on date with me? ");
 
-        ButtonType buttonTypeOne = new ButtonType("Yes");
-        ButtonType buttonTypeTwo = new ButtonType("No");
-        ButtonType buttonTypeCancel = new ButtonType("Exit");
-        alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
-        Optional<ButtonType> result = alert.showAndWait();
+            ButtonType buttonTypeOne = new ButtonType("Yes");
+            ButtonType buttonTypeTwo = new ButtonType("No");
+            ButtonType buttonTypeCancel = new ButtonType("Exit");
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
+            Optional<ButtonType> result = alert.showAndWait();
 
-        if (result.get() == buttonTypeOne) {
+            if (result.get() == buttonTypeOne) {
 
-           Stage Stage = new Stage();
-        Stage.setTitle("The Date");
-        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/The_date.fxml"));
-        Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow(); 
+                Stage Stage = new Stage();
+                Stage.setTitle("The Date");
+                Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/The_date.fxml"));
+                Stage.setScene(new Scene(root, 1000, 750));
+                Stage.show();
+                closeWindow();
+
+            }
+            if (result.get() == buttonTypeTwo) {
+
+                alert.setContentText("I am here if you change your mind...");
+                ButtonType ok = new ButtonType("OK");
+                alert.getButtonTypes().setAll(ok);
+                Optional<ButtonType> new_result = alert.showAndWait();
+
+            }
+            if (result.get() == buttonTypeCancel) {
+                alert.setContentText("Well Alright then!");
+                ButtonType ok = new ButtonType("OK");
+                alert.getButtonTypes().setAll(ok);
+                Optional<ButtonType> new_result = alert.showAndWait();
+            }
 
         }
-        if (result.get() == buttonTypeTwo) {
-
-            alert.setContentText("I am here if you change your mind...");
-            ButtonType ok = new ButtonType("OK");
-            alert.getButtonTypes().setAll(ok);
-            Optional<ButtonType> new_result = alert.showAndWait();
-
-        }
-        if (result.get() == buttonTypeCancel) {
-            alert.setContentText("Well Alright then!");
-            ButtonType ok = new ButtonType("OK");
-            alert.getButtonTypes().setAll(ok);
-            Optional<ButtonType> new_result = alert.showAndWait();
-        }
-
-    }
     }
 
     public void chirs() {
@@ -262,17 +256,20 @@ prompt.setPrefHeight(80);
     }
 
     public void crabs() throws InterruptedException, IOException {
-       Crabs object = new Crabs();
-            object.Crabs();
+        Crabs object = new Crabs();
+        object.Crabs();
     }
-
-   
 
     public void poker() throws InterruptedException, IOException {
 
-        Poker object = new Poker();
-        Stage primaryStage = new Stage();
-      object.start(primaryStage);
+        Parent root = FXMLLoader.load(getClass().getResource("/simplepokerjavafx/PokerUI.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Poker UI");
+        stage.show();
+        stage.show();
+        closeWindow();
 
     }
 
@@ -693,10 +690,10 @@ prompt.setPrefHeight(80);
             case "Tictactoe": //Action for this item
                 tictactoe();
                 break;
-            case "Crabs":
+            case "Slot Machine":
                 crabs();
                 break;
-            case "Rock Paper scissors":
+            case "Hang man":
                 rockpapersiccors();
                 break;
             default: //Default action
@@ -730,22 +727,24 @@ prompt.setPrefHeight(80);
                 break;
         }
     }
-     public void lobby() throws IOException{
-      Stage Stage = new Stage();
+
+    public void lobby() throws IOException {
+        Stage Stage = new Stage();
         Stage.setTitle("Lobby");
         Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Lobby.fxml"));
-        Stage.setScene(new Scene(root,600, 600));
-        Stage.show();
-        closeWindow();    
-    }
-    public void Management_center() throws IOException{
-          Stage Stage = new Stage();
-        Stage.setTitle("Management center");
-        Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Management_center.fxml"));
-        
         Stage.setScene(new Scene(root, 600, 600));
         Stage.show();
-        closeWindow();    
+        closeWindow();
+    }
+
+    public void Management_center() throws IOException {
+        Stage Stage = new Stage();
+        Stage.setTitle("Management center");
+        Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Management_center.fxml"));
+
+        Stage.setScene(new Scene(root, 600, 600));
+        Stage.show();
+        closeWindow();
     }
 
 }

@@ -220,7 +220,7 @@ Player.addbank(150);
 
             } else {
                 Player.setarmor(30);
-                Player.setattackdamage(50);
+                Player.addattackdamage(50);
                
                 Stage Stage = new Stage();
                 Stage.setTitle("Cave 9");

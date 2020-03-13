@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simplepokerjavafx.PokerUIController">
+    <stylesheets>
+        <URL value="@pokerui.css"/>
+    </stylesheets>
+    <Button fx:id="Bet" layoutX="10" layoutY="10.0" mnemonicParsing="false" text="Bet"  onAction = "#bet"/>
+    <TextField fx:id="BetAmount" layoutX="80" layoutY="10.0"  prefHeight="25.0" prefWidth="50.0" />
+    <Label fx:id="PlayerBet" layoutX="200" layoutY="10.0" text="Player Bet amount: " />
+    <Label fx:id="PlayerBank" layoutX="400" layoutY="10.0" text="Player Bank" />
+    <Label fx:id="DealerBank" layoutX="600" layoutY="10.0" text="Dealer Bank" />
+    <Button fx:id="PlayHand" layoutX="50" layoutY="350.0" mnemonicParsing="false" text="Play Hand" onAction = "#PlayHand"/>
+    <Button fx:id="Redraw1" layoutX="50" layoutY="550.0" mnemonicParsing="false" text="Redraw card" onAction = "#redraw1"/>
+     <ImageView fx:id="imageView1" fitHeight="100.0" fitWidth="150.0" layoutX="50.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+    <Button fx:id="Redraw2" layoutX="200" layoutY="550.0" mnemonicParsing="false" text="Redraw card" onAction = "#redraw2"/>
+    <ImageView fx:id="imageView2" fitHeight="100.0" fitWidth="150.0" layoutX="200.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+    <Button fx:id="Redraw3" layoutX="350" layoutY="550.0" mnemonicParsing="false" text="Redraw card" onAction = "#redraw3" />
+    <ImageView fx:id="imageView3" fitHeight="100.0" fitWidth="150.0" layoutX="350.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+    <Button fx:id="Redraw4" layoutX="500" layoutY="550.0" mnemonicParsing="false" text="Redraw card" onAction = "#redraw4"/>
+    <ImageView fx:id="imageView4" fitHeight="100.0" fitWidth="150.0" layoutX="500.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+    <Button fx:id="Redraw5" layoutX="650" layoutY="550.0" mnemonicParsing="false" text="Redraw card" onAction = "#redraw5"/>
+    <ImageView fx:id="imageView5" fitHeight="100.0" fitWidth="150.0" layoutX="650.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+    
+     <ImageView fx:id="imageView6" fitHeight="100.0" fitWidth="150.0" layoutX="50.0" layoutY="60" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+
+    <ImageView fx:id="imageView7" fitHeight="100.0" fitWidth="150.0" layoutX="200.0" layoutY="60" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+
+    <ImageView fx:id="imageView8" fitHeight="100.0" fitWidth="150.0" layoutX="350.0" layoutY="60" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+
+    <ImageView fx:id="imageView9" fitHeight="100.0" fitWidth="150.0" layoutX="500.0" layoutY="60" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+
+    <ImageView fx:id="imageView10" fitHeight="100.0" fitWidth="150.0" layoutX="650.0" layoutY="60" pickOnBounds="true" preserveRatio="true" >
+
+    </ImageView>
+    
+     <Label fx:id="PlayerResult" layoutX="250" layoutY="250"  />
+     <Label fx:id="DealerResult" layoutX="250" layoutY="300"  />
+     <Label fx:id="Winner" layoutX="250" layoutY="350"  />
+     <Button fx:id="Playagain" layoutX="350" layoutY="350" mnemonicParsing="false" text="Play again" onAction = "#playagain" />
+     <Button fx:id="Exit" layoutX="525" layoutY="350" mnemonicParsing="false" text="Exit" onAction = "#exit" />
+</AnchorPane>

@@ -1,0 +1,43 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+.Redraw1{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-color: rgb(244, 164, 96);
+ 
+}
+.Redraw2{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+   -fx-color: rgb(220, 20, 60);
+ 
+}
+.Redraw3{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-color: rgb(220, 20, 60);
+ 
+}
+.Redraw4{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+   -fx-color: rgb(220, 20, 60);
+ 
+}
+.Redraw5{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-color: rgb(220, 20, 60);
+ 
+}
+.root{
+    -fx-font-size: 10pt;
+    -fx-font-family: "Courier New";
+    -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-background-color: rgb(50, 205, 50);
+}
+}

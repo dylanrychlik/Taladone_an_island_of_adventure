@@ -31,7 +31,7 @@ public class Player {
         name = " ";
         attackdamage =100; 
         armor = 100; 
-        bank = 0; 
+        bank = 100; 
         Game_ID =0;
         Jarl_level_count =0;
                 
@@ -75,7 +75,12 @@ public static void subtractpotions(){
     }
 
     public static void subtractarmor(final int armoreffect) {
+        if (armor - armoreffect < 0){
+            armor = 0;
+        }
+        else {
      armor = armor - armoreffect;
+    }
     }
     public static void addactarmor(final int armoreffect) {
      armor = armor + armoreffect;
@@ -121,7 +126,7 @@ public static void subtractpotions(){
         return attackdamage;
     }
 
-    public static void setattackdamage(final int damage ) {
+    public static void addattackdamage(final int damage ) {
        attackdamage = attackdamage + damage;
        
     }

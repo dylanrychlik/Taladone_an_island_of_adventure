@@ -48,7 +48,7 @@ public class InsidearmoryController implements Initializable {
     @FXML
     private Button buy_weapon_submit;
     @FXML
-    private ComboBox sell_weapon;
+    private ComboBox<Weapon> sell_weapon;
     @FXML
     private Button sell_weapon_submit;
     @FXML
@@ -58,11 +58,11 @@ public class InsidearmoryController implements Initializable {
     @FXML
     private TextArea prompt;
     @FXML
-    private ComboBox buy_armor;
+    private ComboBox<Armor> buy_armor;
     @FXML
     private Button buy_armor_submit;
     @FXML
-    private ComboBox sell_armor;
+    private ComboBox<Armor> sell_armor;
     @FXML
     private Button sell_armor_submit;
     @FXML
@@ -77,7 +77,8 @@ public class InsidearmoryController implements Initializable {
     static public LinkedList storeweaponitem = new LinkedList();
 
     static public LinkedList storearmoritem = new LinkedList();
- Weapon weapon;
+    Weapon weapon;
+    Armor armor;
     Taladone_an_island_of_adventure you = new Taladone_an_island_of_adventure();
     Weapon sword = new Weapon("0", "sword", "sword", 120, 30);
     Weapon sword2 = new Weapon("1", "sword", "sword", 125, 30);
@@ -97,7 +98,7 @@ public class InsidearmoryController implements Initializable {
     public InsidearmoryController() {
         this.prompt = new TextArea();
         this.buy_weapon = new ComboBox();
-        // this.buy_weapon_submit = new Button();
+        this.buy_weapon_submit = new Button();
         this.sell_weapon = new ComboBox();
         this.sell_weapon_submit = new Button();
         this.buy_armor = new ComboBox();
@@ -117,28 +118,56 @@ public class InsidearmoryController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-          if (storeweaponitem.isEmpty()) {
+
+        if (storeweaponitem.isEmpty()) {
             intionalize();
 
+        } else {
+            buy_weapon.getItems().addAll(storeweaponitem);
         }
-          else {
-              buy_weapon.getItems().addAll(storeweaponitem);
-          }
+        if (storearmoritem.isEmpty()) {
+            intionalize3();
+
+        } else {
+            buy_armor.getItems().addAll(storearmoritem);
+        }
+        int limit2 = Weaponitem.getSize();
+        for (int x = 1; x <= limit2; x++) {
+
+            sell_weapon.getItems().addAll(Weaponitem.getInfo(x));
+        }
+        limit2 = Armoritem.getSize();
+        for (int x = 1; x <= limit2; x++) {
+
+            sell_armor.getItems().addAll(Armoritem.getInfo(x));
+        }
+
         buy_weapon.setPromptText("Select weapon to buy");
-        sell_weapon.setValue("Select weapon to sell");
-        buy_armor.setValue("Select armor to buy");
-        sell_armor.setValue("Select armor to sell");
+        sell_weapon.setPromptText("Select weapon to sell");
+        buy_armor.setPromptText("Select armor to buy");
+        sell_armor.setPromptText("Select armor to sell");
 
-        
+        try {
+            buy_weapon.setOnAction(e -> {
 
-        buy_weapon.setOnAction(e -> {
-           
-    SelectWeapontoBuy(buy_weapon.getValue().toString());
-        });
+                SelectWeapontoBuy(buy_weapon.getValue().toString());
+            });
+            sell_weapon.setOnAction(e -> {
 
-   
-        buy_armor.getItems().addAll(plate, plate2, plate3, plate4, plate5);
+                SelectWeapontoSell(sell_weapon.getValue().toString());
+            });
+            buy_armor.setOnAction(e -> {
+                SelectArmortoBuy(buy_armor.getValue().toString());
+            });
+            sell_armor.setOnAction(e -> {
+                SelectArmortoSell(sell_armor.getValue().toString());
+            });
+        } catch (java.lang.NullPointerException ex) {
+            System.out.println("NullPointerException thrown!");
+        } catch (Exception ex) {
+            System.out.println("Exception thrown!");
+        }
+
         prompt.setPrefHeight(20);
         prompt.setPrefWidth(800);
         stats.setPrefWidth(800);
@@ -154,40 +183,183 @@ public class InsidearmoryController implements Initializable {
     }
 
     public void SelectWeapontoBuy(String value) {
- 
-    weapon = new Weapon(buy_weapon.getValue().getID(),buy_weapon.getValue().getdescription(),buy_weapon.getValue().getname(),buy_weapon.getValue().gethealthrating(),buy_weapon.getValue().getcost());
+        try {
+            //String ID = buy_weapon.getValue().getID();
+            weapon = new Weapon(buy_weapon.getValue().getID(), buy_weapon.getValue().getdescription(), buy_weapon.getValue().getname(), buy_weapon.getValue().gethealthrating(), buy_weapon.getValue().getcost());
             stats.setText("The following Weapon Item is selected: \n " + weapon.toString() + "\n \n Select the ''Buy Weapon'' button to buy it.");
-        System.out.println(buy_weapon.getValue().getcost());
+            System.out.println(buy_weapon.getValue().getcost());
             value = weapon.toString();
-        buy_weapon.setValue(null);
-       buy_weapon.setPromptText("Select weapon to buy");
+            Weapon test = null;
+            buy_weapon.setValue(test);
+            buy_weapon.setPromptText("Select weapon to buy");
+        } catch (java.lang.NullPointerException ex) {
+            System.out.println("NullPointerException thrown!");
+        } catch (Exception ex) {
+            buy_weapon.setPromptText("Select weapon to buy");
+            System.out.println("Exception thrown!");
+        }
     }
-     public void BuyWeapon() {
- 
- if (weapon.getcost() > Player.getbank()){
-     System.out.println("You dont have enough funds!");
-          stats.setText("You don't have enough funds!");
+
+    @FXML
+    public void SelectWeapontoSell(String value) {
+        try {
+            //String ID = buy_weapon.getValue().getID();
+            weapon = new Weapon(sell_weapon.getValue().getID(), sell_weapon.getValue().getdescription(), sell_weapon.getValue().getname(), sell_weapon.getValue().gethealthrating(), sell_weapon.getValue().getcost());
+            stats.setText("The following Weapon Item is selected: \n " + weapon.toString() + "\n \n Select the ''Sell Weapon'' button to sell it.");
+            System.out.println(sell_weapon.getValue().getcost());
+            value = weapon.toString();
+            Weapon test = null;
+            sell_weapon.setValue(test);
+            sell_weapon.setPromptText("Select weapon to sell");
+        } catch (java.lang.NullPointerException ex) {
+            System.out.println("NullPointerException thrown!");
+        } catch (Exception ex) {
+            sell_weapon.setPromptText("Select weapon to buy");
+            System.out.println("Exception thrown!");
+        }
     }
- else {
-     
-     String rec1 = weapon.getID();
-        storeweaponitem.remove(weapon.toString());
-        
-      for(Iterator<Weapon> iter = storeweaponitem.iterator(); iter.hasNext();) {
-    Weapon data = iter.next();
-    if (data.getID() == rec1) {
-        iter.remove();
+
+    public void SelectArmortoBuy(String value) {
+        try {
+            //String ID = buy_weapon.getValue().getID();
+            armor = new Armor(buy_armor.getValue().getID(), buy_armor.getValue().getdescription(), buy_armor.getValue().getname(), buy_armor.getValue().gethealthrating(), buy_armor.getValue().getcost());
+            stats.setText("The following Armor Item is selected: \n " + armor.toString() + "\n \n Select the ''Buy Armor'' button to buy it.");
+            System.out.println(buy_armor.getValue().getcost());
+            value = armor.toString();
+            Armor test = null;
+            buy_armor.setValue(test);
+            buy_armor.setPromptText("Select armor to buy");
+        } catch (java.lang.NullPointerException ex) {
+            System.out.println("NullPointerException thrown!");
+        } catch (Exception ex) {
+            buy_armor.setPromptText("Select armor to buy");
+            System.out.println("Exception thrown!");
+        }
     }
-}
-      System.out.println(storeweaponitem.size());
-    buy_weapon.getItems().clear();
-   buy_weapon.getItems().addAll(storeweaponitem);
-       Weaponitem.addFirst(weapon);
-       Player.subtractbank(weapon.getcost());
+
+    @FXML
+    public void SelectArmortoSell(String value) {
+        try {
+            //String ID = buy_weapon.getValue().getID();
+            armor = new Armor(sell_armor.getValue().getID(), sell_armor.getValue().getdescription(), sell_armor.getValue().getname(), sell_armor.getValue().gethealthrating(), sell_armor.getValue().getcost());
+            stats.setText("The following Weapon Item is selected: \n " + armor.toString() + "\n \n Select the ''Sell Armor'' button to sell it.");
+            System.out.println(sell_armor.getValue().getcost());
+            value = armor.toString();
+            Armor test = null;
+            sell_armor.setValue(test);
+            sell_armor.setPromptText("Select armor to sell");
+        } catch (java.lang.NullPointerException ex) {
+            System.out.println("NullPointerException thrown!");
+        } catch (Exception ex) {
+            sell_armor.setPromptText("Select armor to sell");
+            System.out.println("Exception thrown!");
+        }
+    }
+
+    public void BuyWeapon() {
+
+        if (weapon.getcost() > Player.getbank()) {
+            System.out.println("You dont have enough funds!");
+            stats.setText("You don't have enough funds!");
+        } else {
+
+            String rec1 = weapon.getID();
+            storeweaponitem.remove(weapon.toString());
+
+            for (Iterator<Weapon> iter = storeweaponitem.iterator(); iter.hasNext();) {
+                Weapon data = iter.next();
+                if (data.getID() == rec1) {
+                    iter.remove();
+                }
+            }
+            System.out.println(storeweaponitem.size());
+            buy_weapon.getItems().clear();
+            buy_weapon.getItems().addAll(storeweaponitem);
+
+            sell_weapon.getItems().add(weapon);
+
+            Weaponitem.addFirst(weapon);
+            Player.addattackdamage(weapon.gethealthrating());
+            Player.subtractbank(weapon.getcost());
             stats.setText(weapon.toString() + " \n Added to your inventory");
-          
- }
-     }
+
+        }
+    }
+
+    public void SellWeapon() {
+
+        String rec1 = weapon.getID();
+        System.out.println(rec1);
+
+        Weaponitem.removeMiddle(Integer.parseInt(weapon.getID()));
+
+        System.out.println(storeweaponitem.size());
+
+        sell_weapon.getItems().clear();
+
+        int limit2 = Weaponitem.getSize();
+        for (int x = 1; x <= limit2; x++) {
+            sell_weapon.getItems().addAll(Weaponitem.getInfo(x));
+        }
+        buy_weapon.getItems().add(weapon);
+        storeweaponitem.addFirst(weapon);
+        Player.addbank(weapon.getcost());
+        stats.setText(weapon.toString() + " \n removed to your inventory");
+
+    }
+
+    public void BuyArmor() {
+
+        if (armor.getcost() > Player.getbank()) {
+            System.out.println("You dont have enough funds!");
+            stats.setText("You don't have enough funds!");
+        } else {
+
+            String rec1 = armor.getID();
+            storearmoritem.remove(armor.toString());
+
+            for (Iterator<Armor> iter = storearmoritem.iterator(); iter.hasNext();) {
+                Armor data = iter.next();
+                if (data.getID() == rec1) {
+                    iter.remove();
+                }
+            }
+            System.out.println(storearmoritem.size());
+            buy_armor.getItems().clear();
+            buy_armor.getItems().addAll(storearmoritem);
+
+            sell_armor.getItems().add(armor);
+
+            Armoritem.addFirst(armor);
+            Player.addactarmor(armor.gethealthrating());
+            Player.subtractbank(armor.getcost());
+            stats.setText(armor.toString() + " \n Added to your inventory");
+
+        }
+    }
+
+    public void SellArmor() {
+
+        String rec1 = armor.getID();
+        System.out.println(rec1);
+
+        Armoritem.removeMiddle(Integer.parseInt(armor.getID()));
+
+        System.out.println(storearmoritem.size());
+
+        sell_armor.getItems().clear();
+
+        int limit2 = Armoritem.getSize();
+        for (int x = 1; x <= limit2; x++) {
+            sell_armor.getItems().addAll(Armoritem.getInfo(x));
+        }
+        buy_armor.getItems().add(armor);
+        storearmoritem.addFirst(armor);
+        Player.addbank(armor.getcost());
+        stats.setText(armor.toString() + " \n removed to your inventory");
+
+    }
+
     public void stats() {
 
         player.getPlayer();
@@ -250,14 +422,9 @@ public class InsidearmoryController implements Initializable {
 
         stats.setText("\n Your Armor items are in the order  by \n" + out3);
     }
+
     
-    public void buy_armor() {
-
-    }
-
-    public void sell_weapons() {
-
-    }
+    
 
     /* public void doAction2() {
 
@@ -482,9 +649,8 @@ public class InsidearmoryController implements Initializable {
         storeweaponitem.add(sword3);
         storeweaponitem.add(sword4);
         storeweaponitem.add(sword5);
-        
 
-    buy_weapon.getItems().addAll(storeweaponitem);
+        buy_weapon.getItems().addAll(storeweaponitem);
 
     }
 
@@ -499,6 +665,7 @@ public class InsidearmoryController implements Initializable {
         storearmoritem.add(plate3);
         storearmoritem.add(plate4);
         storearmoritem.add(plate5);
+        buy_armor.getItems().addAll(storearmoritem);
 
     }
 
@@ -551,4 +718,5 @@ public class InsidearmoryController implements Initializable {
         Stage stage = (Stage) this.prompt.getScene().getWindow();
         stage.close();
     }
+
 }
