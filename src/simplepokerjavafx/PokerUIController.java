@@ -130,6 +130,7 @@ public class PokerUIController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         player.getPlayer();
         money = player.getbank();
+        System.out.println(player.getbank());
         PlayerResult.setVisible(false);
         Winner.setVisible(false);
         DealerResult.setVisible(false);
@@ -230,8 +231,10 @@ public class PokerUIController implements Initializable {
             bet = 0;
 
         }
+
         PlayerBank.setText("Player bank: " + money);
         DealerBank.setText("Dealer bank: " + dealermoney);
+        player.setbank(money);
         PlayerBet.setVisible(false);
         Playagain.setVisible(true);
     }
