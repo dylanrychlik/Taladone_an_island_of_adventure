@@ -7,19 +7,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.Inside_good_storeController">
-    <children>
-      <TextArea fx:id="prompt" layoutX="100" layoutY="0.0" text="Goerge Fordland: Hello and welcome to Fordlands general good store! Feel free to look around and if you need anything, don't hesatate to let me know!"  />
-        <Button fx:id="Buy_item" layoutX="100" layoutY="50.0" mnemonicParsing="false" text="I would like to buy something!"  onAction="#buy_store_item" />
-        <Button fx:id="Sell_item" layoutX="100" layoutY="100.0" mnemonicParsing="false" text="I would like to sell something!" onAction="#sell_store_item"/>
-        <Button fx:id="Hows_bussinse" layoutX="100" layoutY="150.0" mnemonicParsing="false" text="How is bussinse?" onAction = "#Hows_bussinse" />       
-        <Button fx:id="Exit" layoutX="100" layoutY="200.0" mnemonicParsing="false" text="Exit"  onAction = "#exit"/>
-         <Button fx:id = "Player_stats" layoutX="325" layoutY="300.0"  mnemonicParsing="false" text="Player stats"  onAction = "#stats" />  
-   <TextArea fx:id="stats" layoutX="100" layoutY="400.0"/>  
-        <ComboBox fx:id = "Look" layoutX="200" layoutY="300.0" />  
-        <Button fx:id="button" layoutX="200" layoutY="350.0" mnemonicParsing="false" text="Submit Action" />    
-        <TextField fx:id="input" layoutX="325.0" layoutY="350.0"  />
-        <Button fx:id="button2" layoutX="475" layoutY="350.0" mnemonicParsing="false" text="Buy item" onAction = "#doAction2"/>   
-          <Button fx:id="button3" layoutX="550" layoutY="350.0" mnemonicParsing="false" text="sell item" onAction = "#doAction3"/>     
-    </children>  
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Davenrun.Inside_good_storeController">
+               
+        <TextArea fx:id = "prompt" layoutX = "70" layoutY = "25" />
+        <Label fx:id = "Storeactions" layoutX = "50" layoutY = "100" text = "Store actions"/>
+        <ComboBox fx:id="buy_gooditem" layoutX="50" layoutY="150.0"  />  
+        <Button fx:id = "buy_gooditem_submit" layoutX="50" layoutY="200.0" text = "Buy weapon"  onAction="#BuyItem"  /> 
+        <ComboBox fx:id="sell_gooditem" layoutX="250" layoutY="150.0" />  
+        <Button fx:id = "sell_gooditem_submit" layoutX="250" layoutY="200.0" text = "Sell weapon" onAction="#SellItem"  /> 
+        
+        <ComboBox fx:id = "Look" layoutX="50" layoutY="350.0" />  
+        <Button fx:id="button" layoutX="50" layoutY="400.0" mnemonicParsing="false" text="Submit Action" /> 
+        <TextArea fx:id = "stats" layoutX = "50" layoutY = "500" />           
+        <Label fx:id = "Interactions" layoutX = "500" layoutY = "100" text = "Interact with Ford Goodman"/>  
+        <Button fx:id = "Player_stats" layoutX="250" layoutY="350.0"  mnemonicParsing="false" text="Player stats"  onAction = "#stats" />       
+                    
+        <Button fx:id="Hows_bussinse" layoutX="500" layoutY="150.0" mnemonicParsing="false" text="How is bussinse?" onAction = "#Hows_bussinse" />    
+        <Button fx:id="Exit" layoutX="500" layoutY="200.0" mnemonicParsing="false" text="Exit"  onAction = "#exit" />
+    
+
 </AnchorPane>
