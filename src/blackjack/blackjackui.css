@@ -1,0 +1,58 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+.Hit{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-color: rgb(244, 164, 96);
+ 
+}
+.Stand{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+   -fx-color: rgb(220, 20, 60);
+ 
+}
+.Bet{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-color: rgb(220, 20, 60);
+ 
+}
+.Playagain{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+   -fx-color: rgb(220, 20, 60);
+ 
+}
+.Exit{
+   -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-color: rgb(220, 20, 60);
+ 
+}
+.Winner{
+  -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-color: rgb(220, 20, 60);  
+}
+.root{
+    -fx-font-size: 10pt;
+    -fx-font-family: "Courier New";
+    -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-background-color: rgb(50, 205, 50);
+}
+
+}
+.SubFxmlClass {
+  .root {
+      -fx-font-size: 10pt;
+    -fx-font-family: "Courier New";
+    -fx-font-color: black;
+    -fx-font-weight: bold;
+    -fx-background-color: rgb(220,20,60);
+}  
+}

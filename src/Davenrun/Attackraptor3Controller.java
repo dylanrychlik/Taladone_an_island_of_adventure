@@ -199,8 +199,8 @@ public class Attackraptor3Controller implements Initializable {
             if (enmies.isEmpty()) {
                 
                  intro = " ";
-                Player.addbank(30);
-                intro += "You add 30 gold. You bank is now " + Player.getbank();
+                Player.addbank(90);
+                intro += "You add 90 gold. You bank is now " + Player.getbank();
                 prompt.clear();
                 prompt.setText(intro);
                 

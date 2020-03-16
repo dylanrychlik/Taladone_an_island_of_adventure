@@ -195,8 +195,8 @@ public class AttackZombie2Controller implements Initializable {
             if (enmies.isEmpty()) {
                 
                  intro = " ";
-                Player.addbank(30);
-                intro += "You add 30 gold. You bank is now " + Player.getbank();
+                Player.addbank(60);
+                intro += "You add 60 gold. You bank is now " + Player.getbank();
                 prompt.clear();
                 prompt.setText(intro);
                 

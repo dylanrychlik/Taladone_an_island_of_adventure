@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+ 
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="blackjack.BlackJackUIController">
+    <stylesheets>
+        <URL value="@blackjackui.css"/>
+    </stylesheets>
+    <children>
+        <AnchorPane id="Menu" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="250.0" styleClass="SubFxmlClass" >
+            <children>
+                <Button fx:id="Bet" layoutX="10" layoutY="50" mnemonicParsing="false" text="Bet"   onAction = "#bet"/>
+                <TextField fx:id="BetAmount" layoutX="80" layoutY="50"  prefHeight="25.0" prefWidth="50.0" />
+                <Label fx:id="PlayerBet" layoutX="10" layoutY="100" text="Player Bet amount: " />
+                <Label fx:id="PlayerBank" layoutX="10" layoutY="150" text="Player Bank" />
+                <Label fx:id="DealerBank" layoutX="10" layoutY="200" text="Dealer Bank" />
+                <Button fx:id ="Hit" layoutX="10" layoutY="400" text="Hit" onAction = "#Hit" />
+                <Button fx:id ="Stand" layoutX="80" layoutY="400" text="Stand" onAction = "#Stand" />
+                <Label fx:id="DealerTotal" layoutX="10" layoutY="250" text="Dealer: " />
+                <Label fx:id="PlayerTotal" layoutX="10" layoutY="300" text="Player: " />
+                
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="250.0" prefHeight="600.0" prefWidth="600.0">
+            <children>
+               
+                <ImageView fx:id="imageView1" fitHeight="80" fitWidth="50" layoutX="30.0" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+                <ImageView fx:id="imageView2" fitHeight="80.0" fitWidth="50.0" layoutX="100.0" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+                <ImageView fx:id="imageView3" fitHeight="80.0" fitWidth="50.0" layoutX="170.0" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+                <ImageView fx:id="imageView4" fitHeight="80.0" fitWidth="50.0" layoutX="240.0" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+                <ImageView fx:id="imageView5" fitHeight="80.0" fitWidth="50.0" layoutX="310.0" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+    
+                <ImageView fx:id="imageView6" fitHeight="80.0" fitWidth="50.0" layoutX="380.0" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+
+                <ImageView fx:id="imageView7" fitHeight="80.0" fitWidth="50.0" layoutX="450" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+
+                <ImageView fx:id="imageView8" fitHeight="80.0" fitWidth="50.0" layoutX="520" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+
+                <ImageView fx:id="imageView9" fitHeight="80.0" fitWidth="50.0" layoutX="590.0" layoutY="500" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+
+                <ImageView fx:id="imageView10" fitHeight="80.0" fitWidth="50.0" layoutX="30.0" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+                <ImageView fx:id="imageView11" fitHeight="80.0" fitWidth="50.0" layoutX="100.0" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+                <ImageView fx:id="imageView12" fitHeight="80.0" fitWidth="50.0" layoutX="170.0" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+                <ImageView fx:id="imageView13" fitHeight="80.0" fitWidth="50.0" layoutX="240.0" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+                <ImageView fx:id="imageView14" fitHeight="80.0" fitWidth="50.0" layoutX="310.0" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+    
+                <ImageView fx:id="imageView15" fitHeight="80.0" fitWidth="50.0" layoutX="380.0" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+
+                <ImageView fx:id="imageView16" fitHeight="80.0" fitWidth="50.0" layoutX="450" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+
+                <ImageView fx:id="imageView17" fitHeight="80.0" fitWidth="50.0" layoutX="520" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+
+                <ImageView fx:id="imageView18" fitHeight="80.0" fitWidth="50.0" layoutX="590.0" layoutY="100" pickOnBounds="true" preserveRatio="true" >
+
+                </ImageView>
+    
+               
+                <Label fx:id="Winner" layoutX="10" layoutY="350"  />
+                <Button fx:id="Playagain" layoutX="350" layoutY="350" mnemonicParsing="false" text="Play again" onAction = "#playagain" />
+                <Button fx:id="Exit" layoutX="525" layoutY="350" mnemonicParsing="false" text="Exit" onAction = "#closeWindow" />
+                 
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
+   

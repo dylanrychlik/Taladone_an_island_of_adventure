@@ -41,33 +41,33 @@ public class Attacksnake3Controller implements Initializable {
     int healthpotionhealamount = 30;
     @FXML
     private TextArea prompt;
-     
 
     @FXML
     private ComboBox Look;
     @FXML
     private Button Attack;
     @FXML
-       private Button button;
-          Player player;
+    private Button button;
+    Player player;
     @FXML
     private Button button2;
     @FXML
     private Button Player_stats;
     @FXML
     private TextArea stats;
-    
+
     @FXML
     private Button Drink_potion;
     @FXML
     private Button Run;
+
     public void AttackspiderController() {
-       this.prompt = new TextArea();
+        this.prompt = new TextArea();
         this.Attack = new Button();
         this.Drink_potion = new Button();
         this.Run = new Button();
-            this.button = new Button();
-            
+        this.button = new Button();
+
         this.stats = new TextArea();
         this.button = new Button();
         this.Look = new ComboBox();
@@ -78,34 +78,33 @@ public class Attacksnake3Controller implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         prompt.setText(intro);
         enmies.add("snake");
-            enmies.add("snake");
-                enmies.add("snake");
-                    enmies.add("snake");
-                        enmies.add("snake");
-                        
-       
+        enmies.add("snake");
+        enmies.add("snake");
+        enmies.add("snake");
+        enmies.add("snake");
 
-         intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
+        intro += "\n Your encounter with " + enmies.toString() + "\n Your health is " + Player.gethealth()
                 + "\n You armor is " + Player.getarmor() + "Enemy health is " + Enemyhealth + "\n What will you do?";
-       Look.getItems().addAll("Good list", "Weapon list", "Armor list");
+        Look.getItems().addAll("Good list", "Weapon list", "Armor list");
         Look.setValue("Look");
-       
+
         prompt.setText(intro);
-  button.setOnAction(event -> {
+        button.setOnAction(event -> {
             //Call a method to determine which item in the list the user has selected
             doAction2(Look.getValue().toString()); //Send the selected item to the method
         });
 
     }
 
-      public void stats() {
+    public void stats() {
 
         player.getPlayer();
 
         String Output = "Player stats are: \n Health: " + player.gethealth() + "\n Bank:" + player.getbank() + "\n Attack damage:" + player.getattackdamage() + "\n Armor" + player.getarmor() + "\n Game level" + player.getJarl_level_count();
         stats.setText(Output);
     }
- private void doAction2(String listItem) {
+
+    private void doAction2(String listItem) {
         switch (listItem) {
             case "Good list": //Action for this item
                 goodlist();
@@ -132,7 +131,7 @@ public class Attacksnake3Controller implements Initializable {
             armordamage = 10;
 
         } else {
-             intro = " ";
+            intro = " ";
             intro += "\n You have no armor!";
             prompt.clear();
             prompt.setText(intro);
@@ -142,9 +141,9 @@ public class Attacksnake3Controller implements Initializable {
         }
         Enemyhealth -= damagedealth;
 
-      Player.subtracthealth(damagetaken);
+        Player.subtracthealth(damagetaken);
         Player.subtractarmor(armordamage);
-         intro = " ";
+        intro = " ";
         intro += "\n You strike the Enemy  for" + damagedealth + "damage";
         intro += "\n You reciced " + damagetaken + "in retaliation";
         intro += "\n You recived " + armordamage + "In armor adamage";
@@ -162,7 +161,7 @@ public class Attacksnake3Controller implements Initializable {
             alert.getButtonTypes().setAll(Yes, No, Cancel);
             Optional<ButtonType> result = alert.showAndWait();
             if (result.get() == Yes) {
-              Player.addhealth(100);
+                Player.addhealth(100);
                 alert.close();
                 Stage Stage = new Stage();
                 Stage.setTitle("Go_inside_boldsman_areana");
@@ -172,7 +171,7 @@ public class Attacksnake3Controller implements Initializable {
                 closeWindow();
 
             } else {
-               Player.addhealth(100);
+                Player.addhealth(100);
                 alert.close();
                 Stage Stage = new Stage();
                 Stage.setTitle("Go_inside_boldsman_areana");
@@ -184,25 +183,25 @@ public class Attacksnake3Controller implements Initializable {
 
         }
         if (Enemyhealth < 0) {
-             intro = " ";
+            intro = " ";
             intro += "\n Enemy was defeated! \n";
             enmies.remove();
             intro += enmies.toString() + "remaining";
             intro += "\n You have " + Player.gethealth() + "left";
 
-           Player.addpotions();
+            Player.addpotions();
             intro += "\n The eneny dropped the health potion";
             intro += "\n You have " + Player.getpotions() + "left";
             prompt.clear();
             prompt.setText(intro);
             if (enmies.isEmpty()) {
-                
-                 intro = " ";
-                Player.addbank(30);
-                intro += "You add 30 gold. You bank is now " + Player.getbank();
+
+                intro = " ";
+                Player.addbank(90);
+                intro += "You add 90 gold. You bank is now " + Player.getbank();
                 prompt.clear();
                 prompt.setText(intro);
-                
+
                 Thread.sleep(3);
 
                 Stage Stage = new Stage();
@@ -219,15 +218,15 @@ public class Attacksnake3Controller implements Initializable {
     public void Drink_potion() {
         if (Player.getpotions() > 0) {
             Player.addhealth(healthpotionhealamount);
-           
+
             Player.subtractpotions();
-             intro = " ";
+            intro = " ";
             intro += "\n You drink a health potion to health your self for " + healthpotionhealamount + "Your health is now" + you.gethealth();
             intro += "\n you have " + Player.getpotions() + "left";
             prompt.clear();
             prompt.setText(intro);
         } else {
-             intro = " ";
+            intro = " ";
             intro += "You have no health potions! Defeat enmies for health potion!";
             prompt.clear();
             prompt.setText(intro);
@@ -235,18 +234,19 @@ public class Attacksnake3Controller implements Initializable {
     }
 
     public void run() throws IOException {
-         intro = " ";
+        intro = " ";
         intro += "You run away from the enemy!";
         prompt.clear();
         prompt.setText(intro);
         Stage Stage = new Stage();
         Stage.setTitle("Go_inside_boldsman_areana");
-         Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Inside_boldmans_areana.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/Davenrun/Inside_boldmans_areana.fxml"));
         Stage.setScene(new Scene(root, 250, 350));
         Stage.show();
         closeWindow();
     }
-public void goodlist() {
+
+    public void goodlist() {
 
         System.out.println(gooditem.size());
         int limit = gooditem.size();
@@ -283,13 +283,11 @@ public void goodlist() {
 
         stats.setText("\n Your Armor items are in the order  by \n" + out3);
     }
+
     @FXML
     public void closeWindow() {
         Stage stage = (Stage) this.Attack.getScene().getWindow();
         stage.close();
-    }   
-      
-    
-    
-      
+    }
+
 }

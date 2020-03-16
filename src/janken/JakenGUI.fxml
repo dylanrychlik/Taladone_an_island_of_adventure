@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="300.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="janken.JakenGUIController">
+    <stylesheets>
+        <URL value="@jakengui.css"/>
+    </stylesheets>
+    <Label fx:id="PlayerBet" layoutX="20" layoutY="40.0" text="Player Bet amount: " />
+    <Label fx:id="PlayerBank" layoutX="20" layoutY="70.0" text="Player Bank: " />
+    <Button fx:id="Bet" layoutX="10" layoutY="10.0" mnemonicParsing="false" text="Bet"  onAction = "#bet"/>
+    <TextField fx:id="BetAmount" layoutX="80" layoutY="10.0"  prefHeight="25.0" prefWidth="50.0" />
+    <Button fx:id="Rock" layoutX="60" layoutY="100.0" mnemonicParsing="false" text="Rock" onAction = "#Rock"/>
+    <Button fx:id="Paper" layoutX="60" layoutY="150.0" mnemonicParsing="false" text="Paper" onAction = "#Paper"/>
+    <Button fx:id="Sciccors" layoutX="60" layoutY="200.0" mnemonicParsing="false" text="Sciccors" onAction = "#Sciccors"/>
+    <TextArea fx:id="Result" layoutX="25" layoutY="250.0" />
+    <Button fx:id="Playagain" layoutX="150" layoutY="100" mnemonicParsing="false" text="Play again" onAction = "#playagain" />
+    <Button fx:id="Exit" layoutX="150" layoutY="150" mnemonicParsing="false" text="Exit" onAction = "#closeWindow" />
+</AnchorPane>

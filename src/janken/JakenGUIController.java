@@ -73,8 +73,6 @@ public class JakenGUIController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         player.getPlayer();
         money = player.getbank();
-      System.out.println("M: " + money);
-        System.out.println("P: " + player.getbank());
         Result.setText("Welcome to the game of Jaken! \n You may bet if you want to! \n");
         BetAmount.setVisible(false);
         Result.setPrefWidth(250);
@@ -142,7 +140,9 @@ public class JakenGUIController implements Initializable {
         } else if (num == 2 && num2 == 3) {
             Result.appendText("Sciccors Cut Paper! Dealer wins!");
             money -= bet;
+            
         }
+        player.setbank(money);
         Rock.setDisable(true);
         Paper.setDisable(true);
         Sciccors.setDisable(true);
@@ -159,7 +159,7 @@ public class JakenGUIController implements Initializable {
         public void handle(ActionEvent e) {
             try {
                 bet = Integer.parseInt(BetAmount.getText());
-                if (bet < 0 || bet > money) {
+                if (bet < 0 || bet > player.getbank()) {
                     PlayerBet.setText("Your answer must be between \n 0 and " + money + '.');
                 } else {
                     PlayerBet.setText("Player Bet amount: " + bet);
