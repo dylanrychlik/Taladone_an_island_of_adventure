@@ -3,5 +3,38 @@
  */
 
 .mainFxmlClass {
+    .root{
+        -fx-font-size: 10pt;
+        -fx-font-family: "Courier New";
+        -fx-background-color: rgb(170, 120, 57);
+    }
+    .button{
 
+        -fx-background-color: #AA8C39;
+        -fx-border-radius: 20;
+        -fx-background-radius: 20;
+        -fx-padding: 5;
+    }
+
+    .text-area {
+        -fx-font-family: Consolas;
+        -fx-font-size: 10;
+        -fx-display-caret:true;
+        -fx-text-fill: #551600;
+    }
+
+    .text-area .content {
+        -fx-background-color: #FFD9AA;
+
+
+    }
+   .combo-box-base {
+    -fx-background-color:  #806415;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+}
 }

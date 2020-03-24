@@ -41,7 +41,8 @@
                         <Button fx:id="Go_NorthWest" layoutX="500" layoutY="200.0" mnemonicParsing="false" text="Go Northwest" onAction = "#go_NorthWest" />
                         <Button fx:id = "Go_NorthEast" layoutX="100" layoutY="350" mnemonicParsing="false" text="Go NorthEast" onAction ="#go_Northeast"/> 
                         <Button fx:id = "Player_stats" layoutX="325" layoutY="300.0"  mnemonicParsing="false" text="Player stats"  onAction = "#stats" />  
-                        <TextArea fx:id="stats" layoutX="100" layoutY="400.0"/>  
+                        <TextArea fx:id="stats" layoutX="100" layoutY="400.0"/> 
+                        <TextField fx:id="CharacterPrompt" layoutX="100" layoutY="600.0"/> 
                         <ComboBox fx:id = "Look" layoutX="200" layoutY="300.0" />             
                     </children>
                 </Pane>

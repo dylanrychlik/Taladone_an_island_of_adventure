@@ -41,10 +41,11 @@ import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
 public class OutsidehouseController implements Initializable {
-public static boolean[] Sidequests = new boolean[20];
+
+    public static boolean[] Sidequests = new boolean[20];
     private Inside_good_storeController lists;
     public static LinkedList<goodItem> gooditem = new LinkedList<>();
-   // public static LinkedList<Weapon> Weaponitem = new LinkedList<>();
+    // public static LinkedList<Weapon> Weaponitem = new LinkedList<>();
     public static Weaponlinklist Weaponitem = new Weaponlinklist();
     public static Armorlinklist Armoritem = new Armorlinklist();
     public static int MapHeight = 4;
@@ -94,7 +95,7 @@ public static boolean[] Sidequests = new boolean[20];
     public OutsidehouseController() {
 
         this.prompt = new TextArea();
-       
+
         this.Go_inside = new Button();
         this.Go_South = new Button();
         this.Go_West = new Button();
@@ -105,8 +106,8 @@ public static boolean[] Sidequests = new boolean[20];
         this.Look = new ComboBox();
         this.Player_stats = new Button();
         this.Map = new TextArea();
-        
-         this.Actions = new ComboBox();
+
+        this.Actions = new ComboBox();
 
     }
 
@@ -114,9 +115,11 @@ public static boolean[] Sidequests = new boolean[20];
     public void initialize(URL url, ResourceBundle rb) {
         intionalize();
         prompt.setPrefHeight(150);
+        prompt.setPrefWidth(550);
         prompt.setText(intro);
         prompt.setEditable(false);
         stats.setEditable(false);
+       
         Map.setEditable(false);
         current.setEditable(false);
         current.setPrefSize(300, 300);
@@ -305,40 +308,40 @@ public static boolean[] Sidequests = new boolean[20];
     }
 
     public void unkown_person() throws IOException {
-        if (Sidequests[0] == true){
-             Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Alert!");
+        if (Sidequests[0] == true) {
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Alert!");
 
-        alert.setContentText("Side Quest already completed");
-          ButtonType ok = new ButtonType("OK");
+            alert.setContentText("Side Quest already completed");
+            ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
+        } else {
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Unknown_person");
+
+            alert.setContentText("Unkown person: (Stares at you immensely)");
+
+            ButtonType buttonTypeOne = new ButtonType("Why are you staying at me?");
+
+            ButtonType buttonTypeCancel = new ButtonType("Walk away", ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeCancel);
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.get() == buttonTypeOne) {
+                Stage Stage = new Stage();
+                Stage.setTitle("The stalker");
+                Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/The_stalker.fxml"));
+                Stage.setScene(new Scene(root, 1000, 750));
+                Stage.show();
+                closeWindow();
+
+            }
+
         }
-        else {
-        Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Unknown_person");
 
-        alert.setContentText("Unkown person: (Stares at you immensely)");
-
-        ButtonType buttonTypeOne = new ButtonType("Why are you staying at me?");
-
-        ButtonType buttonTypeCancel = new ButtonType("Walk away", ButtonData.CANCEL_CLOSE);
-        alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeCancel);
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == buttonTypeOne) {
-           Stage Stage = new Stage();
-        Stage.setTitle("The stalker");
-        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/The_stalker.fxml"));
-        Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow(); 
-
-        }
-        
     }
-        
-    }
+
     public void Adrian_Hoderson() {
         Alert alert = new Alert(AlertType.INFORMATION);
         alert.setTitle("Adrian Hoderson");
@@ -392,54 +395,54 @@ public static boolean[] Sidequests = new boolean[20];
     }
 
     public void Nigel_williams() throws IOException {
-         if (Sidequests[1] == true){
-             Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Alert!");
+        if (Sidequests[1] == true) {
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Alert!");
 
-        alert.setContentText("Side Quest already completed");
-          ButtonType ok = new ButtonType("OK");
-            alert.getButtonTypes().setAll(ok);
-            Optional<ButtonType> new_result = alert.showAndWait();
-        }
-         else {
-        Alert alert = new Alert(AlertType.CONFIRMATION);
-        alert.setTitle("Nigel Williams");
-
-        alert.setContentText("Oh dear. That is unfouratute. I seemed to have misplaced my book. It’s a book I need to my experments. Is it all possible for you to get it for me? \n It's a spell book in a cave not to far outside of town. Just a short walk! There are also... some... creatures... so be warned traveler");
-
-        ButtonType buttonTypeOne = new ButtonType("Yes");
-        ButtonType buttonTypeTwo = new ButtonType("No");
-        ButtonType buttonTypeCancel = new ButtonType("Exit");
-        alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.get() == buttonTypeOne) {
-
-           Stage Stage = new Stage();
-        Stage.setTitle("The stalker");
-        Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Attack_bookcave_room1.fxml"));
-        Stage.setScene(new Scene(root, 1000, 750));
-        Stage.show();
-        closeWindow(); 
-
-        }
-        if (result.get() == buttonTypeTwo) {
-
-            alert.setContentText("I am here if you change your mind...");
+            alert.setContentText("Side Quest already completed");
             ButtonType ok = new ButtonType("OK");
             alert.getButtonTypes().setAll(ok);
             Optional<ButtonType> new_result = alert.showAndWait();
+        } else {
+            Alert alert = new Alert(AlertType.CONFIRMATION);
+            alert.setTitle("Nigel Williams");
+
+            alert.setContentText("Oh dear. That is unfouratute. I seemed to have misplaced my book. It’s a book I need to my experments. Is it all possible for you to get it for me? \n It's a spell book in a cave not to far outside of town. Just a short walk! There are also... some... creatures... so be warned traveler");
+
+            ButtonType buttonTypeOne = new ButtonType("Yes");
+            ButtonType buttonTypeTwo = new ButtonType("No");
+            ButtonType buttonTypeCancel = new ButtonType("Exit");
+            alert.getButtonTypes().setAll(buttonTypeOne, buttonTypeTwo, buttonTypeCancel);
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.get() == buttonTypeOne) {
+
+                Stage Stage = new Stage();
+                Stage.setTitle("The stalker");
+                Parent root = FXMLLoader.load(getClass().getResource("/Side_quests/Attack_bookcave_room1.fxml"));
+                Stage.setScene(new Scene(root, 1000, 750));
+                Stage.show();
+                closeWindow();
+
+            }
+            if (result.get() == buttonTypeTwo) {
+
+                alert.setContentText("I am here if you change your mind...");
+                ButtonType ok = new ButtonType("OK");
+                alert.getButtonTypes().setAll(ok);
+                Optional<ButtonType> new_result = alert.showAndWait();
+
+            }
+            if (result.get() == buttonTypeCancel) {
+                alert.setContentText("Well Alright then!");
+                ButtonType ok = new ButtonType("OK");
+                alert.getButtonTypes().setAll(ok);
+                Optional<ButtonType> new_result = alert.showAndWait();
+            }
 
         }
-        if (result.get() == buttonTypeCancel) {
-            alert.setContentText("Well Alright then!");
-            ButtonType ok = new ButtonType("OK");
-            alert.getButtonTypes().setAll(ok);
-            Optional<ButtonType> new_result = alert.showAndWait();
-        }
+    }
 
-    }
-    }
     public void stats() {
 
         player.getPlayer();
