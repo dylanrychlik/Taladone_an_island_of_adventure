@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-X-COMMENT: Main-Class will be added automatically by build
-Main-Class: Davenrun.Taladone_an_island_of_adventure.class
-
